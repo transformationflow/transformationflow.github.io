@@ -1,3 +1,3 @@
 # About Us
 
-[beepbeep.technology](https://beepbeep.technology)
+We are [beepbeep.technology](https://beepbeep.technology)
