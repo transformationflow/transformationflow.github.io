@@ -2,7 +2,15 @@ site_name: Transformation Flow
 
 theme:
   name: material
+  font:
+    text: Monserrat
 
 nav:
   - Welcome: 'index.md'
   - About Us: 'about-us.md'
+  - 'Reference':
+    - Action Codes: 'reference_codes.md'
+    - Functions: 'reference_functions.md'
+
+markdown_extensions:
+  - admonition
