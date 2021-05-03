@@ -26,6 +26,7 @@ action_code | action_command | action_description
 `dt` | `DATA_TYPES` | Change data types
 `nu` | `NUMERIC` | Convert columns to number types
 `cr` | `COLUMN_RENAME` | Rename columns
+`cf` | `CLASSIFY` | Classify column values
 `cl` | `CLEAN` | Clean data
 `pv` | `PIVOT` | Pivot data into one column per metric
 `up` | `UNPIVOT` | Unpivot data into key-value pairs
