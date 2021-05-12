@@ -17,7 +17,7 @@ action_code | action_command | action_description
 `up` | `UNPIVOT` | Unpivot data into key-value pairs
 `ag` | `ARRAY_AGGREGATE` | Aggregate into array(s)
 `dj` | `DECODE_JSON` | Decode JSON object(s)
-`j[n]` | DECODE_JSON_LEVEL | Decode a single level (n) of a JSON object (e.g. j0)
+`L[n]` | `DECODE_JSON_LEVEL` | Decode a single level (n) of a JSON object (e.g. L0)
 `xo` | `EXTRACT_JSON_OBJECT` | Extract JSON object(s)
 `xa` | `EXTRACT_ARRAY`| Extract JSON array(s)
 `fl` | `FLATTEN_ARRAY` | Flatten array(s)

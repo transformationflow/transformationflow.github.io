@@ -13,19 +13,19 @@ theme:
 nav:
   - Welcome: 'index.md'
   # - About Us: 'about-us.md'
-  - 'Flow Stages':
-      - Data Ingestion: 'stages-ingestion.md'
-      - Data Profiling: 'stages-profiling.md'
-      - Data Transformation: 'stages-transformation.md'
+  #- 'Flow Stages':
+  #    - Data Ingestion: 'stages-ingestion.md'
+  #    - Data Profiling: 'stages-profiling.md'
+  #    - Data Transformation: 'stages-transformation.md'
       # - Data Profiling: 
       #  Ingest: 'reference_functions.md'
   - 'Functions':
       - Overview: 'functions--overview.md'
-      - Data Ingestion: 'functions-ingestion.md'
+  #    - Data Ingestion: 'functions-ingestion.md'
       - Data Transformation: 'functions-transformation.md'
 
   - 'Utility Functions':
-      - Overview: 'utils--overview.md'
+  #    - Overview: 'utils--overview.md'
       - JSON: 'utils-json.md'
 
   - 'Reference':
