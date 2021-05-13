@@ -6,8 +6,7 @@ These functions can be used to get well-structured responses which are designed 
 
 
 ### `json.get_node_schema`
-
-
+TBC
 
 ## Low-level Utility Functions
 These functions form the building blocks of higher-level `txflowutil` and `txflow` functions, and are not intended to be called directly by users.  Responses may require restructuring and/or cleaning to render them useable or intelligible. 
@@ -19,7 +18,7 @@ Takes a JSON object or array string as an input and outputs the schema as a JSON
 Takes an array of JSON objects or array strings as an input and outputs the schema as a JSON string.
 
 ### `json.flatten_object`
-Takes a JSON string as an input and 
+Takes a JSON string as an input and flattens all nodes into a single column.
 
 
 
