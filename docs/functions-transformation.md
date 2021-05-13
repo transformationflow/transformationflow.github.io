@@ -1,4 +1,40 @@
 # Data Transformation Functions
+These functions form the core of the framework and aim to automate and simplify common data transformation patterns. 
+
+## De-Duplication
+Robust de-duplication is typically executed by leveraging a row hash function, as unique identifiers are not enforced in BigQuery.
+
+### `txflow.transform.remove_duplicates`
+function_group | function_name | function_output | description
+ --- | --- | --- |---
+`transform` | `remove_duplicates` | e.g. VIEW | Creates a view with duplicates removed.  Typically follows addition of a rowhash based on a specified subset of columns (`txflow.prepare.add_rowhash`) 
+
+#### Call Syntax
+``` sql
+CALL txflow.transform.remove_duplicates(
+     'source_ref__STRING', 
+     'destination_ref__STRING', 
+     'partition_by_columns__ARRAY<STRING>', 
+     'order_by_columns_with_optional_sort__ARRAY<STRING>'
+)
+```
+#### Arguments
+argument | datatype | description
+ --- | :-: | ---
+`source_ref` | `STRING` | Input table or view reference 
+`destination_ref` | `STRING` | New view reference
+`partition_by` | `ARRAY <STRING>` | Partition by column(s)
+`order_by_columns_with_optional_sort` | `ARRAY <STRING>` | Sort column(s) with optional ASC/DESC (default ASC if omitted)
+
+#### Example
+``` sql
+CALL txflow.function_group.function_name(
+     'project.dataset.input_table', 
+     'project.dataset.output_table',
+     ['rowhash'], 
+     ['timestamp DESC', 'additional_sort_column ASC']
+)
+```
 
 ## JSON Extraction
 BigQuery can extract data from JSON stored in STRING fields and restructure it into scalar or array columns using [JSON functions in Standard SQL
@@ -16,7 +52,7 @@ function_group | function_name | function_output | description
 Note that the schema used to generate the decoder SQL is detected from a single JSON object.
 
 #### Call Syntax
-```
+``` sql
 CALL txflow.transform.decode_json(
      'source_ref__STRING', 
      'destination_ref__STRING', 
@@ -26,12 +62,11 @@ CALL txflow.transform.decode_json(
 ```
 #### Arguments
 argument | datatype | description
- --- | --- | ---
-`source_ref` | `STRING` | Source table or view
-`destination_ref` | `STRING` | Reference of new output view
+ --- | :-: | ---
+`source_ref` | `STRING` | Source table or view reference 
+`destination_ref` | `STRING` | Reference for new output view
 `json_column` | `STRING` | Column containing JSON string
 `order_by` | `STRING` | 'Order by' column used to determine which object is used for schema detection
-
 
 ## Array Manipulation
 The syntax for working with arrays in BigQuery can be difficult to master (see [Array functions in Standard SQL
@@ -58,7 +93,7 @@ CALL txflow.transform.unnest_array(
 
 #### Arguments
 argument | datatype | description
- --- | --- | ---
+ --- | :-: | ---
 `source_ref` | `STRING` | Source table or view
 `destination_ref` | `STRING` | Reference of new output view
 `unnest_array_column` | `STRING` | Column containing array to be unnested

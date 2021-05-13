@@ -20,9 +20,10 @@ nav:
       # - Data Profiling: 
       #  Ingest: 'reference_functions.md'
   - 'Functions':
-      - Overview: 'functions--overview.md'
+      - Overview: 'functions-overview.md'
   #    - Data Ingestion: 'functions-ingestion.md'
-      - Data Transformation: 'functions-transformation.md'
+      - Prepare: 'functions-preparation.md'
+      - Transform: 'functions-transformation.md'
 
   - 'Utility Functions':
   #    - Overview: 'utils--overview.md'
@@ -34,7 +35,9 @@ nav:
 
 markdown_extensions:
   - admonition
-
+  - pymdownx.highlight
+  - pymdownx.superfences
+  
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
