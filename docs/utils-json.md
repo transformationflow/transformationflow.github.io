@@ -1,4 +1,4 @@
-# JSON Utility Functions (`txflowutils.json`)
+# JSON Utility Functions `(txflowutils.json)`
 These functions extend BigQuery functionality by enabling automatic schema recognition and associated utilities.
 
 ## High Level Utility Functions

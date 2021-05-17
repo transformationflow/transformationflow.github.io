@@ -1,8 +1,6 @@
 # Overview
 
-Functions are primarily a combination of Stored Procedures (also interchangeably referred to as Routines) and SQL User Defined Functions.  
-
-JavaScript User Defined functions are also implemented in some instances, which leverage custom-packaged external libraries to extend core BigQuery functionality.
+Functions are primarily a combination of Stored Procedures and SQL User Defined Functions.  JavaScript User Defined functions are also implemented in some instances, which leverage custom-packaged external libraries to extend core BigQuery functionality.
 
 Functions are grouped into core `txflow` functions (which are intended to be directly called by users), and lower-level `txflowutil` functions, which are the building blocks for the higher-order `txflow` functions.  These can also be composed into custom functions to fit precise use-cases.
 

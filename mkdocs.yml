@@ -27,7 +27,9 @@ nav:
 
   - 'Utility Functions':
   #    - Overview: 'utils--overview.md'
+      - String: 'utils-string.md'
       - JSON: 'utils-json.md'
+      - Data Visualisation: 'utils-dataviz.md'
 
   - 'Reference':
       - Action Codes: 'reference-transformation-codes.md'
