@@ -21,7 +21,7 @@ nav:
       #  Ingest: 'reference_functions.md'
   - 'Functions':
       - Overview: 'functions-overview.md'
-  #    - Data Ingestion: 'functions-ingestion.md'
+      - Data Ingestion: 'functions-ingestion.md'
       - Prepare: 'functions-preparation.md'
       - Transform: 'functions-transformation.md'
 
