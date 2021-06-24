@@ -12,7 +12,7 @@ Functions are grouped into core `txflow` functions which are higher-level functi
 suffix | behaviour | response
 --- | --- | ---
 _`none`_ | Core function | Query stage results in the results window
-`_query` | Generates the SQL query which defines the function | Returns a SQL query string in an OUT argument
+`_sql` | Generates the SQL query which defines the function | Returns a SQL query string in an OUT argument
 `_view` | Creates or replaces view from the SQL string | New or updated view at `destination_view_ref` from the SQL
 `_table` | Creates or replaces table from the SQL string | Creates a new table at `destination_table_ref` from the SQL execution
 `_result` | Returns the query execution result | Returns an array of structs as documented in the function definition
@@ -24,7 +24,7 @@ The precise behaviour is outlined below for the `txflow.profile.column_profile` 
 function_name_suffix | function_name | function_action 
  --- | --- | --- 
 _`none`_ | `column_profile` | Returns the column profile as the final stage in the results window, in addition to previous stages (for inspection or saving/exporting results).
-`_query` | `column_profile_query` | Returns the column profile SQL query as the OUT `final_query_string` parameter.
+`_sql` | `column_profile_sql` | Returns the column profile SQL query as the OUT `final_query_string` STRING parameter.
 `_view` | `column_profile_view` | Builds a view with the column profile at time of creation.  Columns included in the view will be static until re-generated, but data will be dynamic.
 `_table` | `column_profile_table` | Builds a table with the column profile and data at time of creation.  Columns and data included in the table will be static until re-generated.
 `_result` | `column_profile_result` | Returns an array of structs in the OUT `column_profile` argument.
