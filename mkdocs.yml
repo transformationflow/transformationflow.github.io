@@ -7,7 +7,7 @@ theme:
   palette:
     primary: teal
     accent: cyan
-  logo: assets/TxFlow_Geometric_Logo_Icon_white_on_teal_100x100.png
+  logo: assets/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
   favicon: assets/TxFlow_Geometric_Logo_Icon_100x100.png
     
 nav:
@@ -21,18 +21,18 @@ nav:
       #  Ingest: 'reference_functions.md'
   - 'Functions':
       - Overview: 'functions-overview.md'
-      - Data Ingestion: 'functions-ingestion.md'
-      - Prepare: 'functions-preparation.md'
-      - Transform: 'functions-transformation.md'
+      #- Data Ingestion: 'functions-ingestion.md'
+      #- Prepare: 'functions-preparation.md'
+      #- Transform: 'functions-transformation.md'
 
-  - 'Utility Functions':
+  #- 'Utility Functions':
   #    - Overview: 'utils--overview.md'
-      - String: 'utils-string.md'
-      - JSON: 'utils-json.md'
-      - Data Visualisation: 'utils-dataviz.md'
+      #- String: 'utils-string.md'
+      #- JSON: 'utils-json.md'
+      #- Data Visualisation: 'utils-dataviz.md'
 
-  - 'Reference':
-      - Action Codes: 'reference-transformation-codes.md'
+  #- 'Reference':
+      #- Action Codes: 'reference-transformation-codes.md'
     
 
 markdown_extensions:
