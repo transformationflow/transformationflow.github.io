@@ -2,7 +2,7 @@
 
 ## Overview
 ### What is Transformation Flow?
-Transformationflow is a lightweight, opinionated framework for planning, implementing, managing and monitoring in-warehouse data transformations.
+Transformation Flow is a lightweight, opinionated framework for planning, implementing, managing and monitoring in-warehouse data transformations.
 
 ### What is a data transformation
 A data transformation is a sequence of one or more SQL statements which take data as an input and results in data as an output.
