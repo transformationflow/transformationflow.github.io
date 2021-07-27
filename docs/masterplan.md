@@ -2,7 +2,7 @@
 
 ## Overview
 ### What is Transformation Flow?
-Transformationflow is a lightweight, opinionated framework for planning, implementing, managing and monitoring in-warehouse data transformations.
+Transformation Flow is a lightweight, opinionated framework for planning, implementing, managing and monitoring in-warehouse data transformations.
 
 ### Why do you need to transform data?
 
@@ -16,9 +16,16 @@ By considering each transformation flow stage as the minimum modular, sequential
 ### Simplicity
 
 ### What problem does it solve?
+
+
 ### Why SQL?
 SQL is the de-facto language of choice for data engineers, data analysts and data scientists.  It is far from a perfect language, however many of the objections commonly leveled at the language can be mitigated by leveraging scripting and encapsulating logic into 
  
+SQL is the common language for anybody who works with data. It is an extremely powerful if imperfect language, and its capability and widespread adoption makes it the default choice for any data transformation application.
+
+### SQL shortcomings
+However SQL is not perfect. It can be extremely verbose, which makes it difficult to write code without manually copy-pasting sections and requiring manual human update of references. This unwelcome introduction of human interference is a potential source of errors, which can then be difficult to detect in the resulting code.
+
 ### The Zen of SQL
 ### Where does it fit into the modern analytics stack?
 
