@@ -12,15 +12,12 @@ theme:
     
 nav:
   - Welcome: 'index.md'
-  # - About Us: 'about-us.md'
-  #- 'Flow Stages':
-  #    - Data Ingestion: 'stages-ingestion.md'
-  #    - Data Profiling: 'stages-profiling.md'
-  #    - Data Transformation: 'stages-transformation.md'
-      # - Data Profiling: 
-      #  Ingest: 'reference_functions.md'
-  - 'Functions':
-      - Overview: 'functions-overview.md'
+  - Overview: 'overview-all.md'
+  # - 'Components':
+  - Methodology: 'overview-methodology.md'
+  - Functions: 'overview-functions.md'
+  - Console: 'overview-console.md'
+
       #- Data Ingestion: 'functions-ingestion.md'
       #- Prepare: 'functions-preparation.md'
       #- Transform: 'functions-transformation.md'
