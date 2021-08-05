@@ -7,12 +7,14 @@ Just as there is no single way to write SQL code, there is no single way to thin
 The dividing line between these two activities is one which is frequently blurred, and one which it is critical to understand when planning data transformations.  Depending on the scale and type of data that you are processing, the deployment aproach will vary massively in order to manage performance and cost.  
 
 ### Logical Flow
-The logical data transformation ...
+In its purest form, The logical data transformation ...
 
 
 
 ### Deployment
+Scheduled Queries
 
+DBT/Dataform, 
 
 
 
