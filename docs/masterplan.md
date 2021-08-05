@@ -23,22 +23,36 @@ The guiding principles, structure and methodology are detailed in [link to overv
 This methodology is supported by a set of functions to enable abstraction to an appropriate level for human interaction.  The approach here is to abstract individual transformation objectives where the SQL implementation would be either:
 
 - **Predictable but verbose:**
-    - If a user needs to apply _the same_ data transformation to a number of different columns, SQL requires the user to explicitly identify each column by name and repeat the transformation code for each column, potentially introducing human error.  Transformation Flow functions enable the user to pass an explicit list of column names to a specific function and have the verbose SQL generated immediately and perfectly.
+    - If a user needs to - for example - apply _the same_ data transformation to a number of different columns, SQL requires the user to explicitly identify each column by name and repeat the transformation code for each column, potentially introducing human error if the manual repetition is not completed _perfectly_.  Transformation Flow functions enable the user to pass an explicit list of column names to a specific function and have the verbose SQL generated immediately and perfectly.
+
 - **Explicit instead of implicit:**
-    - Transformation Flow functions are sequential and composable by design.  This means that it is trivial to  apply a transformation to a number of different columns where the column_name adheres to a specific pattern (e.g. every column suffixed with `_lifetime`).  In this case the user can call a Transformation Flow function which outputs a list of matching column names, and pass this list as a variable to the subsequent data transformation flow stage.
+    - Transformation Flow functions are sequential and composable by design.  This means that it is trivial to apply a transformation to a number of different columns where the column_name adheres to a specific pattern (e.g. every column suffixed with `_lifetime`).  In this case the user can call a Transformation Flow function which outputs a list of matching column names, and pass this list as a variable to the subsequent data transformation flow stage.
+
 - **A predictable, multi-step process**
     - Functions are also composable into objective-focused groupings, which can output a sequence of common table expressions instead of a single expression.  This means that a user can call a function with the objective of e.g. "filter for the final row on each `ingest_date` for each `id`", and the Transformation Flow function will build sequential common table expressions to:
         - Add a `row_number` column to each row, partitioned by `ingest_date` and `id`, ordered by most recent `ingest_date` (i.e. descending)
         - Filter for `row_number` = 1 (most recent row per day)
         - Column filter to remove the `row_number`
 
+[move to examples]
+
 Functions are built to leverage core BigQuery functions, while simplifying interaction without (where possible) limiting options.
 
 #### Transformation Flow Console
-Whilst functions are the foundational building blocks of any data transformation, limitations of the implementation of routines (i.e. lack of autocomplete for custom routines, no support for keyword arguments or default argument values) in BigQuery can still make development slow.  For this reason we have developed the Transformation Flow Console, which performs a number of higher-level functions and gives the user next-level capabilities in profiling data, rapidly building and testing transformation flows and monitoring data flows across the entire BigQuery project.  The console is organised in the following structure:
+Whilst functions are the foundational building blocks of any data transformation, limitations in the implementation of routines in BigQuery (i.e. lack of autocomplete for custom routines, no support for keyword arguments or default argument values) can still make development slower than is desirable.  For this reason we have developed the Transformation Flow Console, which performs a number of higher-level functions and gives the user some extremely useful capabilities in profiling data, rapidly building and testing transformation flows and setting up the infrastructure to monitor data flows across the entire BigQuery project.  
+
+Although all of the data transformation functions are defined in SQL within the `txflow` BigQuery project, building a User Interface enables us to benefit from some more advanced profiling and visualisation tools. This enables the developer to stay within a single tool and minimised time lost due to context switching and distraction.
+
+The console is organised in the following structure:
+
+##### Transformation Flow Builder
+
+
+
 
 ##### Data Profiling
 There are a number of critical elements to profiling data, which enable data engineers, analytics engineers, analysts and scientists to better understand both the underlying data, the relationships between different views and tables, and the way data changes through each Transformration Flow.
+
 ###### Single Table/View Column-level Profiling
 ###### Table and View Relationships
 ###### Data Transformation Flows
