@@ -3,7 +3,7 @@
 ## Introduction
 Just as there is no single way to write SQL code, there is no single way to think about and write data transformations.  However there are some guiding principles which support development of transformations which are clean, readable, and are as simple to maintain, monitor and update as possible.
 
-## Logical Definition vs. Deployment
+## Transformation Logical Definition vs. Deployment
 The dividing line between these two activities is one which is frequently blurred, and one which it is critical to understand when planning data transformations.  
 
 In its essence, the logical definition of a data transformation is the abstract sequence of actions through which each row of ingested data needs to be transformed, and the deployment approach is how this is practically implemented.
