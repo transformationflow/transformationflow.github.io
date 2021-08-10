@@ -1,12 +1,12 @@
 # Transformation Flow Functions
 
-A metholodology and framework is a great starting point, but in order to move from theory to practice we need the practical function set which empowers SQL developers to start realising the benefits of this framework.  These functions are all open-source and readily available to any authenticated BigQuery user in the public `txflow` project[^1].
+A metholodology and framework is a great starting point, but in order to move from theory to practice we need the practical function set which empowers SQL developers to start realising the benefits of this framework.  These functions are all open-source and readily available to any authenticated BigQuery user in the public `txflow` and `txflowutils` projects[^1].
 
 ## `txflow` functions
 The functions are organised into function sets around the different phases in a data pipeline:
 
-function_set | function_set_ref | function_set_description
---- | --- | :-- 
+dataset | dataset_ref | function_set_description
+--- | :-- | :-- 
 `ingest` | `txflow.ingest` | Functions which support setup of data ingestion points into BigQuery
 `profile` | `txflow.profile` | Functions which support profiling of data at every point in the transformation flow
 `transform` | `txflow.transform` | Core functions which support all forms of data transformation actions

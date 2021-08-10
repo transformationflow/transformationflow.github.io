@@ -1,3 +1,7 @@
+---
+hide:
+  - navigation
+---
 # Transformation Flow
 ## What is Transformation Flow?
 ---

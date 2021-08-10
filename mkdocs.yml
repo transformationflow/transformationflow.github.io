@@ -16,7 +16,7 @@ theme:
     
 nav:
   - Welcome: 'index.md'
-  - Overview: 'overview-all.md'
+  #- Overview: 'overview-all.md'
   - 'Methodology':
     - The Zen of SQL: 'the-zen-of-sql.md' 
   #  - Overview: 'overview-methodology.md'
@@ -42,7 +42,8 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - footnotes
-  
+  - meta
+
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js

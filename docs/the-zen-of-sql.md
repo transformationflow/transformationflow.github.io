@@ -1,7 +1,11 @@
+---
+hide:
+  - navigation
+---
 # The Zen of SQL
 Inspired by the Python equivalent ([PEP20](https://www.python.org/dev/peps/pep-0020/) - The Zen of Python), and also using it as a starting point, the TF-SQL10[^1] are the core guiding principles which are central to writing clean, clear, well-structured and easy to maintain data transformations in SQL:
 
-## TF-SQL10: Transformation Flow - SQL 10 Commandments
+## TF-SQL10: SQL 10 Commandments
 > - Readability counts.
 > - Explicit is better than implicit.
 > - Simple is better than complex.
