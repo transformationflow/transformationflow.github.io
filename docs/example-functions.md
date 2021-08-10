@@ -1,4 +1,4 @@
-# How-to Guide
+# Transformation Flow Functions Guid
 
 ## SQL Blocks Variable
 The first thing you need to do when building a transformation flow is declaring the sql_blocks variable which will hold each transformation block name, sql code and dependencies.  This is an ARRAY of STRUCTs, with each STRUCT composed of the following elements:
