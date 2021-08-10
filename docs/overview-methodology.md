@@ -1,10 +1,27 @@
 # Transformation Flow Methodology
 
 ## Introduction
-Just as there is no single way to write SQL code, there is no single way to think about and execute data transformations.  However there are some guiding principles which support development of transformations which are clean, readable, and are as simple to maintain, monitor and update as possible.
+Just as there is no single way to write SQL code, there is no single way to think about and write data transformations.  However there are some guiding principles which support development of transformations which are clean, readable, and are as simple to maintain, monitor and update as possible.
 
-## Logical Flow vs. Deployment
-The dividing line between these two activities is one which is frequently blurred, and one which it is critical to understand when planning data transformations.  Depending on the scale and type of data that you are processing, the deployment aproach will vary massively in order to manage performance and cost.  
+## Logical Definition vs. Deployment
+The dividing line between these two activities is one which is frequently blurred, and one which it is critical to understand when planning data transformations.  
+
+In its essence, the logical definition of a data transformation is the abstract sequence of actions through which each row of ingested data needs to be transformed, and the deployment approach is how this is practically implemented.
+
+Consider two end-to-end data pipelines with _exactly_ the same data transformation requirements.
+
+
+
+
+
+
+Just as the decoupling of storage and compute in modern cloud data warehouses has 
+
+
+
+
+
+Depending on the scale and type of data that you are processing, the deployment aproach will vary massively in order to manage performance and cost.  
 
 ### Logical Flow
 In its purest form, The logical data transformation ...
@@ -59,17 +76,6 @@ Since Transformation Flow functions automate generation of more verbose or compl
 However, in reality there are times when the SQL developer needs to use his or her judgement in how to structure and format code.  In some circumstances it might be clearer to put a `CASE` statement on multiple lines, but in other cases a single line could result in more readable code.
 
 So, in homage to the Zen of Python, we propose a subset of these guidelines to outline our approach to SQL.  Futher discussion of each of these points, along with some guidance around interpretation is included in the [link] section.
-
-### The Zen of SQL
-- Readability counts.
-- Explicit is better than implicit.
-- Simple is better than complex.
-- Complex is better than complicated.
-- Flat is better than nested.
-- Errors should never pass silently.
-- Unless explicitly silenced.
-- Predictable is better than flexible.
-- Modular is better than monolithic.
 
 ### Start with the data
 

@@ -2,7 +2,7 @@
 
 ## Overview
 ### What is Transformation Flow?
-Transformation Flow is a lightweight, opinionated framework for planning, implementing, managing and monitoring in-warehouse data transformations.  There are three key components:
+Transformation Flow is a lightweight, open-source, opinionated framework for planning, implementing, managing and monitoring in-warehouse data transformations.  There are three key components:
 
 #### Transformation Flow Methodology
 This is the overarching approach to designing data transformations.  This is a set of guidelines and a framework for thinking about the structure and characteristics of data in order to build transformations which achieve their specific objectives.  This methodology has been refined over decades of working in the evolving data environment, and is aligned to the modern data analytics stack and ways of thinking.
@@ -10,13 +10,13 @@ This is the overarching approach to designing data transformations.  This is a s
 The guiding principles, structure and methodology are detailed in [link to overview-methodology], but it is essentially arranged around the following core principals:
 
 ---
-!!! tldr "Transformation Flow Core Principle #1"
-    Transformation Flows are composed of one or more individual transformation stages, with each stage aiming to achieve one and only one specifc transformation action to the input data.  These flow stages are then composed into sequences of logical steps, so at every point the data shape and structure can be checked, tested and monitored via manual or automated methods.
+!!! tldr "Transformation Flow Core Principle #1: Composability"
+    Transformation Flows are composed of one or more individual transformation stages, with each stage aiming to achieve one and only one specifc transformation action to the input data.  These flow stages are then composed into sequences of logical steps, so at every point the data shape and structure can be checked, visualised, tested and monitored via manual or automated methods.
 ---
 
 ---
-!!! tldr "Transformation Flow Core Principle #2"
-    Humans are great at abstract thought and introducing unpredictable errors into anything they touch.  Every copy/paste or find/replace represents another potential source of human error which should be avoided at all costs. 
+!!! tldr "Transformation Flow Core Principle #2: Appropriate Human Input"
+    Humans are great at abstract thought and introducing unpredictable errors into anything they touch.  Every copy/paste or find/replace represents another potential source of human error which should be avoided at all costs.
 ---
 
 #### Transformation Flow Functions
