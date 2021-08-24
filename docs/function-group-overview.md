@@ -8,7 +8,7 @@ These groups are either aligned to the sequential stages in a typical data pipel
 ## Function Groups
 
 | schema_name | schema_ref | schema_description |
-|-----|-----|-----|
+|---|---|---|
 | ingest | txflow.ingest | Functions which support setup of data ingestion points into BigQuery. |
 | profile | txflow.profile | Functions which support profiling of data at every point in the transformation flow. |
 | transform | txflow.transform | Transform functions (`txflow.transform`) form the core of the Transformation Flow framework. They automate and simplify common data transformation patterns and can be used to either generate SQL code for a single transformation stage (for inspection, execution or view creation) or composed into a sequential flow to build more complex multi-stage transformations. |
