@@ -1,8 +1,13 @@
+# txflow.transform
+## Description
+Transform functions (`txflow.transform`) form the core of the Transformation Flow framework. They automate and simplify common data transformation patterns and can be used to either generate SQL code for a single transformation stage (for inspection, execution or view creation) or composed into a sequential flow to build more complex multi-stage transformations.
 
-# Data Transformation Functions
-These functions form the core of the framework and aim to automate and simplify common data transformation patterns.
+## Functions
 
-## Function group: profile | Function name: get_data_type_profile
+
+
+
+
 Description of the function group: profile and function name: get_data_type_profile
 
 ### `txflow.profile.get_data_type_profile`
