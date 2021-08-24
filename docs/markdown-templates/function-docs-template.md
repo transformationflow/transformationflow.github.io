@@ -1,0 +1,16 @@
+# --[FUNCTION_GROUP_NAME]--
+## Description
+
+--[FUNCTION_GROUP_DESCRIPTION]--
+
+## Functions
+
+### --[FUNCTION_NAME]--
+--[FUNCTION_DESCRIPTION]--
+
+--[FUNCTION_INPUTS]--
+
+--[FUNCTION_OUTPUTS]
+
+--[FUNCTION_CALL_SYNTAX]            
+
