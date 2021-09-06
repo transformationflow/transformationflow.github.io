@@ -1,4 +1,5 @@
 site_name: Transformation Flow
+repo_url: https://github.com/transformationflow/txflow
 
 theme:
   name: material
@@ -12,30 +13,18 @@ theme:
   features:
     - navigation.tracking
     - navigation.tabs
-    - navigation.top    
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/git-alt    
     
 nav:
-  - Welcome: 'index.md'
+  - Overview: 'index.md'
   #- Overview: 'overview-all.md'
-  - 'Methodology':
-    - The Zen of SQL: 'the-zen-of-sql.md' 
-  #  - Overview: 'overview-methodology.md'
-  #- Functions: 'overview-functions.md'
-  #- Console: 'overview-console.md'
-
-      #- Data Ingestion: 'functions-ingestion.md'
-      #- Prepare: 'functions-preparation.md'
-      #- Transform: 'functions-transformation.md'
-
-  #- 'Utility Functions':
-  #    - Overview: 'utils--overview.md'
-      #- String: 'utils-string.md'
-      #- JSON: 'utils-json.md'
-      #- Data Visualisation: 'utils-dataviz.md'
-
-  #- 'Reference':
-      #- Action Codes: 'reference-transformation-codes.md'
-    
+  #- 'Approach':
+  - Philosophy: 'the-zen-of-sql.md' 
+  - Functions: 'overview-functions.md'
+  #- 
+  #  - Overview: 'overview-methodology.md'    
 
 markdown_extensions:
   - admonition

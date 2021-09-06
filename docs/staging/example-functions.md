@@ -7,7 +7,7 @@ The first thing you need to do when building a transformation flow is declaring 
 1. **sql_block.code** `STRING`: SQL code to execute the transformation.  Note that this block can reference external tables and/or sql_blocks which occur above this block.
 1. **sql_block.dependencies** `ARRAY<STRING>`: references to external tables and/or sql_blocks.
 
-THe standard code required to iniitalise a transformation flow is therefore:
+THe standard code required to initialise a transformation flow is therefore:
 
 ```
 DECLARE sql_blocks ARRAY<STRUCT<name STRING, code STRING, dependencies ARRAY<STRING>>>
