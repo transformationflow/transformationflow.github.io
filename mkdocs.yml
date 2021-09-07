@@ -1,5 +1,5 @@
 site_name: Transformation Flow
-repo_url: https://github.com/transformationflow/txflow
+# repo_url: https://github.com/transformationflow/txflow
 
 theme:
   name: material
@@ -10,21 +10,20 @@ theme:
     accent: cyan
   logo: assets/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
   favicon: assets/TxFlow_Geometric_Logo_Icon_100x100.png
+  
+  #icon:
+  #  repo: fontawesome/brands/git-alt  
+  
   features:
     - navigation.tracking
     - navigation.tabs
-    - navigation.top
-  icon:
-    repo: fontawesome/brands/git-alt    
+    - navigation.top  
     
 nav:
   - Overview: 'index.md'
-  #- Overview: 'overview-all.md'
-  #- 'Approach':
   - Philosophy: 'the-zen-of-sql.md' 
   - Functions: 'overview-functions.md'
-  #- 
-  #  - Overview: 'overview-methodology.md'    
+  # - Getting Started: 'getting-started.md'
 
 markdown_extensions:
   - admonition
@@ -34,9 +33,17 @@ markdown_extensions:
   - meta
   - toc:
       baselevel: 2
-      
+
+extra:
+  analytics:
+    provider: google
+    property: G-P2ZCF8ZKFD
+
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
+
+plugins:
+  - git-revision-date
 
 copyright: Copyright &copy; 2021 Transformationflow OÜ (16248096), Estonia
