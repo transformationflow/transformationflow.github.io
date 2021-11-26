@@ -1,5 +1,7 @@
+
+
 # Getting Started
-Starting to build data transformations using `txflow` does not require any signup or installation, and will work for any authenticated BigQuery user.  This walkthrough will show you how to get up and running in a matter of minutes.  
+Starting to build data transformations using `flowfunctions` does not require any signup or installation, and will work for any authenticated BigQuery user.  This walkthrough will show you how to get up and running in a matter of minutes.  
 
 ## Initialisation (`transform.begin`)
 To begin a transformation flow, the first step is to declare the `sql_blocks` array variable which will contain all of the transformation flow stages.  The simplest way of doing this is to generate the boilerplate code by running the following command in the Query editor:
