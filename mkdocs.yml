@@ -17,12 +17,15 @@ theme:
   features:
     - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top  
     
 nav:
   - Overview: 'index.md'
   - Philosophy: 'the-zen-of-sql.md' 
-  - Functions: 'overview-functions.md'
+  # - How to Write SQL: 'how-to-write-sql.md'
+  # - Workflow: 'workflow.md'
+  # - Functions: 'overview-functions.md'
   # - Getting Started: 'getting-started.md'
 
 markdown_extensions:
@@ -44,6 +47,6 @@ extra_javascript:
   - javascripts/tables.js
 
 plugins:
-  - git-revision-date
+  # - git-revision-date
 
 copyright: Copyright &copy; 2021 Transformationflow OÜ (16248096), Estonia

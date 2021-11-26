@@ -1,5 +1,3 @@
-
-
 # Getting Started
 Starting to build data transformations using `flowfunctions` does not require any signup or installation, and will work for any authenticated BigQuery user.  This walkthrough will show you how to get up and running in a matter of minutes.  
 
