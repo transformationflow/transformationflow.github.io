@@ -9,16 +9,16 @@ hide:
 ---
 
 ## Motivation
-The ability to build data transformations in SQL and have the results immediately available to downstream tools, models and consumers is a modern data superpower, but with great power comes great responsibility.  
+The ability to build data transformations in SQL within a data warehouse and have the results immediately available to downstream tools, models and consumers is a modern data superpower, but with great power comes great responsibility.  
 
 ### Structure
-Unfortunately the responsibility to write clean, clear, well-structured code is often overlooked, especially when the transformations begin life as ad-hoc data explorations.  This means that the resulting flows can quickly grow into complicated interconnected networks of datasets, tables and views, which can be extremely difficult to manage and debug.
+Unfortunately the responsibility to write clean, clear, well-structured code is often overlooked, especially when the transformations begin life as ad-hoc data explorations.  This means that the resulting flows can quickly grow into complicated interconnected networks of datasets, tables and views, which can be extremely difficult to manage, debug and build upon.
 
 ### Simplicity
 The objective of this framework is to enable rapid development of robust data transformations within the data warehouse, wherever you want to write your SQL, without requiring any additional tools or installation. It is designed to help humans convert their data transformation objectives into simple, well-structured code, which is quick to build and deploy, and easy to manage, monitor and debug.
 
 ## Benefits
-Aside from the obvious benefits of rapid, clear, readable, maintainable code, using this approach reduces the amount of code written by humans significantly, aims to eliminate potential copy-paste errors and ensures that the resulting code is structured to be easier to manage in the future.  It also helps with step-by-step testing to ensure that the data transformation flow stages work as expected, with the aim of preventing 'needle in a haystack-sized[^2] mound of dirty spaghetti' debugging endeavours.
+Aside from the obvious benefits of rapid, clear, readable, consistent and maintainable code, using this approach ensures that the resulting code is structured consistently and benefits from standardised helper and profiling code from the start.  It helps with step-by-step testing to ensure that the data transformation flow stages work as expected, with the aim of preventing 'needle in a haystack-sized[^2] mound of dirty spaghetti' debugging endeavours.
 
 ### Functions
 Common patterns are abstracted into powerful functions to transform human intent into sometimes verbose SQL structures.  By leveraging the information schema[^1], user defined functions (UDF) and scripting capabilities, these new functions enable dynamic development of patterns which would typically require hard-coding of column-names into human-error-prone structures such as long case statements or column name string concatenations.
@@ -38,17 +38,14 @@ The code base is open source, with the source function code (including arguments
 ## Alternatives
 This framework was born because the alternatives did not meet the requirements for our specific use-cases, where implementation of additional external tools would have added unneccesary complexity to a data transformation process which is completely manageable in pure SQL (plus additional innovstions in scripting, functions, and Data Definition Language).
 
-### Modern Tools
 For more complex situations where hundreds or thousands of interdependant transformations need to be developed, deployed, orchestrated and managed, or collaboration is required across a large number of people or teams, then it might make more sense to use an external tool.
 
-#### DBT
-[DBT](https://www.getdbt.com/) is the industry standard tool for data transformation, leveraging Jinja templating inside SQL to enable analytics engineers to model data and deploy/manage data transformations.  It is written in Python.
+### dbt
+[dbt](https://www.getdbt.com/) is the industry standard tool for data transformation, leveraging Jinja templating inside SQL to enable analytics engineers to model data and deploy/manage data transformations.  It is written in Python.
 
-#### Dataform
+### Dataform
 [Dataform](https://dataform.co/) is a BigQuery-specific platform for transformation collaboration, using Javascript and SQLX (a templated SQL variant).
 
-### Legacy Tools
-There are also a number of legacy tools in this space, however they are typically tailored towards the enterprise and come with complex sales processes and high licence fees.  
 
 [^1]: the various [INFORMATION_SCHEMA](https://cloud.google.com/bigquery/docs/information-schema-intro) views contain metadata about datasets, columns, tables, views and other assets
 [^2]: in this context 'haystack-sized' is of course completely subjective, however in the data world I will spuriously define this as multi-gigabyte

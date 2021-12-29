@@ -1,0 +1,99 @@
+{
+  "main": {
+    "id": "bd9e47f6638713f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c5d4e8c1f0df2cc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "the-zen-of-sql.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "df72dafb5e3ef45b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8061e0f8f5cbdcdc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e3e69236b84683fa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "11d60fbbed5c2800",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f5481a814a5efb1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "3bab99531627252d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb2008e4304f774b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "the-zen-of-sql.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1c5d4e8c1f0df2cc",
+  "lastOpenFiles": [
+    "the-zen-of-sql.md",
+    "context.md",
+    "index.md",
+    "architecture.md",
+    "framework.md",
+    "definitions.md"
+  ]
+}

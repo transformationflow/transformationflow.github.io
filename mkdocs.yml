@@ -23,6 +23,8 @@ theme:
 nav:
   - Overview: 'index.md'
   - Philosophy: 'the-zen-of-sql.md' 
+  - Context: 'context.md'
+  # - Framework: 'framework.md'
   # - How to Write SQL: 'how-to-write-sql.md'
   # - Workflow: 'workflow.md'
   # - Functions: 'overview-functions.md'
