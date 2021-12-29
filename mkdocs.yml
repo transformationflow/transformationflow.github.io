@@ -24,6 +24,7 @@ nav:
   - Overview: 'index.md'
   - Philosophy: 'the-zen-of-sql.md' 
   - Context: 'context.md'
+  - Quickstart: 'quickstart.md'
   # - Framework: 'framework.md'
   # - How to Write SQL: 'how-to-write-sql.md'
   # - Workflow: 'workflow.md'
