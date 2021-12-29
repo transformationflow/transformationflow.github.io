@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "the-zen-of-sql.md",
+            "file": "architecture.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "the-zen-of-sql.md",
+                "file": "architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,10 +89,10 @@
   },
   "active": "1c5d4e8c1f0df2cc",
   "lastOpenFiles": [
-    "the-zen-of-sql.md",
-    "context.md",
-    "index.md",
     "architecture.md",
+    "context.md",
+    "the-zen-of-sql.md",
+    "index.md",
     "framework.md",
     "definitions.md"
   ]

@@ -3,16 +3,21 @@ hide:
   - navigation
 ---
 # Life, the Universe and Everything
-Before diving into the specific details of implementation and code structure, it is important to understand the intellectual context within which we are operating.  Data is defined in the [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/data) as:
+Before diving into the specific details of implementation and code structure, it is important to understand the intellectual context within which we are operating.  A dictionary definition is always a good place to start, and according to the [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/data):
 
+> ## definition: **data**
+> 
 > noun [ U, + sing/pl verb ]
 >
-> UK /ˈdeɪ.tə/
-> US /ˈdeɪ.t̬ə, dæt̬.ə/
+> UK /ˈdeɪ.tə/ [pronounced "day-ter"]
+> 
+> US /ˈdeɪ.t̬ə, dæt̬.ə/ [pronounced "dar-ter"]
 >
 > information, especially facts or numbers, collected to be examined and considered and used to help decision-making, or information in an electronic form that can be stored and used by a computer
 
-This is good place to start, however an oversimplification for our purposes. 
+This might be good place to start, however it is at once an oversimplification and unnecesarily prescriptive for our purposes. For a more detailed exploration we will start from a different place.  
+
+We will also consistently consider "data" to be a singular noun, which you can pronounce however you like. 
 
 ## The Universe
 Let's start with the universe.
@@ -61,9 +66,9 @@ Modern machine learning systems are often designed to cut straight to the action
 ## Metadata
 The word metadata is often misused, so it is important to clearly define at this point too: metadata is data which describes characteristics of data, for example a timestamp of when the data was collected, or the type of data in each structure.
 
-The term should not be used to refer to data related to an entity, state or event.
+The term should not be used to refer to data related to an entity, state or event.  Metadata contains information about the context,  location, structure and lineage of data, but not its content.
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiJSV7aW5pdDogeydmbG93Y2hhcnQnOnsgJ2RpYWdyYW1QYWRkaW5nJzogMjB9LCAndGhlbWUnOiAnbmV1dHJhbCcsICd0aGVtZVZhcmlhYmxlcyc6IHsnZm9udFNpemUnOiAnMTVweCcsICdmb250RmFtaWx5JzogJ21vbm9zcGFjZSd9fX0lJVxuXG5mbG93Y2hhcnQgVEJcbnN1YmdyYXBoIHVuaXZlcnNlW1wiVGhlIFVuaXZlcnNlXCJdXG5lbnRpdGllcyhbXCJlbnRpdGllc1wiXSkgLS0-fHJlbGF0ZSB0b3wgZW50aXRpZXNcbmVudGl0aWVzIC0tPiB8XCJoYXZlXCJ8IHN0YXRlKFtcInN0YXRlXCJdKVxuZW50aXRpZXMgLS0-IHxcImV4cGVyaWVuY2VcInwgZXZlbnRzKFtcImV2ZW50c1wiXSlcbmVuZFxuXG5pbmZvcm1hdGlvbihbXCJpbmZvcm1hdGlvblwiXSkgLS0-IHxcInJlcHJlc2VudHNcInwgdW5pdmVyc2VcblxuZGF0YShbXCJkYXRhXCJdKSAtLT4gfFwic3RvcmVzXCJ8IGluZm9ybWF0aW9uXG5tZXRhZGF0YShbXCJtZXRhZGF0YVwiXSkgLS0-IHxcImRlc2NyaWJlc1wifCBkYXRhIiwibWVybWFpZCI6eyJ0aGVtZSI6ImJhc2UifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiJSV7aW5pdDogeydmbG93Y2hhcnQnOnsgJ2RpYWdyYW1QYWRkaW5nJzogMjB9LCAndGhlbWUnOiAnbmV1dHJhbCcsICd0aGVtZVZhcmlhYmxlcyc6IHsnZm9udFNpemUnOiAnMTVweCcsICdmb250RmFtaWx5JzogJ21vbm9zcGFjZSd9fX0lJVxuXG5mbG93Y2hhcnQgVEJcbnN1YmdyYXBoIHVuaXZlcnNlW1wiVGhlIFVuaXZlcnNlXCJdXG5lbnRpdGllcyhbXCJlbnRpdGllc1wiXSkgLS0-fHJlbGF0ZSB0b3wgZW50aXRpZXNcbmVudGl0aWVzIC0tPiB8XCJoYXZlXCJ8IHN0YXRlKFtcInN0YXRlXCJdKVxuZW50aXRpZXMgLS0-IHxcImV4cGVyaWVuY2VcInwgZXZlbnRzKFtcImV2ZW50c1wiXSlcbmVuZFxuXG5pbmZvcm1hdGlvbihbXCJpbmZvcm1hdGlvblwiXSkgLS0-IHxcInJlcHJlc2VudHNcInwgdW5pdmVyc2VcblxuZGF0YShbXCJkYXRhXCJdKSAtLT4gfFwic3RvcmVzXCJ8IGluZm9ybWF0aW9uXG5tZXRhZGF0YShbXCJtZXRhZGF0YVwiXSkgLS0-IHxcImRlc2NyaWJlc1wifCBkYXRhIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImJhc2VcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiJSV7aW5pdDogeydmbG93Y2hhcnQnOnsgJ2RpYWdyYW1QYWRkaW5nJzogMjB9LCAndGhlbWUnOiAnbmV1dHJhbCcsICd0aGVtZVZhcmlhYmxlcyc6IHsnZm9udFNpemUnOiAnMTVweCcsICdmb250RmFtaWx5JzogJ21vbm9zcGFjZSd9fX0lJVxuXG5mbG93Y2hhcnQgVEJcbnN1YmdyYXBoIHVuaXZlcnNlW1wiVGhlIFVuaXZlcnNlXCJdXG5lbnRpdGllcyhbXCJlbnRpdGllc1wiXSkgLS0-fHJlbGF0ZSB0b3wgZW50aXRpZXNcbmVudGl0aWVzIC0tPiB8XCJoYXZlXCJ8IHN0YXRlKFtcInN0YXRlXCJdKVxuZW50aXRpZXMgLS0-IHxcImV4cGVyaWVuY2VcInwgZXZlbnRzKFtcImV2ZW50c1wiXSlcbmVuZFxuXG5pbmZvcm1hdGlvbihbXCJpbmZvcm1hdGlvblwiXSkgLS0-IHxcInJlcHJlc2VudHNcInwgdW5pdmVyc2VcbmRhdGEoW1wiZGF0YVwiXSkgLS0-IHxcInN0b3Jlc1wifCBpbmZvcm1hdGlvblxubWV0YWRhdGEoW1wibWV0YWRhdGFcIl0pIC0tPiB8XCJkZXNjcmliZXNcInwgZGF0YSIsIm1lcm1haWQiOnsidGhlbWUiOiJiYXNlIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiJSV7aW5pdDogeydmbG93Y2hhcnQnOnsgJ2RpYWdyYW1QYWRkaW5nJzogMjB9LCAndGhlbWUnOiAnbmV1dHJhbCcsICd0aGVtZVZhcmlhYmxlcyc6IHsnZm9udFNpemUnOiAnMTVweCcsICdmb250RmFtaWx5JzogJ21vbm9zcGFjZSd9fX0lJVxuXG5mbG93Y2hhcnQgVEJcbnN1YmdyYXBoIHVuaXZlcnNlW1wiVGhlIFVuaXZlcnNlXCJdXG5lbnRpdGllcyhbXCJlbnRpdGllc1wiXSkgLS0-fHJlbGF0ZSB0b3wgZW50aXRpZXNcbmVudGl0aWVzIC0tPiB8XCJoYXZlXCJ8IHN0YXRlKFtcInN0YXRlXCJdKVxuZW50aXRpZXMgLS0-IHxcImV4cGVyaWVuY2VcInwgZXZlbnRzKFtcImV2ZW50c1wiXSlcbmVuZFxuXG5pbmZvcm1hdGlvbihbXCJpbmZvcm1hdGlvblwiXSkgLS0-IHxcInJlcHJlc2VudHNcInwgdW5pdmVyc2VcbmRhdGEoW1wiZGF0YVwiXSkgLS0-IHxcInN0b3Jlc1wifCBpbmZvcm1hdGlvblxubWV0YWRhdGEoW1wibWV0YWRhdGFcIl0pIC0tPiB8XCJkZXNjcmliZXNcInwgZGF0YSIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJiYXNlXCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
 
 Now this intellectual context is clearly defined, we can dive into the detail of how to *think about* data specifically, and how data transformation is such a critical step in the process of extracting meaning from the universe.
 
