@@ -20,6 +20,15 @@ The objective of this framework is to enable rapid development of robust data tr
 ## Benefits
 Aside from the obvious benefits of rapid, clear, readable, consistent and maintainable code, using this approach ensures that the resulting code is structured consistently and benefits from standardised helper and profiling code from the start.  It helps with step-by-step testing to ensure that the data transformation flow stages work as expected, with the aim of preventing 'needle in a haystack-sizedmound of dirty spaghetti code' debugging endeavours.
 
+### Conventions
+Clear definition of the overall approach, target structure and naming conventions is a simple but extremely powerful starting point to start building consistency and robustness to data transformation flows. 
+
+### Process
+Simply ensuring that any data transformation activities begin with a plan of desired stages and outcomes is a remarkably simple yet powerful aspect of any creative framework.  This basic (non-concrete) plan then build the code outline for the transformation flow.
+
+### Outlines
+Simple outline builder functions enable code structure outlines to be quickly generated, along with supporting helper functions to data transformation profiling and debugging within the SQL development workflow.
+
 ### Functions
 Common patterns are abstracted into powerful functions to transform human intent into sometimes verbose SQL structures.  By leveraging the information schema[^1], user defined functions (UDF) and scripting capabilities, these new functions enable dynamic development of patterns which would typically require hard-coding of column-names into human-error-prone structures such as long case statements or column name string concatenations.
 
@@ -32,8 +41,11 @@ The framework is intended to simplify and accelerate the workflow for translatin
 ### Workflow Simplification
 Data workflows can be extremely complicated, requiring repeated context switching, multiple systems and large-scale data management, which impacts productivity by limiting the opportunity to get into a flow state for creative problem solving.  By keeping the entire workflow inside one platform and mode of thinking, the objective is to maximise creative productivity.
 
+### Deployment
+Simple deployment patterns are documented and supported with powerful functions to leverage powerful native functionality (e.g. external tables, partitioned & clustered tables and Google Cloud Storage data exports) to enable the end-to-end logical flows to be deployed in a data-efficient manner and to minimise ongoing query costs and maximise performance.
+
 ### Open Source Code
-The code base is open source, with the source function code (including arguments and detailed descriptions) soon to be made available at [transformationflow/flowfunctions](https://github.com/transformationflow/flowfunctions), and currently useable by any authenticated BigQuery user in the public `flowfunctions` project.
+The code base is open source, with the source function code (including arguments and detailed descriptions) soon to be made available at [transformationflow/flowfunctions](https://github.com/transformationflow/flowfunctions).  Access to the `flowfunctions` BigQuery project and functions is currently in private beta, please contact [flowfunctions@transformationflow.io](mailto:flowfunctions@transformationflow.io) for access in your geography.
 
 ## Alternatives
 This framework was born because the alternatives did not meet the requirements for our specific use-cases, where implementation of additional external tools would have added unneccesary complexity to a data transformation process which is completely manageable in pure SQL (plus additional innovstions in scripting, functions, and Data Definition Language).
