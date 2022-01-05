@@ -61,5 +61,4 @@ For more complex situations where hundreds or thousands of interdependant transf
 ### Dataform
 [Dataform](https://dataform.co/) is a BigQuery-specific platform for transformation collaboration, using Javascript and SQLX (a templated SQL variant).
 
-
 [^1]: the various [INFORMATION_SCHEMA](https://cloud.google.com/bigquery/docs/information-schema-intro) views contain metadata about datasets, columns, tables, views and other assets.
