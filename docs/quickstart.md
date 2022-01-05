@@ -5,17 +5,17 @@ hide:
 # Introduction
 This quickstart will introduce you to the small set of `flowfunctions` which will enable you to rapidly build high quality, tested data transformation flows. 
 
-## Build View Outline `(viewbuilder.outline)`
+## Build View Outline `(flowfunctions.build.view)`
 This is the first function you need when commencing the build of *any* data transformation flow or flow stage.
 
 ### Objective
 Build a base outline for a transformation flow stage as a single view, including profiling and helper functions.
 
 ### Syntax
-To create a new flow stage outline, call the `viewbuilder.outline` function from your query editor, using the following syntax and arguments:
+To create a new flow stage outline, call the `flowfunctions.build.view` function from your query editor, using the following syntax and arguments:
 
 ```sql 
-CALL flowfunctions.viewbuilder.outline(
+CALL flowfunctions.build.view(
 destination_view_ref,
 source_ref_array,
 view_step_array

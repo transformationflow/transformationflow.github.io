@@ -18,7 +18,7 @@ Unfortunately the responsibility to write clean, clear, well-structured code is 
 The objective of this framework is to enable rapid development of robust data transformations within the data warehouse, wherever you want to write your SQL, without requiring any additional tools or installation. It is designed to help humans convert their data transformation objectives into simple, well-structured code, which is quick to build and deploy, and easy to manage, monitor and debug.
 
 ## Benefits
-Aside from the obvious benefits of rapid, clear, readable, consistent and maintainable code, using this approach ensures that the resulting code is structured consistently and benefits from standardised helper and profiling code from the start.  It helps with step-by-step testing to ensure that the data transformation flow stages work as expected, with the aim of preventing 'needle in a haystack-sized[^2] mound of dirty spaghetti' debugging endeavours.
+Aside from the obvious benefits of rapid, clear, readable, consistent and maintainable code, using this approach ensures that the resulting code is structured consistently and benefits from standardised helper and profiling code from the start.  It helps with step-by-step testing to ensure that the data transformation flow stages work as expected, with the aim of preventing 'needle in a haystack-sizedmound of dirty spaghetti code' debugging endeavours.
 
 ### Functions
 Common patterns are abstracted into powerful functions to transform human intent into sometimes verbose SQL structures.  By leveraging the information schema[^1], user defined functions (UDF) and scripting capabilities, these new functions enable dynamic development of patterns which would typically require hard-coding of column-names into human-error-prone structures such as long case statements or column name string concatenations.
@@ -47,5 +47,4 @@ For more complex situations where hundreds or thousands of interdependant transf
 [Dataform](https://dataform.co/) is a BigQuery-specific platform for transformation collaboration, using Javascript and SQLX (a templated SQL variant).
 
 
-[^1]: the various [INFORMATION_SCHEMA](https://cloud.google.com/bigquery/docs/information-schema-intro) views contain metadata about datasets, columns, tables, views and other assets
-[^2]: in this context 'haystack-sized' is of course completely subjective, however in the data world I will spuriously define this as multi-gigabyte
+[^1]: the various [INFORMATION_SCHEMA](https://cloud.google.com/bigquery/docs/information-schema-intro) views contain metadata about datasets, columns, tables, views and other assetss

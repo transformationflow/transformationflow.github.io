@@ -25,6 +25,7 @@ nav:
   - Philosophy: 'the-zen-of-sql.md' 
   - Context: 'context.md'
   - Quickstart: 'quickstart.md'
+  - flowfunctions: 'flowfunctions.md'
   # - Framework: 'framework.md'
   # - How to Write SQL: 'how-to-write-sql.md'
   # - Workflow: 'workflow.md'
@@ -44,6 +45,14 @@ extra:
   analytics:
     provider: google
     property: G-P2ZCF8ZKFD
+  social:
+    - icon: fontawesome/brands/medium
+      link: https://jimbeepbeep.medium.com/
+    - icon: fontawesome/brands/github
+      link: https://github.com/jimbeepbeep   
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:jim@transformationflow.io
+
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js

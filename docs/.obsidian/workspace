@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "quickstart.md",
+            "file": "framework.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "quickstart.md",
+                "file": "framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1c5d4e8c1f0df2cc",
   "lastOpenFiles": [
-    "quickstart.md",
     "framework.md",
-    "conventions.md",
-    "architecture.md",
-    "context.md",
+    "index.md",
+    "quickstart.md",
+    "the-zen-of-sql.md",
     "workflow.md",
     "flow.md",
-    "definitions.md",
-    "index.md",
-    "the-zen-of-sql.md"
+    "architecture.md",
+    "context.md",
+    "conventions.md",
+    "definitions.md"
   ]
 }
