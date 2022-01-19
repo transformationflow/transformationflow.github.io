@@ -17,7 +17,7 @@ Before diving into the specific details of implementation and code structure, it
 
 This might be good place to start, however it is at once an oversimplification and unnecesarily prescriptive for our purposes. For a more detailed exploration we will start from a different place.  
 
-We will also consistently consider "data" to be a singular noun, which you can pronounce however you like. 
+We will also consistently consider "data" to be a singular noun, which you are free to pronounce however you like. 
 
 ## The Universe
 Let's start with the universe.
