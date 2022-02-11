@@ -24,6 +24,7 @@ nav:
   - Overview: 'index.md'
   - Philosophy: 'the-zen-of-sql.md' 
   - Context: 'context.md'
+  - Glossary: 'function-glossary.md'
   # - Guides:
   #   - CSV Ingestion: 'csv-ingestion.md'
   #   - Schema Alignment: 'schema-alignment.md'
