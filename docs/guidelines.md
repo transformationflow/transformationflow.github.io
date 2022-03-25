@@ -12,15 +12,13 @@ These guidelines are consistently applied when we build data transformation flow
 - **Capability** extensions from the `flowfunctions` library
 
 ## Naming Conventions
+A Transformation Flow is the end-to-end flow between inbound data and transformed outbound data.  It is a set of inbound tables, followed by some intermediate transformation logic and a set of outbound tables.  The important definitions here are:
 
-=== "Flow Definitions"
-    A data transformation flow is a set of inbound tables, followed by some intermediate transformation logic and a set of outbound tables.  The important definitions here are:
+- **Flow Dataset:** A dataset containing individual stages (connected tables and views)
+- **Flow Stage:** A single table or view in a transformation flow   
+- **Flow Step:** A common table expression within a SQL transformation flow stage
 
-    - **Flow Stage:** A single table or view in a transformation flow   
-    - **Flow Dataset:** A dataset containing a set of tables or views
-    - **Flow Step:** A common table expression within a SQL transformation flow stage
-
-=== "Datasets"
+=== "Flow Datasets"
     A transformation flow name is the shortest description of the flow, which will be used as the base for all related datasets. It might be as short as a single word (e.g. `shopify`) or multiple words sepearated by underscores (e.g. `google_analytics`).
     
     Suffixes are used to group datasets within transformation flows, added to the transformation flow name.  This means that the flow datasets will appear adjacent to each other in the user interface or in any ordered list. The following suffixes are recommended at a minimum:
@@ -35,7 +33,7 @@ These guidelines are consistently applied when we build data transformation flow
     - **`_staging`:** a parallel transformation flow replica for development without impacting an existing live transformation flow
 
 === "Flow Stages"
-    Flow stage names consist of two distinct and important parts, spearated by a single underscore:
+    Flow stage names consist of two distinct and important parts, separated by a single underscore:
 
     - **Flow Stage Index (`flow_stage_index`):** a three-to four digit numerical identifier[^1] (e.g. `201`)
     - **Flow Stage Title (`flow_stage_title`):** a descriptive title of the outcome of the flow stage (e.g. `deduplicate_sessions`)
@@ -44,7 +42,7 @@ These guidelines are consistently applied when we build data transformation flow
 
     The only precise rules for definition of the indices and titles are:
 
-    - The `flow_stage_index` and `flow_stage_title` should be serarated by a single underscore (`_`) as the `flow_stage_index` will be parsed from the name
+    - The `flow_stage_index` and `flow_stage_title` should be separated by a single underscore (`_`) as the `flow_stage_index` will be parsed from the name
     - Flow Stages can only reference other Flow Stages with lower indices (e.g. `201` can reference `107` but not `305`)
     - Flow Stage titles should begin with an active verb where possible, and should be a concise description of the objective/outcome (e.g. `aggregate_to_sessions`, `deduplicate_users`)
 
@@ -118,14 +116,14 @@ The different table types in BigQuery are the building blocks of any transformat
     They also add redundancy and resilience to your data flows as deleting the external table does not delete the underlying data. 
 
 === "External Tables (Google Sheets)" 
-    External tables can also be created from sheets in a Google Sheets workbook, wihch is a powerful mechanism but not without potential pitfalls.  They are very useful as e.g. match tables or for semi-automated QA based on point-in-time data extraction from another non-integrated system.  However some potential challenges are:
+    External tables can also be created from sheets in a Google Sheets workbook, which is a powerful mechanism but not without potential pitfalls.  They are very useful as e.g. match tables or for semi-automated QA based on point-in-time data extraction from another non-integrated system.  However some potential challenges are:
 
     1. Schema Detection does not work when all columns are detected as a string type.  
     2. Downstream users and systems will require federated access to the sheets.
 
     Point 1 can be addressed by adding an incremental integer `row_id` into the sheet and point 2 by creating a related flow stage (with the same `flow_stage_title` but an incremented `flow_stage_index`) as a table.  
 
-    They can also be used as temporary data ingestion points (if an external system ca output to Google Sheets), however this is not recommended as a long-term approach as you can quickly hit row limits and performance challenges.
+    They can also be used as temporary data ingestion points (if an external system can output to Google Sheets), however this is not recommended as a long-term approach as you can quickly hit row limits and performance challenges.
 
 === "Views" 
     Views are the foundational building block of transformation flows and are the mechanism by which all transformation/integration logic is written in pure SQL, as well as the functions in our library `flowfunctions`. 
@@ -143,7 +141,7 @@ The different table types in BigQuery are the building blocks of any transformat
 
 ## Column Naming Convention
 === "Case" 
-    Columns are alway in Camel Case (i.e. lower case, separated by underscores e.g. `video_views` or `media_id`).  If the column type is an array, they suffix `_array` is added to the column name.
+    Columns are always in Camel Case (i.e. lower case, separated by underscores e.g. `video_views` or `media_id`).  If the column type is an array, they suffix `_array` is added to the column name.
 
 === "Aggregate Columns" 
     When a column is aggregated, in order to preserve the relationship in the flow profile the new name should be descriptive, but include the source name as a substring (e.g. `sum_video_views` or `total_video_views`).  This is so the columns can be related across flow stages using simple string comparisons. 
