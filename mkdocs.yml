@@ -24,7 +24,9 @@ nav:
   - Overview: 'index.md'
   - Philosophy: 'the-zen-of-sql.md' 
   - Context: 'context.md'
+  # - Considerations: 'considerations.md'
   - Guidelines: 'guidelines.md'
+  - Consulting: 'consulting.md'
   # - Guides:
   #   - CSV Ingestion: 'csv-ingestion.md'
   #   - Schema Alignment: 'schema-alignment.md'
@@ -51,6 +53,9 @@ markdown_extensions:
       alternate_style: true 
   - toc:
       baselevel: 2
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra:
   analytics:
