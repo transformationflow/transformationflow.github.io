@@ -60,7 +60,8 @@ markdown_extensions:
 extra:
   analytics:
     provider: google
-    property: G-P2ZCF8ZKFD
+    property: G-2SWKZ494KD
+
   social:
     - icon: fontawesome/brands/medium
       link: https://jimbeepbeep.medium.com/
