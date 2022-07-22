@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# Transformation Flow Guidelines
+# Transformation Flow Style Guide
 These guidelines are consistently applied when we build data transformation flows, and serve a few purposes:
 
 - **Consistency** across transformation flows
