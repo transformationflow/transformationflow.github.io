@@ -26,6 +26,8 @@ nav:
   - Context: 'context.md'
   # - Considerations: 'considerations.md'
   - Style Guide: 'style-guide.md'
+  - Quickstart: 'quickstart.md'
+
   # - Consulting: 'consulting.md'
   # - Guides:
   #   - CSV Ingestion: 'csv-ingestion.md'

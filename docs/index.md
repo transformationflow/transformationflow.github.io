@@ -48,7 +48,7 @@ Data workflows can be extremely complicated, requiring repeated context switchin
 Simple deployment patterns are documented and supported with powerful functions to leverage powerful native functionality (e.g. external tables, partitioned & clustered tables and Google Cloud Storage data exports) to enable the end-to-end logical flows to be deployed in a data-efficient manner and to minimise ongoing query costs and maximise performance.
 
 ### Open Source Code
-The code base is intended to be open source, but access to the `flowfunctions` BigQuery library (and also the US and EU specific libraries `floweu` and `flowus`) is currently in private beta.  Please contact [flowfunctions@transformationflow.io](mailto:flowfunctions@transformationflow.io) for access in your geography.
+The code base is intended to be open source, but access to the `flowfunctions` BigQuery library (and also the EU-specific library mirror `flowfunctionseu`) is currently in private beta.  Please contact [flowfunctions@transformationflow.io](mailto:flowfunctions@transformationflow.io) for access in your geography.
 
 ## Alternatives
 This framework was born out of a desire for simplicity.  In many cases, implementation of additional external tools would have added unneccesary complexity to a data transformation process which is completely manageable without ever leaving the BigQuery console[^2].
