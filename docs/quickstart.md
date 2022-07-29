@@ -41,6 +41,33 @@ One current major limitation of BigQuery Routines (i.e. `PROCEDURES`, `USER DEFI
 
 These functions are stored in datasets with a `_sqlb` suffix, and the function names are also prefixed with a `sqlb__`.
 
+#### SQL Builder Function Execution
+To execute a `sqlb` function you simply wrap a simple `SELECT` statement in an `EXECUTE IMMEDIATE` statement, executing the constructed SQL.  For example:
+```sql
+EXECUTE IMMEDIATE ((
+SELECT `flowfunctionseu.metadata_sqlb.sqlb__get_column_schema`(
+  'project_id.dataset_name.table_name'
+  )
+));
+```
+
+#### SQL Builder Function Output
+The real power of these functions are, however, when you can use the outputs in subsequent operations.  In order to do this you need to know the exact structure you are expecting to be returned, and you then set the value of the variable using the `EXECUTE IMMEDIATE... INTO...` construct.  In the following example, the function `sqlb__get_column_schema` returns a `STRUCT` containing information about the table columns in a variety of forms. To pick one of them (e.g. `schema_multiline`) you simple use a `'.schema_multiline'` suffix:
+
+```sql
+DECLARE table_column_schema STRING;
+
+EXECUTE IMMEDIATE ((
+SELECT `flowfunctionseu.metadata_sqlb.sqlb__get_column_schema`(
+  'project_id.dataset_name.table_name'
+  )
+)) INTO table_column_schema
+```
+
+
+
+
+
 ## Flow Configuration
 Flow configuration takes place inside the main orchestrator function for simplicity, although it could technically reside in a BigQuery table, external table (e.g. Google Sheet) or anywhere else the data can be accessed from BigQuery (e.g. JSON files in a GCS bucket or even an external database).  
 

@@ -24,8 +24,8 @@ A Transformation Flow is the end-to-end flow between inbound data and transforme
     Suffixes are used to group datasets within transformation flows, added to the transformation flow name.  This means that the flow datasets will appear adjacent to each other in the user interface or in any ordered list. The following suffixes are recommended at a minimum:
 
     - **`_admin`:** for administrative tables, views and custom functions (e.g. inbound data monitoring, GCS bucket inventory or table refresh automation)
-    - **`_inbound`:** for inbound tables only
-    - **`_transform`**: core transformation views, intermediate tables where required and outbound views/tables 
+    - **`_inbound`** or no suffix**:** for inbound tables only
+    - **`_transform`** or **`_flow`**: core transformation views, intermediate tables where required and outbound views/tables 
 
     These datasets might also be required when undertaking ad-hoc data quality checks or performing staged transformation flow development:
 
