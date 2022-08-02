@@ -37,8 +37,8 @@ nav:
     - Architecture: 'documentation/architecture.md'
     - Data Ingestion: 'documentation/ingestion.md'
     
-    #- Use Cases:
-      #- Data Backup: 'documentation/usecases/backup.md'
+    - Use Cases:
+      - Data Backup: 'documentation/usecases/backup.md'
     
     - Functions:
       - SQL Builder Functions: 'documentation/functions/sqlbuilders.md'

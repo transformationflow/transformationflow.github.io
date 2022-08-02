@@ -9,7 +9,7 @@ External tables enable direct querying of data files in Google Cloud Storage (GC
 
 They also add redundancy and resilience to your data flows as deleting the external table does not delete the underlying data. 
 
-### "External Tables (Google Sheets)
+### External Tables (Google Sheets)
 External tables can also be created from sheets in a Google Sheets workbook, which is a powerful mechanism but not without potential pitfalls.  They are very useful as e.g. match tables or for semi-automated QA based on point-in-time data extraction from another non-integrated system.  However some potential challenges are:
 
 1. Schema Detection does not work when all columns are detected as a string type.  
