@@ -18,31 +18,32 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.top  
-    
-nav:
-  - Overview: 'index.md'
-  - Philosophy: 'the-zen-of-sql.md' 
-  - Context: 'context.md'
-  # - Considerations: 'considerations.md'
-  - Style Guide: 'style-guide.md'
-  - Quickstart: 'quickstart.md'
+    - navigation.top
+    - navigation.indexes
+    - navigation.sections
+    - navigation.expand
+    - navigation.instant
 
-  # - Consulting: 'consulting.md'
-  # - Guides:
-  #   - CSV Ingestion: 'csv-ingestion.md'
-  #   - Schema Alignment: 'schema-alignment.md'
+nav:
+  - Intro:
+
+    - Introduction: 'index.md'
+    - Principles: 'the-zen-of-sql.md'
+    - Philosophy: 'context.md'
   
-  # - Quickstart: 'quickstart.md'
-  
-  
-  # - flowfunctions: 'flowfunctions.md'
-  
-  # - Framework: 'framework.md'
-  # - How to Write SQL: 'how-to-write-sql.md'
-  # - Workflow: 'workflow.md'
-  # - Functions: 'overview-functions.md'
-  # - Getting Started: 'getting-started.md'
+  - Documentation:
+    - Style Guide: 'documentation/style-guide.md'
+    - Key Concepts: 'documentation/concepts.md'
+    - Architecture: 'documentation/architecture.md'
+    - Data Ingestion: 'documentation/ingestion.md'
+    
+    #- Use Cases:
+      #- Data Backup: 'documentation/usecases/backup.md'
+    
+    - Functions:
+      - SQL Builder Functions: 'documentation/functions/sqlbuilders.md'
+      # - Flow Functions: 'documentation/functions/flowfunctions.md'
+      - Remote Functions: 'documentation/functions/remotefunctions.md'
 
 markdown_extensions:
   - admonition
@@ -66,18 +67,18 @@ extra:
 
   social:
     - icon: fontawesome/brands/medium
-      link: https://jimbeepbeep.medium.com/
+      link: https://jim-barlow.medium.com/
     - icon: fontawesome/brands/github
-      link: https://github.com/jimbeepbeep   
+      link: https://github.com/transformationflow   
     - icon: fontawesome/solid/paper-plane
       link: mailto:jim@transformationflow.io
-
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
 
-plugins:
-  # - git-revision-date
+#plugins:
+#  - git-revision-date-localized:
+#      enable_creation_date: true
 
-copyright: Copyright &copy; 2021 Transformationflow OÜ (16248096), Estonia
+copyright: Copyright &copy; 2022 Transformationflow OÜ (16248096), Estonia

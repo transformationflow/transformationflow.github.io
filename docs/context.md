@@ -1,11 +1,7 @@
----
-hide:
-  - navigation
----
 # Life, the Universe and Everything
 Before diving into the specific details of implementation and code structure, it is important to understand the intellectual context within which we are operating.  A dictionary definition is always a good place to start, and according to the [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/data):
 
-> ## definition: **data**
+> ## Definition: **data**
 > 
 > noun [ U, + sing/pl verb ]
 >
@@ -69,7 +65,3 @@ The word metadata is often misused, so it is important to clearly define at this
 The term should not be used to refer to data related to an entity, state or event.  Metadata contains information about the context,  location, structure and lineage of data, but not its content.
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiJSV7aW5pdDogeydmbG93Y2hhcnQnOnsgJ2RpYWdyYW1QYWRkaW5nJzogMjB9LCAndGhlbWUnOiAnbmV1dHJhbCcsICd0aGVtZVZhcmlhYmxlcyc6IHsnZm9udFNpemUnOiAnMTVweCcsICdmb250RmFtaWx5JzogJ21vbm9zcGFjZSd9fX0lJVxuXG5mbG93Y2hhcnQgVEJcbnN1YmdyYXBoIHVuaXZlcnNlW1wiVGhlIFVuaXZlcnNlXCJdXG5lbnRpdGllcyhbXCJlbnRpdGllc1wiXSkgLS0-fHJlbGF0ZSB0b3wgZW50aXRpZXNcbmVudGl0aWVzIC0tPiB8XCJoYXZlXCJ8IHN0YXRlKFtcInN0YXRlXCJdKVxuZW50aXRpZXMgLS0-IHxcImV4cGVyaWVuY2VcInwgZXZlbnRzKFtcImV2ZW50c1wiXSlcbmVuZFxuXG5pbmZvcm1hdGlvbihbXCJpbmZvcm1hdGlvblwiXSkgLS0-IHxcInJlcHJlc2VudHNcInwgdW5pdmVyc2VcbmRhdGEoW1wiZGF0YVwiXSkgLS0-IHxcInN0b3Jlc1wifCBpbmZvcm1hdGlvblxubWV0YWRhdGEoW1wibWV0YWRhdGFcIl0pIC0tPiB8XCJkZXNjcmliZXNcInwgZGF0YSIsIm1lcm1haWQiOnsidGhlbWUiOiJiYXNlIn0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiJSV7aW5pdDogeydmbG93Y2hhcnQnOnsgJ2RpYWdyYW1QYWRkaW5nJzogMjB9LCAndGhlbWUnOiAnbmV1dHJhbCcsICd0aGVtZVZhcmlhYmxlcyc6IHsnZm9udFNpemUnOiAnMTVweCcsICdmb250RmFtaWx5JzogJ21vbm9zcGFjZSd9fX0lJVxuXG5mbG93Y2hhcnQgVEJcbnN1YmdyYXBoIHVuaXZlcnNlW1wiVGhlIFVuaXZlcnNlXCJdXG5lbnRpdGllcyhbXCJlbnRpdGllc1wiXSkgLS0-fHJlbGF0ZSB0b3wgZW50aXRpZXNcbmVudGl0aWVzIC0tPiB8XCJoYXZlXCJ8IHN0YXRlKFtcInN0YXRlXCJdKVxuZW50aXRpZXMgLS0-IHxcImV4cGVyaWVuY2VcInwgZXZlbnRzKFtcImV2ZW50c1wiXSlcbmVuZFxuXG5pbmZvcm1hdGlvbihbXCJpbmZvcm1hdGlvblwiXSkgLS0-IHxcInJlcHJlc2VudHNcInwgdW5pdmVyc2VcbmRhdGEoW1wiZGF0YVwiXSkgLS0-IHxcInN0b3Jlc1wifCBpbmZvcm1hdGlvblxubWV0YWRhdGEoW1wibWV0YWRhdGFcIl0pIC0tPiB8XCJkZXNjcmliZXNcInwgZGF0YSIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJiYXNlXCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
-
-Now this intellectual context is clearly defined, we can dive into the detail of how to *think about* data specifically, and how data transformation is such a critical step in the process of extracting meaning from the universe.
-
-

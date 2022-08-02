@@ -1,0 +1,1 @@
+Now this intellectual context is clearly defined, we can dive into the detail of how to *think about* data specifically, and how data transformation is such a critical step in the process of extracting meaning from the universe.

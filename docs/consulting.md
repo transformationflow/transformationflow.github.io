@@ -49,7 +49,7 @@ Our most successful and productive relationships have been with founders and lea
 
 A mix of long-term objectives and specific projects enables the maximisation of impactful output without the cognitive overhead or time-demands that additional employees might require.
 
-We find the best trade-off between productivity and management & communication overhead is approximately 1.5 days per week (52hrs per calendar month), for which the current rate is 5000€.
+We find the best trade-off between productivity and management & communication overhead is approximately 1.5 days per week (52hrs per calendar month), for which the current rate is 5000€ + VAT.
 
 Included in this is ongoing access to all of the framework resources, proprietary functions and code which enable us to be an order of magnitude more effective and significantly faster than if we were simply experts leveraging native GCP capabilities.
 
