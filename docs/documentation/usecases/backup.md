@@ -1,4 +1,4 @@
-Whether interacting with your data in BigQuery via the Console, API or scripted SQL statements, it can happen that the wrong table or dataset is deleted by accident.  Whilst in some instances this can be recovered (e.g. using [Time Travel](https://cloud.google.com/bigquery/docs/time-travel)), it is good practice to backup your data and code in a manner which enables quick recovery in case something goes wrong.
+Whether interacting with your data in BigQuery via the Console, API or scripted SQL statements, it _can_ happen that the wrong table or dataset is deleted by accident.  Whilst in some instances this can be recovered (e.g. using [Time Travel](https://cloud.google.com/bigquery/docs/time-travel)), it is good practice to backup your data and code in a manner which enables quick recovery in case something goes wrong.
 
 # Inbound Data Backup
 If your data is coming into BigQuery via native Google services like Firebase or Google Analytics, it is streaming into BigQuery and is not necessarily stored anywhere else.  This means that without backing up your data, accidental deletion of the dataset might be a non-recoverable action.
@@ -142,10 +142,8 @@ Individual resource types can also be backed up using the following sub-function
 
 Note that when recovering tables, they will be created as empty tables with the exact same schema as the source table.  In the context of a Transformation Flow this is not problematic as the tables will be filled with data when the flow is run and the inbound data should be backed up separately.
 
-
 # Data Recovery
 Once your backups are tested and scheduled, hopefully you will never have to touch or use them again!  However, in the eventuality that you do need to restore these tables, there are a few different approaches depending on 
-
 
 ## Inbound Data Recovery
 The functions used to restore inbound data depends on the source and the backup types.
@@ -172,7 +170,25 @@ This is achieved by calling the following function:
         )
     ```
 
+### Restore Firebase Backup from GCS
+Restoring from a GCS backup is a multi-stage process, but this complexity is taken care of by the internal function operations.  To execute restore this data to a destination dataset, we use the following function:
+
+=== "us" 
+    ```sql
+    CALL flowfunctions.restore.restore_firebase_table_from_gcs_backup (
+        backup_firebase_gcs_bucket_name, -- STRING
+        restore_dataset_ref -- STRING 
+        )
+    ```
+
+=== "eu" 
+    ```sql
+    CALL flowfunctionseu.restore.restore_firebase_table_from_gcs_backup (
+        backup_firebase_gcs_bucket_name, -- STRING
+        restore_dataset_ref -- STRING 
+        )
+    ```
+
 
 ### TBC 2022-08-03
 - DDL-Based Resource Recovery
-- Restore Firebase Backup from GCS
