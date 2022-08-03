@@ -68,7 +68,7 @@ This function backs up table shards from the `source_dataset_ref` into different
             'my-gcs-bucket', 1, 3)
     ```
 
-The example will export table shards from the `project_id.dataset_name.table_name` table into folders (with the folder name format `YYYYMMDD`) in the `gs://my-gcs-bucket` GCS bucket for days between yesterday and three days ago, overwriting any files which already exist.
+The example will export table shards from the `project_id.dataset_name.table_name` table into files (with the date included in the format `YYYYMMDD`) in the `gs://my-gcs-bucket` GCS bucket for days between yesterday and three days ago, overwriting any files which already exist.  For example, a single file on 2022-07-01 would be saved as `gs://my-gcs-bucket/events_20220701_00000000.parquet`, and if the data to export was larger than 1GB, the second filename would be `gs://my-gcs-bucket/events_20220701_00000001.parquet`.  
 
 # DDL-Based Backups
 Data Definition Language (DDL) backups leverage the fact that the DDL to recreate resources is available via the `INFORMATION_SCHEMA`.  This means that backing up the DDL into a BigQuery dataset gives us the mechanism to recover any views, external tables or routines.
@@ -172,6 +172,7 @@ This is achieved by calling the following function:
         )
     ```
 
-### TBC 2022-08-02
-- Restore Firebase Backup from GCS
+
+### TBC 2022-08-03
 - DDL-Based Resource Recovery
+- Restore Firebase Backup from GCS
