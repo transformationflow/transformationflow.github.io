@@ -41,7 +41,7 @@ This function checks for the existence of date shards in the `destination_datase
     ```
 
 #### Firebase to GCS
-This function backs up table shards from the `source_dataset_ref` into different date-based folders in the destination bucket determined by `export_gcs_bucket_name`. The offset parameters `start_days_offset` and `end_days_offset` determine how many days to export (offset from today, as defined by the `CURRENT_DATE()` in SQL).
+This function backs up table shards from the `source_dataset_ref` into different files including the date in the format `YYYYMMDD` in the destination bucket determined by `export_gcs_bucket_name`. The offset parameters `start_days_offset` and `end_days_offset` determine how many days to export (offset from today as defined by the `CURRENT_DATE()` in SQL i.e. 0 = today).
 
 === "us" 
     ```sql
@@ -153,7 +153,6 @@ Restoring from a Firebase table backup to a new dataset is exactly the same as c
 
 This is achieved by calling the following function:
 
-
 === "us" 
     ```sql
     CALL flowfunctions.copy.copy_firebase_table (
@@ -171,7 +170,7 @@ This is achieved by calling the following function:
     ```
 
 ### Restore Firebase Backup from GCS
-Restoring from a GCS backup is a multi-stage process, but this complexity is taken care of by the internal function operations.  To execute restore this data to a destination dataset, we use the following function:
+Restoring from a GCS backup is a more complex multi-stage process, but this complexity is abstracted away by the internal function operations.  To execute restore this data to a destination dataset, use the following function:
 
 === "us" 
     ```sql
@@ -189,6 +188,23 @@ Restoring from a GCS backup is a multi-stage process, but this complexity is tak
         )
     ```
 
+### Restore Flow Resources from DDL
+Flow resource restoration (Routines, Views, Tables) is executed via the following function:
 
-### TBC 2022-08-03
-- DDL-Based Resource Recovery
+=== "us" 
+    ```sql
+    CALL flowfunctions.restore.restore_resources_from_info_schema_backup (
+        info_schema_backup_table_ref, -- STRING
+        restore_dataset_suffix -- STRING 
+        )
+    ```
+
+=== "eu" 
+    ```sql
+    CALL flowfunctionseu.restore.restore_resources_from_info_schema_backup (
+        info_schema_backup_table_ref, -- STRING
+        restore_dataset_suffix -- STRING 
+        )
+    ```
+
+The `restore_dataset_suffix` will add a suffix to each dataset in the backup DDL.
