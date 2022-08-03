@@ -34,6 +34,3 @@ The following functions are in an earlier stage of testing, but are on the devel
 - **GCS (Text Files) -> Google Cloud Natural Language AI -> BigQuery (Text Annotations)**
 - **GCS (Text Files) -> Google Translation AI -> BigQuery (Text Translations)**
 - **GCS (JSON Files) -> GCS (JSONL Files) -> BigQuery (External Table)**
-
-
-
