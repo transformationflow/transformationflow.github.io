@@ -7,7 +7,8 @@ Remote Functions are currently in private beta and have different authentication
 
 - triggering an external action (e.g. BigQuery to Slack)
 - returning a value to BigQuery from an external API (without authentication)
-- returning a value to BigQuery from an external API (with authentication)
+- returning a value to BigQuery from an external API (with transformationflow authentication)
+- returning a value to BigQuery from an external API (with client authentication)
 - accessing files on a GCS bucket and use an authenticated external API to process the files and return value to BigQuery
 
 We use Google Secrets Manager to manage secrets, and the deployment process depends on whether the function needs access to your internal assets or API keys.
