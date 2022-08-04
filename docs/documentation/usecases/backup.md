@@ -75,6 +75,7 @@ Data Definition Language (DDL) backups leverage the fact that the DDL to recreat
 
 The following functions will backup all view, routine and external tables DDL to a set of date-sharded table in the destination dataset defined by `destination_dataset_ref`.  Scheduling this statement on a daily basis will give you a daily backup of all DDL in the datasets defined in `backup_dataset_refs`.
 
+## All Resources
 === "us" 
     ```sql
     CALL flowfunctions.backup.backup_resource_metadata (

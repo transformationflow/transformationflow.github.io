@@ -38,6 +38,7 @@ nav:
     - Data Ingestion: 'documentation/ingestion.md'
     
     - Use Cases:
+      - Data Profiling: 'documentation/usecases/profiling.md'
       - Data Backup: 'documentation/usecases/backup.md'
     
     - Functions:
