@@ -40,7 +40,8 @@ nav:
     - Use Cases:
       - Data Profiling: 'documentation/usecases/profiling.md'
       - Data Backup: 'documentation/usecases/backup.md'
-    
+      - Data Recovery: 'documentation/usecases/recovery.md'
+
     - Functions:
       - SQL Builder Functions: 'documentation/functions/sqlbuilders.md'
       # - Flow Functions: 'documentation/functions/flowfunctions.md'
