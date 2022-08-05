@@ -25,14 +25,14 @@ Firebase data comes directly into BigQuery on a daily basis as shards, which can
 #### Firebase to BigQuery
 This function checks for the existence of date shards in the `destination_dataset_ref`, and inserts the data when a new shard is detected in the source data.  This queries table metadata, so can be run on a regular basis (e.g. hourly) and incurs only negligible cost.
 
-=== "us" 
+=== "region-us" 
     ```sql
     CALL flowfunctions.backup.backup_firebase_table (
             source_dataset_ref, -- STRING
             destination_dataset_ref -- STRING
             );
     ```
-=== "eu" 
+=== "region-eu" 
     ```sql
     CALL flowfunctionseu.backup.backup_firebase_table (
             source_dataset_ref, -- STRING
@@ -43,7 +43,7 @@ This function checks for the existence of date shards in the `destination_datase
 #### Firebase to GCS
 This function backs up table shards from the `source_dataset_ref` into different files including the date in the format `YYYYMMDD` in the destination bucket determined by `export_gcs_bucket_name`. The offset parameters `start_days_offset` and `end_days_offset` determine how many days to export (offset from today as defined by the `CURRENT_DATE()` in SQL i.e. 0 = today).
 
-=== "us" 
+=== "region-us" 
     ```sql
     CALL flowfunctions.backup.backup_firebase_table_to_gcs (
             source_dataset_ref, -- STRING
@@ -52,7 +52,7 @@ This function backs up table shards from the `source_dataset_ref` into different
             end_days_offset -- INT64
             );
     ```
-=== "eu" 
+=== "region-eu" 
     ```sql
     CALL flowfunctionseu.backup.backup_firebase_table_to_gcs (
             source_dataset_ref, -- STRING
@@ -76,14 +76,14 @@ Data Definition Language (DDL) backups leverage the fact that the DDL to recreat
 The following functions will backup all view, routine and external tables DDL to a set of date-sharded table in the destination dataset defined by `destination_dataset_ref`.  Scheduling this statement on a daily basis will give you a daily backup of all DDL in the datasets defined in `backup_dataset_refs`.
 
 ## All Resources
-=== "us" 
+=== "region-us" 
     ```sql
     CALL flowfunctions.backup.backup_resource_metadata (
             backup_dataset_refs, -- ARRAY<STRING>
             destination_dataset_ref -- STRING
             );
     ```
-=== "eu" 
+=== "region-eu" 
     ```sql
     CALL flowfunctionseu.backup.backup_resource_metadata (
             backup_dataset_refs, -- ARRAY<STRING>
@@ -94,14 +94,14 @@ The following functions will backup all view, routine and external tables DDL to
 Individual resource types can also be backed up using the following sub-functions.
 
 ## Routines
-=== "us" 
+=== "region-us" 
     ```sql
     CALL flowfunctions.backup.backup_info_schema_routines (
             dataset_refs, -- ARRAY<STRING>
             destination_dataset_ref -- STRING
             );
     ```
-=== "eu" 
+=== "region-eu" 
     ```sql
     CALL flowfunctionseu.backup.backup_info_schema_routines (
             dataset_refs, -- ARRAY<STRING>
@@ -110,14 +110,14 @@ Individual resource types can also be backed up using the following sub-function
     ```
 
 ## Views
-=== "us" 
+=== "region-us" 
     ```sql
     CALL flowfunctions.backup.backup_info_schema_views (
             dataset_refs, -- ARRAY<STRING>
             destination_dataset_ref -- STRING
             );
     ```
-=== "eu" 
+=== "region-eu" 
     ```sql
     CALL flowfunctionseu.backup.backup_info_schema_views (
             dataset_refs, -- ARRAY<STRING>
@@ -126,14 +126,14 @@ Individual resource types can also be backed up using the following sub-function
     ```
 
 ## Tables
-=== "us" 
+=== "region-us" 
     ```sql
     CALL flowfunctions.backup.backup_info_schema_tables (
             dataset_refs, -- ARRAY<STRING>
             destination_dataset_ref -- STRING
             );
     ```
-=== "eu" 
+=== "region-eu" 
     ```sql
     CALL flowfunctionseu.backup.backup_info_schema_tables (
             dataset_refs, -- ARRAY<STRING>

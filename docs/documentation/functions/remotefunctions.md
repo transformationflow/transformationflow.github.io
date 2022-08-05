@@ -17,7 +17,7 @@ We use Google Secrets Manager to manage secrets, and the deployment process depe
 Remote Functions return responses in JSON, which require decoding in BigQuery.  This process is built into the user-facing functions, with each function returning data in the most relevant structure.
 
 # Existing Remote Functions
-The following functions are developed and currently in a private beta testing phase, with docs in progress.  Note that GCS is Google Cloud Storage, which interoperates natively with BigQuery and other Google APIs.
+The following functions are developed and currently in a private beta testing phase, with docs in progress.  GCS is Google Cloud Storage, which interoperates natively with BigQuery and other Google APIs.
 
 - **BigQuery (Text-based Query Reponse) -> Slack Notification**
 - **BigQuery (Text/Icon-based Query Reponse) -> Slack Notification**
@@ -35,3 +35,6 @@ The following functions are in an earlier stage of testing, but are on the devel
 - **GCS (Text Files) -> Google Cloud Natural Language AI -> BigQuery (Text Annotations)**
 - **GCS (Text Files) -> Google Translation AI -> BigQuery (Text Translations)**
 - **GCS (JSON Files) -> GCS (JSONL Files) -> BigQuery (External Table)**
+- **Text Data Source (Question) -> Wolfram Alpha API -> BigQuery (Answer)**
+- **Text Data Source (Briefing) -> GPT-3 API -> BigQuery (Generated Prose)**
+

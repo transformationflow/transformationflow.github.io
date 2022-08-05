@@ -8,7 +8,7 @@ These guidelines are consistently applied when we build data transformation flow
 ## SQL Style
 When you spend time writing SQL which writes other SQL (sometimes executed by other SQL), it's natural to think quite carefully about how to write SQL.  As such we have some simple guidelines which support code readability, clarity and maintainability.  Of course rules are made to be broken so these are not always set in stone, however they hold in the vast majority of use-cases.
 
-=== "Optimise for Readbility" 
+=== "Optimise for Readability" 
     If in doubt, decide how to structure your code based on how easily it can be understood when reading from top to bottom without any context. This is especially pertinent in e.g. CASE statements where different approaches are more/less readable depending on the situation.
 
 === "Use Common Table Expressions" 
@@ -27,7 +27,7 @@ When you spend time writing SQL which writes other SQL (sometimes executed by ot
     There is no consistly defined or enforced indentation system in SQL, so avoid this to avoid confusion. 
 
 === "Group on Specific Columns" 
-    Although it is possible to use e.g. `GROUP BY 1, 2, 3`to group based on ordinal position, this should be avoided as it negatively impacts readability: the reader will need to then scan up the page to identify the precise grouping columns in the query.  It is also less robust than grouping by specific columns as re-ordering the columns might produce inconsistent and erroneious results.     
+    Although it is possible to use e.g. `GROUP BY 1, 2, 3`to group based on ordinal position, this should be avoided as it negatively impacts readability: the reader will need to then scan up the page to identify the precise grouping columns in the query.  It is also less robust than grouping by specific columns as re-ordering the columns might produce inconsistent and erroneous results.     
 
 ## Column Naming Convention
 === "Case" 

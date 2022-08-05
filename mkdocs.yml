@@ -29,7 +29,7 @@ nav:
 
     - Introduction: 'index.md'
     - Principles: 'the-zen-of-sql.md'
-    - Philosophy: 'context.md'
+    - Context: 'context.md'
   
   - Documentation:
     - Style Guide: 'documentation/style-guide.md'
