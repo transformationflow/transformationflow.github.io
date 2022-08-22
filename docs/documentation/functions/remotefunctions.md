@@ -30,6 +30,7 @@ The following functions are developed and currently in a private beta testing ph
 # Remote Function Roadmap
 The following functions are in an earlier stage of testing, but are on the development roadmap.  We are currently developing the process for additional feature requests, however we currently prioritise Google APIs due to the interoperability with other Google Cloud resources and the standardised authentication mechanisms. 
 
+- **GCS (Move Files)**
 - **GCS (Image Files) -> Google Cloud Vision AI -> BigQuery (Image Annotations)**
 - **GCS (Video Files) -> Google Cloud Video AI -> BigQuery (Video Annotations)**
 - **GCS (Text Files) -> Google Cloud Natural Language AI -> BigQuery (Text Annotations)**
