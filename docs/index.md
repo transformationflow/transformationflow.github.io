@@ -1,54 +1,47 @@
 # What is a Transformation Flow?
 ---
 !!! tldr "Summary"
-    Transformation Flow is a lightweight, open source framework for planning, developing, implementing, documenting, managing and monitoring SQL-based in-warehouse data transformations.  
+    Transformation Flow is a framework for planning, developing, implementing, documenting, managing, optimising and monitoring SQL-based in-warehouse data transformations.  
 ---
 
+
 ## Motivation
-The ability to build data transformations in SQL within a data warehouse and have the results immediately available to downstream tools, models and consumers is a modern data superpower, but with great power comes great responsibility.  
+Google BigQuery is an almost infinitely powerful foundation for any kind of data analytics work, which can be used in virtually unbounded ways.  This makes it difficult to structure optimally, especially for those new to the platform.  After years of experience refining optimal ways of working within BigQuery with a large number of clients and types of data, while the platform capabilities have evolved in parallel, this framework is the codification of this evolved methodology.
 
-### Structure
-Unfortunately the responsibility to write clean, clear, well-structured code is often overlooked, especially when the transformations begin life as ad-hoc data explorations.  This means that the resulting flows can quickly grow into complicated interconnected networks of datasets, tables and views, which can be extremely difficult to manage, debug and build upon.
+The core motivation for developing and sharing this are:
+- **Accessibility** - lowering the barriers to entry for anybody wanting to access these modern data superpowers
+- **Simplicity** - helping people achieve complex outcomes using logical, composable structures and resources, with minimal dependencies on external tools
+- **Extensibility** - leveraging non-SQL language capabilities and the wider API ecosystem to extend what is possible in BigQuery
 
-### Simplicity
-The objective of this framework is to enable rapid development of robust data transformations within the data warehouse, without requiring any additional tools or installation. It is designed to help humans convert their data transformation objectives into simple, well-structured code, which is quick to build, quality assure and deploy, and easy to manage, monitor and debug.
+There are third party solutions to execute different parts of this solution (e.g. dbt for transformation, Airflow for orchestration etc.), however all of this can be achieved within BigQuery, without the need to learn, configure and manage multiple tools. 
 
-### Benefits
-Aside from the obvious benefits of rapid, clear, readable, robust and maintainable code, using this approach ensures that the resulting code is structured consistently and benefits from standardised helper and profiling functions from the start, within the SQL query editor.  It helps with step-by-step testing to ensure that the data transformation flow stages work as expected as built, with the aim of preventing 'needle in a haystack-sized mound of dirty spaghetti code' data debugging endeavours.
+## Situation
+This is only possible due to the technical advancements in BigQuery, which have evolved it from a 'data warehouse' (i.e. place to store and retrieve data) to a 'data platform', if you know how to use it.
 
-## Conventions
-Clear definition of the overall approach, target structure and naming conventions is a simple but extremely powerful starting point to start building consistency and robustness to data transformation flows. 
+The most important features which we use are:
+- **Views** - enabling logic to be decomposed into a sequence of logical, testable (but ephemeral) steps, without requiring data to be continually re-created.
+- **Partitions** - enabling subsets of data to be queried and processed, reducing development and testing time, and supporting cost optimization  
+- **Functions** - enabling complex computations to be encapsulated into functional, reuseable code, leveraging SQL and Javascript functionality
+- **Routines** - enabling complex logic to be defined and executed, using control flows and complex data structures
+- **Information Schemas** - enabling easy visibility and use of metadata to build robust logical structures and automation 
+- **Remote Functions** - enabling access to external APIs at scale via (serverless) Python Cloud Functions  
 
-## Process
-Simply ensuring that any data transformation activities begin with clear objectives and a sequential plan of stages which lead to those objectives is a remarkably simple yet powerful characteristic of any creative framework.  This basic plan then builds the initial, extensible code outline for the transformation flow.
+These resources, in combination with specific naming conventions and taxonomies, enable us to use a generalised core methodology to solve specific data-related problems across almost any any field. 
 
-## Functions
-Common patterns are abstracted into powerful functions to transform human intent into sometimes verbose SQL structures.  By leveraging the information schema[^1], user defined functions (UDF) and scripting capabilities, these new functions enable dynamic development of patterns which would typically more error-prone human interaction.  
+## Solution
+This framework uses a number of different components under the hood, however in its simplest form there are only two categories:
 
-## Management
-In addition to the code becoming easier to reproduce and more portable (as you can simply apply the exact same function with a few argument changes to deploy transformations to different source data), this approach has built-in data lineage, and is structured to support testing, debugging and automatic documentation of transformation flows.
+- **Methodology** - specific ways of thinking about, naming and working with BigQuery (and Google Cloud) resources 
+- **Functions** - the `flowfunctions` functional extensions which enable users to execute complex tasks in simple workflows.  Their precise implementation varies depending on context and objectives.
 
-## Approach
-The framework is intended to simplify and accelerate the workflow for translating human intent into robust, maintainable SQL code, leveraging the power of functional encapsulation to build SQL in real time from an extensible set of functions and their parameters.
+The solution is fundamentally designed to be BigQuery-centric, enabling development, testing, orchestration and execution without ever needing to leave the BigQuery Console. It can also be used by attached tools, so wherever you can run BigQuery SQL (via e.g. connected notebooks, dashboards or IDEs), you can use `flowfunctions`.
 
-## Workflow Simplification
-Data workflows can be extremely complicated, requiring repeated context switching, multiple systems and large-scale data management, which impacts productivity by limiting the opportunity to get into a flow state for creative problem solving.  By keeping the entire workflow inside one platform and mode of thinking, the objective is to maximise creative productivity and enjoyment of the process.
+## Execution
+Access to the documentation and functions is free and open to all, however due to authentication requirements access to some functions will require an invite to the flowfunctions permission Google Group.  Please email info@transformationflow.io for information/access.
 
-## Deployment
-Simple deployment patterns are documented and supported with powerful functions to leverage powerful native functionality (e.g. external tables, partitioned & clustered tables and Google Cloud Storage data exports) to enable the end-to-end logical flows to be deployed in a data-efficient manner and to minimise ongoing query costs and maximise performance.
+The flowfunctions project is a multi-region US-based project, so functions are called using the `flowfunctions.function_set.function_name`syntax if you are operating on US-based data.  For EU-based users, the library is mirrored to the `flowfunctionseu` project.
 
-## Open Source Code
-The core code base is intended to be open source, but access to the `flowfunctions` BigQuery library (and also the EU-specific library mirror `flowfunctionseu`) is currently in private beta.  Please contact [flowfunctions@transformationflow.io](mailto:flowfunctions@transformationflow.io) for access in your geography.
 
-## Alternatives
-This framework was born out of a desire for simplicity.  In many cases, implementation of additional external tools would have added unneccesary complexity to a data transformation process which is completely manageable without ever leaving the BigQuery console[^2].
 
-For more complex situations where hundreds or thousands of interdependant transformations need to be developed, deployed, orchestrated and managed, or collaboration is required across a large number of people or teams, then it might make more sense to use an external tool.
 
-### dbt
-[dbt](https://www.getdbt.com/) is the industry (gold) standard tool for data transformation and the origin of the Analytics Engineering profession. It uses jinja templating inside SQL to enable Analytics Engineers to model data and deploy/manage data transformations.  It is written in Python.
 
-### Dataform
-[Dataform](https://dataform.co/) is a BigQuery-specific platform for transformation collaboration, using Javascript and SQLX (a templated SQL variant).
-
-[^1]: the various [INFORMATION_SCHEMA](https://cloud.google.com/bigquery/docs/information-schema-intro) views contain metadata about datasets, columns, tables, views and other assets.
