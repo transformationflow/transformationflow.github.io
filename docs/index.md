@@ -5,9 +5,9 @@
 ---
 
 ## Motivation
-Google BigQuery is an almost infinitely powerful foundation for any kind of analytics work, and it can be used in virtually unbounded ways.  This makes it difficult to structure optimally, especially for those new to the platform (or new to working with data).  
+Google BigQuery is an almost infinitely powerful foundation for any kind of analytics work, and it can be used in virtually unbounded ways.  This can make it difficult to structure optimally, especially for those new to the platform (or new to working with data).  
 
-After years of experience refining and optimising ways of working within BigQuery with a large number of clients and types of data, while the platform capabilities have evolved in parallel, this framework is the codification of this evolved methodology.
+After years of experience refining and optimising ways of working within BigQuery with a large number of clients and types of data (while the platform capabilities have evolved in parallel) this framework is the codification of this evolved methodology.
 
 The core motivation for developing and sharing this are:
 
@@ -15,10 +15,10 @@ The core motivation for developing and sharing this are:
 - **Simplicity** - helping people achieve complex outcomes using logical, composable structures and resources, with minimal dependencies on external tools
 - **Extensibility** - leveraging non-SQL language capabilities and the wider API ecosystem to extend what is possible in BigQuery
 
-There are third party solutions to manage different roles in (e.g. dbt for transformation and documentation, Airflow for orchestration, Dataflow for augmentation... etc!), however all of this can be achieved within BigQuery, without the need to learn, configure and manage multiple tools. 
+There are third party solutions to manage different roles in (e.g. dbt for transformation and documentation, Airflow for orchestration, Dataflow for augmentation... etc. etc.), however all of this can be achieved within BigQuery, without the need to learn, configure and manage multiple tools. 
 
 ## Situation
-This is only possible due to the technical advancements in BigQuery, which have evolved it from a 'data warehouse' (i.e. a place to store and retrieve data) to a 'data platform' (i.e. a foundational enabling technology), if you know how to use it.
+This is only possible due to the technical advancements in BigQuery, which have seen it evolve from a 'data warehouse' (i.e. a place to efficiently store and retrieve data) to a 'data platform' (i.e. a suite of technology capabilities built with data as the foundation), if you know how to use it.
 
 The most important features which we use are:
 - **Views** - enabling logic to be decomposed into a sequence of logical, testable (but ephemeral) steps, without requiring data to be continually re-created.
