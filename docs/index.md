@@ -6,9 +6,12 @@
 
 
 ## Motivation
-Google BigQuery is an almost infinitely powerful foundation for any kind of data analytics work, which can be used in virtually unbounded ways.  This makes it difficult to structure optimally, especially for those new to the platform.  After years of experience refining optimal ways of working within BigQuery with a large number of clients and types of data, while the platform capabilities have evolved in parallel, this framework is the codification of this evolved methodology.
+Google BigQuery is an almost infinitely powerful foundation for any kind of data analytics work, and it can be used in virtually unbounded ways.  This makes it difficult to structure optimally, especially for those new to the platform (or new to working with data).  
+
+After years of experience refining optimal ways of working within BigQuery with a large number of clients and types of data, while the platform capabilities have evolved in parallel, this framework is the codification of this evolved methodology.
 
 The core motivation for developing and sharing this are:
+
 - **Accessibility** - lowering the barriers to entry for anybody wanting to access these modern data superpowers
 - **Simplicity** - helping people achieve complex outcomes using logical, composable structures and resources, with minimal dependencies on external tools
 - **Extensibility** - leveraging non-SQL language capabilities and the wider API ecosystem to extend what is possible in BigQuery
