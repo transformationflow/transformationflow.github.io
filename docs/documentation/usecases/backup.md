@@ -1,3 +1,8 @@
+---
+!!! Warning "DEPRECATED"
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+---
+
 Whether interacting with your data in BigQuery via the Console, API or scripted SQL statements, it _can_ happen that the wrong table or dataset is deleted by accident.  Whilst in some instances this can be recovered (e.g. using [Time Travel](https://cloud.google.com/bigquery/docs/time-travel)), it is good practice to backup your data and code in a manner which enables quick recovery in case something goes wrong.
 
 # Inbound Data Backup

@@ -1,3 +1,8 @@
+---
+!!! Warning "DEPRECATED"
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+---
+
 Moving data around consistently, reliably and at scale is a complex problem to solve. However there are many potential solutions, especially when working with BigQuery.  The objective here is to land your data consistently into BigQuery in a low-cost (or ideally zero-cost), reliable and low maintenance manner.
 
 # Data Ingestion Options

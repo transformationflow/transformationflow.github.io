@@ -1,3 +1,8 @@
+---
+!!! Warning "DEPRECATED"
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+---
+
 ## Table Types
 The different table types in BigQuery are the building blocks of any transformation flow, and understanding the differences is critical to building robust and efficient flows.
 

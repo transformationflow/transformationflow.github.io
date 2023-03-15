@@ -1,3 +1,8 @@
+---
+!!! Warning "DEPRECATED"
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+---
+
 # Life, the Universe and Everything
 Before diving into the specific details of implementation and code structure, it is important to understand the intellectual context within which we are operating.  A dictionary definition is always a good place to start, and according to the [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/data):
 

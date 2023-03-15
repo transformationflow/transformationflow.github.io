@@ -1,3 +1,8 @@
+---
+!!! Warning "DEPRECATED"
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+---
+
 # What is Transformation Flow?
 ---
 !!! tldr "Summary"
@@ -21,6 +26,7 @@ There are third party solutions to manage different roles in (e.g. dbt for trans
 This is only possible due to the technical advancements in BigQuery, which have seen it evolve from a 'data warehouse' (i.e. a place to efficiently store and retrieve data) to a 'data platform' (i.e. a suite of technology capabilities built with data as the foundation), if you know how to use it.
 
 The most important features which we use are:
+
 - **Views** - enabling logic to be decomposed into a sequence of logical, testable (but ephemeral) steps, without requiring data to be continually re-created.
 - **Partitions** - enabling subsets of data to be queried and processed, reducing development and testing time, and supporting cost optimisation  
 - **Functions** - enabling complex computations to be encapsulated into functional, reuseable code, leveraging SQL and Javascript functionality
@@ -37,12 +43,6 @@ This framework uses a number of different components under the hood, however in 
 - **Functions** - the `flowfunctions` functional extensions which enable users to execute complex tasks in simple workflows.  Their precise implementation varies depending on context and objectives.
 
 The solution is fundamentally designed to be BigQuery-centric, enabling development, testing, orchestration and execution without ever needing to leave the BigQuery Console. It can also be used by attached tools, so wherever you can run BigQuery SQL (via e.g. connected notebooks, dashboards or IDEs), you can use `flowfunctions`.
-
-## Execution
-Access to the documentation and functions is free and open to all, however due to authentication requirements access to some functions will require an invite to the flowfunctions permission Google Group.  Please email info@transformationflow.io for information/access.
-
-The flowfunctions project is a multi-region US-based project, so functions are called using the `flowfunctions.function_set.function_name`syntax if you are operating on US-based data.  For EU-based users, the library is mirrored to the `flowfunctionseu` project.
-
 
 
 

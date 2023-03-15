@@ -1,3 +1,8 @@
+---
+!!! Warning "DEPRECATED"
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+---
+
 # Flow Configuration
 Flow configuration takes place inside the main orchestrator function for simplicity, although it could technically reside in a BigQuery table, external table (e.g. Google Sheet) or anywhere else the data can be accessed from BigQuery (e.g. JSON files in a GCS bucket or even an external database).  
 

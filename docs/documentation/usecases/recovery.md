@@ -1,3 +1,8 @@
+---
+!!! Warning "DEPRECATED"
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+---
+
 If your data, table schemas, views and routines are safely backed up and something _does_ go awry, there are just a few simple steps required to recover all of your resources.
 
 # Inbound Data Recovery
