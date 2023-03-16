@@ -1,8 +1,8 @@
 ---
 !!! Warning "DEPRECATED"
-    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the `flowfunctions` library and framework can be found at the [flowfunctions.io](https://flowfunctions.io) site.
 ---
-
+ 
 # The Zen of SQL
 ## Introduction
 Inspired by the Python equivalent ([PEP20](https://www.python.org/dev/peps/pep-0020/) - The Zen of Python), and also using it as a starting point, the TFSQL10[^1] are the core guiding principles which are central to writing clean, clear, well-structured and easy to maintain data transformations in SQL.  These are the guiding principles for all SQL code written by our functions and humans.

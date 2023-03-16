@@ -1,6 +1,6 @@
 ---
 !!! Warning "DEPRECATED"
-    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the `flowfunctions` library and framework can be found at the [flowfunctions.io](https://flowfunctions.io) site.
 ---
 
 Although the [INFORMATION_SCHEMA](https://cloud.google.com/bigquery/docs/information-schema-intro) provides us with some useful mechanisms for querying resource metadata, the following functions address more complex use-cases which go beyond the basic foundations.

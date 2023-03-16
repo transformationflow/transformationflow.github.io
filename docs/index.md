@@ -1,6 +1,6 @@
 ---
 !!! Warning "DEPRECATED"
-    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the `flowfunctions` library and framework can be found at the [flowfunctions.io](https://flowfunctions.io) site.
 ---
 
 # What is Transformation Flow?

@@ -1,8 +1,8 @@
 ---
 !!! Warning "DEPRECATED"
-    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the `flowfunctions` library and framework can be found at the [flowfunctions.io](https://flowfunctions.io) site.
 ---
-
+ 
 These guidelines are consistently applied when we build data transformation flows, and serve a few purposes:
 
 - **Consistency** across transformation flows

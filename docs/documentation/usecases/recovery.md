@@ -1,6 +1,6 @@
 ---
 !!! Warning "DEPRECATED"
-    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the framekwork and `flowfunctions` library can be found at our new site [flowfunctions.io](https://flowfunctions.io).
+    Note that this site is now deprecated and will be removed shortly.  The latest information and documentation on the `flowfunctions` library and framework can be found at the [flowfunctions.io](https://flowfunctions.io) site.
 ---
 
 If your data, table schemas, views and routines are safely backed up and something _does_ go awry, there are just a few simple steps required to recover all of your resources.
