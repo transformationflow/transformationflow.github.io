@@ -20,6 +20,7 @@ We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for our d
 - [Pub/Sub](https://cloud.google.com/pubsub) for streaming data and messaging
 - [Cloud Functions](https://cloud.google.com/functions) for custom actions and interaction with external APIs (predominantly in Python)
 - [Remote Functions](https://cloud.google.com/bigquery/docs/remote-functions) to deploy Cloud Functions in BigQuery workflows
+- [Scheduled Queries](https://cloud.google.com/bigquery/docs/scheduling-queries) for automation and function orchestration
 - [Looker Studio](https://lookerstudio.google.com/) for end-user and data monitoring dashboards
 
 We have advanced capabilities in the GoogleSQL procedural language, and build custom and reuseable functions, procedures and table functions to solve complex data automation challenges. 
