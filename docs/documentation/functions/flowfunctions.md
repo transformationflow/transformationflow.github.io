@@ -1,1 +1,0 @@
-Flowfunctions are the core set of functions which support every stage in the data transformation management
