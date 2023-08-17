@@ -11,10 +11,9 @@ theme:
   logo: assets/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
   favicon: assets/TxFlow_Geometric_Logo_Icon_100x100.png
   
-  #icon:
-  #  repo: fontawesome/brands/git-alt  
-  
   features:
+    - content.code.annotate
+    - content.code.copy
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -25,27 +24,13 @@ theme:
     - navigation.instant
 
 nav:
-  - Intro:
-
-    - Introduction: 'index.md'
-    # - Principles: 'the-zen-of-sql.md'
-    # - Context: 'context.md'
-  
-  # - Documentation:
-    # - Style Guide: 'documentation/style-guide.md'
-    # - Key Concepts: 'documentation/concepts.md'
-    # - Architecture: 'documentation/architecture.md'
-    # - Data Ingestion: 'documentation/ingestion.md'
-    
-    # - Use Cases:
-      # - Data Profiling: 'documentation/usecases/profiling.md'
-      # - Data Backup: 'documentation/usecases/backup.md'
-      # - Data Recovery: 'documentation/usecases/recovery.md'
-
-    # - Functions:
-    # - SQL Builder Functions: 'documentation/functions/sqlbuilders.md'
-    # - Flow Functions: 'documentation/functions/flowfunctions.md'
-    # - Remote Functions: 'documentation/functions/remotefunctions.md'
+  - Introduction: index.md
+  - Products: products.md
+  - Reference:
+    # - reference/methodology.md
+    - BigQuery Tools: reference/bqtools.md
+    - BigQuery Manager: reference/bqmanager.md
+    - Decode Data for GA4: reference/decodedata.md
 
 markdown_extensions:
   - admonition
@@ -74,10 +59,10 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/transformationflow   
     - icon: fontawesome/solid/paper-plane
-      link: mailto:jim@transformationflow.io
+      link: mailto:hello@transformationflow.io
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
 
-copyright: Copyright &copy; 2022 Transformationflow OÜ (16248096), Estonia
+copyright: Copyright &copy; 2023 Transformationflow OÜ (16248096), Estonia
