@@ -3,7 +3,6 @@ site_name: Transformation Flow
 
 theme:
   name: material
-  custom_dir: overrides
   font:
     text: Monserrat
   palette:
