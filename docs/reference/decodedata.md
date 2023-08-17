@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Summary
 Product | Project ID | Access | Description
 -- | -- | -- | --
