@@ -26,7 +26,7 @@ Field Name | Field Type | Field Description
 index | STRING | CTE sequence
 name | STRING | CTE name
 sql | STRING | CTE SQL definition
-dependencies | ARRAY<STRING\> | CTE dependencies by CTE alias or table_id
+dependencies | ARRAY<STRING\> | CTE dependencies by CTE alias or `table_id`
 
 ??? abstract "example: `cte_profile`"
     The `cte_profile` for the following SQL query:
