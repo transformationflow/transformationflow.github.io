@@ -4,7 +4,7 @@ hide:
 ---
 
 # `bqtools`
-These functions are the low-level building blocks used to build, deploy and manage our complex data automation solutions.  
+These functions are the low-level building blocks used to build, deploy and manage data automation solutions, capabilities and products.  
 
 # `bqmanager`
 This suite of functions is used to build and deploy tools which support common BigQuery monitoring, management and optimisation activities.
