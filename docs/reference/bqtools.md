@@ -22,7 +22,7 @@ US | `bqtools.us`
 ## `get_sql`
 Function Name | Function Type | Description | Arguments | Returns | Dependencies
 --- | --- | --- | --- | --- | ---
-`get_sql` | Returns the SQL definition of a single view or routine | PROCEDURE (OUT) | routine_or_view_id STRING | sql STRING | `bqtools-qb.[region].get_sql`
+`get_sql` | Returns the SQL definition of a single view or routine | PROCEDURE | routine_or_view_id STRING | sql STRING | `bqtools-qb..get_sql`
 
 ??? info "example: `get_sql`"
     === "EU"
@@ -45,14 +45,15 @@ Function Name | Function Type | Description | Arguments | Returns | Dependencies
 ??? info "example: `profile_query_ctes`"
     === "EU"
         ```sql
-        SELECT PARSE_JSON(bqtools.eu.profile_query_ctes(sql))
+        DECLARE cte_profile JSON;
+        SET cte_profile = (SELECT PARSE_JSON(bqtools.eu.profile_query_ctes(sql)))
         ```
 
     === "US"
         ```sql
-        SELECT PARSE_JSON(bqtools.us.profile_query_ctes(sql))
+        DECLARE cte_profile JSON;
+        SET cte_profile = (SELECT PARSE_JSON(bqtools.eu.profile_query_ctes(sql)))
         ```
-
 
 ??? question "response: `profile_query_ctes`"
     The response will be a JSON string representation of the `cte_profile`, containing an array of objects (`[{index, name, sql, dependencies},...]`), for example:
@@ -65,3 +66,14 @@ Function Name | Function Type | Description | Arguments | Returns | Dependencies
     ```
 
     This response can be converted into a JSON object using `PARSE_JSON` as in the example above. 
+
+## `update_cte_sql`
+Function Name | Function Type | Description | Arguments | Returns | Dependencies
+--- | --- | --- | --- | --- | ---
+`update_cte_sql` | PROCEDURE | Replaces the SQL for a single CTE (identified by name) in a `cte_profile` object | INOUT cte_profile JSON, update_cte_name STRING, update_cte_sql STRING_ | _INOUT cte_profile JSON | `bqtools..get_cte_profile_index`
+
+
+## `build_sql_from_cte_profile`
+Function Name | Function Type | Description | Arguments | Returns | Dependencies
+--- | --- | --- | --- | --- | ---
+`build_sql_from_cte_profile` | PROCEDURE | Builds a SQL query from a `cte_profile` object | cte_profile JSON, INOUT sql STRING | INOUT sql STRING | 

@@ -23,5 +23,4 @@ We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for every
 - [Scheduled Queries](https://cloud.google.com/bigquery/docs/scheduling-queries) for automation and function orchestration
 - [Looker Studio](https://lookerstudio.google.com/) for end-user and data monitoring dashboards
 
-We have advanced capabilities in the GoogleSQL procedural language, and build custom and reuseable functions, procedures and table functions to solve complex data automation challenges. 
-
+We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL procedural language.  We use this skillset to build custom and reuseable functions, procedures and table functions to solve complex data automation challenges. 
