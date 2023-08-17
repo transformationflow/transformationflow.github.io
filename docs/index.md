@@ -14,7 +14,7 @@ Transformationflow is a [Google Cloud Partner](https://cloud.google.com/find-a-p
 We are a remote, specialist team of Google Cloud Certified [Professional Data Engineers](https://cloud.google.com/learn/certification/data-engineer) who build cool data stuff on Google Cloud.  We have been working exclusively with Google Cloud and BigQuery since 2017.
 
 ## How we do it
-We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for our data automation solutions, in addition to adjacent Google Cloud products such as:
+We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for everything we do, in addition to adjacent Google Cloud products such as:
 
 - [Google Cloud Storage](https://cloud.google.com/storage) for file ingestion, storage and backup
 - [Pub/Sub](https://cloud.google.com/pubsub) for streaming data and messaging
