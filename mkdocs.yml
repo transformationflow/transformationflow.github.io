@@ -29,27 +29,28 @@ nav:
   - Intro:
 
     - Introduction: 'index.md'
-    - Principles: 'the-zen-of-sql.md'
-    - Context: 'context.md'
+    # - Principles: 'the-zen-of-sql.md'
+    # - Context: 'context.md'
   
-  - Documentation:
-    - Style Guide: 'documentation/style-guide.md'
-    - Key Concepts: 'documentation/concepts.md'
+  # - Documentation:
+    # - Style Guide: 'documentation/style-guide.md'
+    # - Key Concepts: 'documentation/concepts.md'
     # - Architecture: 'documentation/architecture.md'
-    - Data Ingestion: 'documentation/ingestion.md'
+    # - Data Ingestion: 'documentation/ingestion.md'
     
-    - Use Cases:
+    # - Use Cases:
       # - Data Profiling: 'documentation/usecases/profiling.md'
-      - Data Backup: 'documentation/usecases/backup.md'
-      - Data Recovery: 'documentation/usecases/recovery.md'
+      # - Data Backup: 'documentation/usecases/backup.md'
+      # - Data Recovery: 'documentation/usecases/recovery.md'
 
-    #- Functions:
-    #- SQL Builder Functions: 'documentation/functions/sqlbuilders.md'
-    #- Flow Functions: 'documentation/functions/flowfunctions.md'
-    #- Remote Functions: 'documentation/functions/remotefunctions.md'
+    # - Functions:
+    # - SQL Builder Functions: 'documentation/functions/sqlbuilders.md'
+    # - Flow Functions: 'documentation/functions/flowfunctions.md'
+    # - Remote Functions: 'documentation/functions/remotefunctions.md'
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.highlight   
   - pymdownx.details
   - pymdownx.superfences
@@ -80,8 +81,8 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
 
-#plugins:
-#  - git-revision-date-localized:
-#      enable_creation_date: true
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 copyright: Copyright &copy; 2022 Transformationflow OÜ (16248096), Estonia
