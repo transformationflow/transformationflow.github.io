@@ -11,7 +11,7 @@ We build, manage and license serverless Google Cloud data automation solutions, 
 ## Who we are
 Transformationflow is a [Google Cloud Partner](https://cloud.google.com/find-a-partner/partner/transformationflow-%C3%96u), headquartered in Estonia (EU). 
 
-We are a remote, specialist team of Google Cloud Certified [Professional Data Engineers](https://cloud.google.com/learn/certification/data-engineer) who build cool data stuff on Google Cloud.  We have been working exclusively with Google Cloud and BigQuery since 2017.
+We are a remote, specialist team of Google Cloud Certified [Professional Data Engineers](https://cloud.google.com/learn/certification/data-engineer) who build data automation solutions, capabilities and products on Google Cloud.  We have been working exclusively with Google Cloud and BigQuery since 2017.
 
 ## How we do it
 We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for everything we do, in addition to adjacent Google Cloud products such as:

@@ -28,7 +28,7 @@ nav:
   - Products: products.md
   - Reference:
     # - reference/methodology.md
-    - BigQuery Tools: reference/bqtools.md
+    - BigQuery Tools (bqtools): reference/bqtools.md
     - BigQuery Manager: reference/bqmanager.md
     - Decode Data for GA4: reference/decodedata.md
 

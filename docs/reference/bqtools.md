@@ -66,6 +66,25 @@ dependencies | ARRAY<STRING\> | CTE dependencies by CTE alias or `table_id`
 
 
 # Functions
+
+## `get_dataset_ids`
+Function Name | Function Type | Description | Arguments | Returns | Dependencies
+--- | --- | --- | --- | --- | ---
+`get_dataset_ids` | PROCEDURE | Returns the dataset_ids for all datasets across multiple projects | project_ids ARRAY<STRING\> | dataset_ids ARRAY<STRING\> | `bqtools-qb..get_dataset_ids`
+
+??? info "execution: `get_dataset_ids`"
+    === "EU"
+        ```sql
+        DECLARE dataset_ids ARRAY<STRING>;
+        CALL bqtools.eu.get_dataset_ids(project_ids, dataset_ids);
+        ```
+
+    === "US"
+        ```sql
+        DECLARE dataset_ids ARRAY<STRING>;
+        CALL bqtools.us.get_dataset_ids(project_ids, dataset_ids);
+        ```
+
 ## `get_sql`
 Function Name | Function Type | Description | Arguments | Returns | Dependencies
 --- | --- | --- | --- | --- | ---
