@@ -1,6 +1,6 @@
 These objects and functions are used to profile, manipulate and construct Common Table Expression (CTE) structured SQL queries.  They enable robust arbitrary manipulation and evaluation of SQL queries in the native BigQuery environment.
 
- The profiler uses [SQLGlot](https://sqlglot.com/) to parse BigQuery-specific SQL inputs.
+The profiler uses [SQLGlot](https://sqlglot.com/) to parse BigQuery-specific SQL inputs.
 
 # Objects
 ## **`cte_profile (JSON)`**
@@ -106,10 +106,10 @@ _**Dependencies**_ | `bqtools.[region].get_cte_profile_index`
 !!! info "execution: `build_sql_from_cte_profile`"
     === "EU"
         ```sql
-        CALL bqtools.eu.build_sql_from_cte_profile(cte_profile, sql);
+        CALL `bqtools-qb.eu.build_sql_from_cte_profile`(cte_profile, sql);
         ```
 
     === "US"
         ```sql
-        CALL bqtools.us.build_sql_from_cte_profile(cte_profile, sql);
+        CALL `bqtools-qb.us.build_sql_from_cte_profile`(cte_profile, sql);
         ```

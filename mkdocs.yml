@@ -29,9 +29,10 @@ nav:
   - Reference:
     - BigQuery Tools (bqtools):
       - Overview: reference/bqtools/index.md
-      - Metadata: reference/bqtools/metadata.md
-      # - Copy: reference/bqtools/copy.md
+      - Resource Metadata: reference/bqtools/metadata.md
       - Common Table Expressions: reference/bqtools/cte.md
+      - Copy Resources: reference/bqtools/copy.md
+
 
     # - BigQuery Tools (bqtools):
       #- ID Functions: docs/reference/bqtools/id.md
