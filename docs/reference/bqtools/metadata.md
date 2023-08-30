@@ -14,17 +14,11 @@ _**Dependencies**_ | `bqtools-qb.[region].get_dataset_ids`
 !!! info "execution: `get_dataset_ids`"
     === "EU"
         ```sql
-        DECLARE project_ids, dataset_ids ARRAY<STRING>;
-        SET project_ids = ['project_a', 'project_b'];
-
         CALL bqtools.eu.get_dataset_ids(project_ids, dataset_ids);
         ```
 
     === "US"
         ```sql
-        DECLARE project_ids, dataset_ids ARRAY<STRING>;
-        SET project_ids = ['project_a', 'project_b'];
-        
         CALL bqtools.us.get_dataset_ids(project_ids, dataset_ids);
         ```
 
@@ -41,16 +35,10 @@ _**Dependencies**_ | `bqtools-qb.[region].get_sql`
 !!! info "execution: `get_sql`"
     === "EU"
         ```sql
-        DECLARE routine_or_view_id, sql STRING;
-        SET routine_or_view_id = 'project_id.dataset_name.routine_or_view_name';
-
         CALL bqtools.eu.get_sql(routine_or_view_id, sql);
         ```
 
     === "US"
         ```sql
-        DECLARE routine_or_view_id, sql STRING;
-        SET routine_or_view_id = 'project_id.dataset_name.routine_or_view_name';
-        
         CALL bqtools.us.get_sql(routine_or_view_id, sql);
         ```
