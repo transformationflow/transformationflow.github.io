@@ -27,10 +27,17 @@ nav:
   - Introduction: index.md
   - Products: products.md
   - Reference:
-    # - reference/methodology.md
-    - BigQuery Tools (bqtools): reference/bqtools.md
-    - BigQuery Manager: reference/bqmanager.md
-    - Decode Data for GA4: reference/decodedata.md
+    - BigQuery Tools (bqtools):
+      - Overview: reference/bqtools/index.md
+      - Metadata: reference/bqtools/metadata.md
+      # - Copy: reference/bqtools/copy.md
+      - Common Table Expressions: reference/bqtools/cte.md
+
+    # - BigQuery Tools (bqtools):
+      #- ID Functions: docs/reference/bqtools/id.md
+      #- CTE Functions: docs/reference/bqtools/cte.md
+      #- Copy Functions: docs/reference/bqtools/copy.md
+
 
 markdown_extensions:
   - admonition
@@ -61,8 +68,8 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:hello@transformationflow.io
 
-extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-  - javascripts/tables.js
+# extra_javascript:
+#   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+#   - javascripts/tables.js
 
 copyright: Copyright &copy; 2023 Transformationflow OÜ (16248096), Estonia
