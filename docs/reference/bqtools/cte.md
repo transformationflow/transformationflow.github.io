@@ -1,6 +1,6 @@
-These objects and functions are used to profile, manipulate and construct Common Table Expression (CTE) structured SQL queries.  They enable robust arbitrary manipulation and evaluation of SQL queries in the native BigQuery environment.
+These objects and functions are used to profile, manipulate and build SQL queries.  They enable robust arbitrary manipulation and evaluation of SQL queries in the native BigQuery environment.
 
-The profiler uses [SQLGlot](https://sqlglot.com/) to parse BigQuery-specific SQL inputs.
+The profiler uses [SQLGlot](https://sqlglot.com/) to parse GoogleSQL code.
 
 # Objects
 ## **`cte_profile (JSON)`**
