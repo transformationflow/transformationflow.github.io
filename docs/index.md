@@ -9,7 +9,7 @@ hide:
 We build, manage and license serverless Google Cloud data automation solutions, capabilities and products.
 
 ## Who we are
-Transformationflow ÖU is a [Google Cloud Partner](https://cloud.google.com/find-a-partner/partner/transformationflow-%C3%96u), headquartered in Estonia (EU). 
+Transformationflow OÜ is a [Google Cloud Partner](https://cloud.google.com/find-a-partner/partner/transformationflow-%C3%96u), headquartered in Estonia (EU). 
 
 We are a remote, specialist team of Google Cloud Certified [Professional Data Engineers](https://cloud.google.com/learn/certification/data-engineer) who build data automation solutions, capabilities and products on Google Cloud.  We have been working exclusively with Google Cloud and BigQuery since 2017.
 
@@ -23,4 +23,4 @@ We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for every
 - [Scheduled Queries](https://cloud.google.com/bigquery/docs/scheduling-queries) for automation and function orchestration
 - [Looker Studio](https://lookerstudio.google.com/) for end-user and data monitoring dashboards
 
-We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL [procedural language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).  We use this experience and skillset to build custom and reuseable functions, procedures and table functions to solve complex data automation challenges in a replicable manner.
+We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL [procedural language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).  We use these capabilities to build custom and reuseable functions, procedures and table functions which solve complex data automation challenges in a scalable and replicable manner.
