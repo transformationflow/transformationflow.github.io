@@ -14,30 +14,29 @@ theme:
   features:
     - content.code.annotate
     - content.code.copy
-    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.path
+    - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
-    - navigation.indexes
-    - navigation.sections
-    - navigation.expand
-    - navigation.instant
+    - navigation.tracking
 
 nav:
   - Introduction: index.md
   - Products: products.md
   - Reference:
-    - BigQuery Tools (bqtools):
+    - BigQuery Tools:
       - Overview: reference/bqtools/index.md
       - Resource Metadata: reference/bqtools/metadata.md
       - Resource Creation: reference/bqtools/creation.md
       - Resource Replication: reference/bqtools/replication.md
       - Query Manipulation: reference/bqtools/manipulation.md
-
-    # - BigQuery Tools (bqtools):
-      #- ID Functions: docs/reference/bqtools/id.md
-      #- CTE Functions: docs/reference/bqtools/cte.md
-      #- Copy Functions: docs/reference/bqtools/copy.md
+    - BigQuery Manager:
+      - Overview: reference/bqmanager/index.md
+      - Information Schema: reference/bqmanager/information_schema.md
 
 
 markdown_extensions:

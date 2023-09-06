@@ -1,4 +1,4 @@
-This library simplifies atomic data operations in BigQuery and enables functional programming and automation in the native BigQuery environment.
+The BigQuery Tools (`bqtools`) library simplifies atomic data operations in BigQuery and enables functional programming and automation in the native BigQuery environment.
 
 # Summary
 _Attribute_ | Value
