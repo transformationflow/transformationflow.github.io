@@ -34,6 +34,7 @@ nav:
       - Resource Creation: reference/bqtools/creation.md
       - Resource Replication: reference/bqtools/replication.md
       - Query Manipulation: reference/bqtools/manipulation.md
+      - Data Manipulation: reference/bqtools/data.md
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
       - Information Schema: reference/bqmanager/information_schema.md

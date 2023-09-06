@@ -1,4 +1,4 @@
-These functions return metadata related to BigQuery resources to support data management and automation activities in the native BigQuery environment.
+These functions return metadata related to BigQuery resources.
 
 # Functions
 ## **`get_dataset_ids`**
