@@ -4,9 +4,10 @@ These functions are used to create resources from arbitrary SQL definitions and 
 ## **`create_table`**
 _**Attribute**_ | Value
 --- | ---
-_**Function Name**_ | `create_table`
+_**Name**_ | `create_table`
+_**ID**_ | `bqtools.[region].create_table`
 _**Description**_ | Creates or replaces a single `BASE TABLE` defined by an arbitrary sql `query_statement`, with options defined in alignment with the `CREATE TABLE` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_statement).
-_**Function Type**_ | `PROCEDURE`
+_**Type**_ | `PROCEDURE`
 _**Arguments**_ | `table_id STRING, query_statement STRING, table_options JSON`
 _**Returns**_ | `None`
 _**Dependencies**_ | `bqtools-qb.[region].create_table`
@@ -28,9 +29,10 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table`
 ## **`create_view`**
 _**Attribute**_ | Value
 --- | ---
-_**Function Name**_ | `create_view`
+_**Name**_ | `create_view`
+_**ID**_ | `bqtools.[region].create_table`
 _**Description**_ | Creates or replaces a single `VIEW` defined by an arbitrary sql `query_statement`, with options defined in alignment with the `CREATE VIEW` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_view_statement).
-_**Function Type**_ | `PROCEDURE`
+_**Type**_ | `PROCEDURE`
 _**Arguments**_ | `view_id STRING, query_statement STRING, view_options JSON`
 _**Returns**_ | `None`
 _**Dependencies**_ | `bqtools-qb.[region].create_view`

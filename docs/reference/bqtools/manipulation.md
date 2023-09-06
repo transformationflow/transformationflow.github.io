@@ -8,10 +8,10 @@ The CTE (Common Table Expression) profile (`cte_profile`) is a JSON representati
 
 Field Name | Field Type | Field Description
 --- | --- | ---
-`index` | `STRING` | CTE sequence
-`name`| `STRING` | CTE name
-`sql` | `STRING` | CTE SQL definition
-`dependencies` | `ARRAY<STRING>` | CTE dependencies by CTE alias or `table_id`
+`index` | `STRING` | Sequential order 
+`name`| `STRING` | Alias
+`sql` | `STRING` | SQL definition
+`dependencies` | `ARRAY<STRING>` | Dependencies by alias or `table_id`
 
 ??? abstract "example: `cte_profile`"
     The `cte_profile` for the following SQL query:
@@ -54,7 +54,8 @@ Field Name | Field Type | Field Description
 ## **`profile_query_ctes`**
 _**Attribute**_ | Value
 --- | ---
-_**Function Name**_ | `profile_query_ctes`
+_**Name**_ | `profile_query_ctes`
+_**ID**_ | `bqtools.[region].profile_query_ctes`
 _**Description**_ | Returns the JSON profile of a CTE-based query
 _**Function Type**_ | `REMOTE`
 _**Arguments**_ | `sql_query STRING`
@@ -75,7 +76,8 @@ _**Dependencies**_ | `bqtools.cloudfunctions.net/profile-query-ctes`
 ## **`update_cte_sql`**
 _**Attribute**_ | Value
 --- | ---
-_**Function Name**_ | `update_cte_sql`
+_**Name**_ | `update_cte_sql`
+_**ID**_ | `bqtools.[region].update_cte_sql`
 _**Description**_ | Replaces the SQL for a single CTE (identified by name) in a `cte_profile` object
 _**Function Type**_ | `PROCEDURE`
 _**Arguments**_ | `INOUT cte_profile JSON, update_cte_name STRING, update_cte_sql STRING`
@@ -96,9 +98,10 @@ _**Dependencies**_ | `bqtools.[region].get_cte_profile_index`
 ## **`build_sql_from_cte_profile`**
 _**Attribute**_ | Value
 --- | ---
-_**Function Name**_ | `build_sql_from_cte_profile`
+_**Name**_ | `build_sql_from_cte_profile`
+_**ID**_ | `bqtools.[region].build_sql_from_cte_profile`
 _**Description**_ | Builds a SQL query from a `cte_profile` object
-_**Function Type**_ | `PROCEDURE`
+_**Type**_ | `PROCEDURE`
 _**Arguments**_ | `cte_profile JSON, OUT sql STRING`
 _**Returns**_ | `OUT sql STRING`
 _**Dependencies**_ | `bqtools.[region].get_cte_profile_index`
