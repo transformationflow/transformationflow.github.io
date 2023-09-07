@@ -54,9 +54,7 @@ _**Dependencies**_ | `encodeURIComponent()`
     ```sql
     response: "test%3F"
     ```
-
-
-
+    
 ## **`decode_uri_component`**
 _**Attribute**_ | Value
 --- | ---

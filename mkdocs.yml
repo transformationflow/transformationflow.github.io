@@ -32,18 +32,21 @@ nav:
   - Introduction: index.md
   - Products: products.md
   - Reference:
+
     - BigQuery Tools:
       - Overview: reference/bqtools/index.md
       - Resources:
-        - Resource Metadata: reference/bqtools/metadata.md
-        - Resource Creation: reference/bqtools/creation.md
-        - Resource Replication: reference/bqtools/replication.md
+        - Metadata: reference/bqtools/metadata.md
+        - Creation: reference/bqtools/creation.md
+        - Replication: reference/bqtools/replication.md
       - Queries:
-        - Query Manipulation: reference/bqtools/manipulation.md
+        - Interaction: reference/bqtools/query.md
       - Data:
-        - Data Manipulation: reference/bqtools/data.md
-        - Data Decoding: reference/bqtools/decoders.md
-        - String Manipulation: reference/bqtools/string.md
+        - String: reference/bqtools/string.md
+        - Array: reference/bqtools/array.md
+        - Decoders: reference/bqtools/decoders.md
+        - Interaction: reference/bqtools/data.md
+
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
       - Information Schema: reference/bqmanager/information_schema.md
