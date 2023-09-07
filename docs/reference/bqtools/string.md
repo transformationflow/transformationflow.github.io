@@ -1,6 +1,28 @@
 These functions are used to parse and manipulate `STRING` inputs.
 
 # Functions
+## **`parse_resource_id`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `parse_resource_id`
+_**ID**_ | `bqtools.[region].parse_resource_id`
+_**Description**_ | Parses valid `resource_ids` into constituent elements.
+_**Type**_ | `FUNCTION`
+_**Arguments**_ | `resource_id STRING`
+_**Returns**_ | `STRUCT(is_valid BOOL, project_id STRING, dataset_name STRING, resource_name STRING, dataset_id STRING, resource_id STRING`
+_**Dependencies**_ | `None`
+
+!!! info "execution: `parse_resource_id`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.parse_resource_id(resource_id);
+        ```
+
+    === "US"
+        ```sql
+        CALL bqtools.us.parse_resource_id(resource_id);
+        ```
+
 ## **`encode_uri_component`**
 _**Attribute**_ | Value
 --- | ---
