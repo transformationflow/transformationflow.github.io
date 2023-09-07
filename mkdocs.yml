@@ -36,6 +36,7 @@ nav:
       - Query Manipulation: reference/bqtools/manipulation.md
       - Data Manipulation: reference/bqtools/data.md
       - Data Decoding: reference/bqtools/decoders.md
+      - String Manipulation: reference/bqtools/string.md
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
       - Information Schema: reference/bqmanager/information_schema.md
