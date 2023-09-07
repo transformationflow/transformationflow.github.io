@@ -25,6 +25,9 @@ theme:
     - navigation.tracking
     - toc.integrate
 
+plugins:
+  - search
+
 nav:
   - Introduction: index.md
   - Products: products.md
