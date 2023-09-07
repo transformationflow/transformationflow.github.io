@@ -23,6 +23,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    - toc.integrate
 
 nav:
   - Introduction: index.md
@@ -30,17 +31,19 @@ nav:
   - Reference:
     - BigQuery Tools:
       - Overview: reference/bqtools/index.md
-      - Resource Metadata: reference/bqtools/metadata.md
-      - Resource Creation: reference/bqtools/creation.md
-      - Resource Replication: reference/bqtools/replication.md
-      - Query Manipulation: reference/bqtools/manipulation.md
-      - Data Manipulation: reference/bqtools/data.md
-      - Data Decoding: reference/bqtools/decoders.md
-      - String Manipulation: reference/bqtools/string.md
+      - Resources:
+        - Resource Metadata: reference/bqtools/metadata.md
+        - Resource Creation: reference/bqtools/creation.md
+        - Resource Replication: reference/bqtools/replication.md
+      - Queries:
+        - Query Manipulation: reference/bqtools/manipulation.md
+      - Data:
+        - Data Manipulation: reference/bqtools/data.md
+        - Data Decoding: reference/bqtools/decoders.md
+        - String Manipulation: reference/bqtools/string.md
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
       - Information Schema: reference/bqmanager/information_schema.md
-
 
 markdown_extensions:
   - admonition
