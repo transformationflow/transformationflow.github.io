@@ -35,6 +35,7 @@ nav:
       - Resource Replication: reference/bqtools/replication.md
       - Query Manipulation: reference/bqtools/manipulation.md
       - Data Manipulation: reference/bqtools/data.md
+      - Data Decoding: reference/bqtools/decoders.md
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
       - Information Schema: reference/bqmanager/information_schema.md
@@ -50,11 +51,17 @@ markdown_extensions:
   - meta
   - pymdownx.tabbed:
       alternate_style: true 
+  - tables
   - toc:
       baselevel: 2
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra:
   analytics:
