@@ -30,7 +30,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table`
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_view`
-_**ID**_ | `bqtools.[region].create_table`
+_**ID**_ | `bqtools.[region].create_view`
 _**Description**_ | Creates or replaces a single `VIEW` defined by an arbitrary sql `query_statement`, with options defined in alignment with the `CREATE VIEW` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_view_statement).
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `view_id STRING, query_statement STRING, view_options JSON`
