@@ -50,6 +50,9 @@ nav:
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
       - Information Schema: reference/bqmanager/information_schema.md
+    
+    - Decode Data for GA4:
+      - Overview: reference/decodedata-ga4/index.md
 
 markdown_extensions:
   - admonition
