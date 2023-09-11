@@ -17,10 +17,11 @@ We are a remote, specialist team of Google Cloud Certified [Professional Data En
 We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for everything we do, in addition to complementary Google Cloud products such as:
 
 - [Google Cloud Storage](https://cloud.google.com/storage) for file ingestion, storage and backup
-- [Pub/Sub](https://cloud.google.com/pubsub) for streaming data and messaging
-- [Cloud Functions](https://cloud.google.com/functions) for custom actions and interaction with external APIs (predominantly in Python)
+- [Pub/Sub](https://cloud.google.com/pubsub) for streaming data, messaging and scheduled query monitoring
+- [Cloud Functions](https://cloud.google.com/functions) for custom actions, notifications and interaction with external APIs (predominantly in Python)
 - [Remote Functions](https://cloud.google.com/bigquery/docs/remote-functions) to deploy Cloud Functions in BigQuery workflows
-- [Scheduled Queries](https://cloud.google.com/bigquery/docs/scheduling-queries) for automation and function orchestration
+- [Scheduled Queries](https://cloud.google.com/bigquery/docs/scheduling-queries) for automation and orchestration
+- [BigQuery ML](https://cloud.google.com/bigquery/docs/bqml-introduction) for AI/ML and Generative AI 
 - [Looker Studio](https://lookerstudio.google.com/) for end-user and data monitoring dashboards
 
 We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL [procedural language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).  We use these capabilities to build custom and reuseable functions, procedures and table functions which solve complex data automation challenges in a rapid, scalable and replicable manner.
