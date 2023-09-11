@@ -20,7 +20,7 @@ _**Dependencies**_ | `None`
 
     === "US"
         ```sql
-        CALL bqtools.us.parse_resource_id(resource_id);
+        SELECT bqtools.us.parse_resource_id(resource_id);
         ```
 
 ## **`encode_uri_component`**

@@ -1,5 +1,4 @@
 site_name: Transformation Flow
-# repo_url: https://github.com/transformationflow/txflow
 
 theme:
   name: material
@@ -44,7 +43,7 @@ nav:
       - Data:
         - String: reference/bqtools/string.md
         - Array: reference/bqtools/array.md
-        - Decoders: reference/bqtools/decoders.md
+        - Decoding: reference/bqtools/decoders.md
         - Interaction: reference/bqtools/data.md
 
     - BigQuery Manager:
@@ -53,6 +52,7 @@ nav:
     
     - Decode Data for GA4:
       - Overview: reference/decodedata-ga4/index.md
+      - Event Profiler: reference/decodedata-ga4/profiler.md
 
 markdown_extensions:
   - admonition
