@@ -40,7 +40,7 @@ nav:
         - Replication: reference/bqtools/replication.md
       - Partitions:
         - Partitioned Tables: reference/bqtools/partitioning.md
-        # - Sharded Tables:
+        - Sharded Tables: reference/bqtools/sharding.md
       - Queries:
         - Interaction: reference/bqtools/query.md
       - Data:
