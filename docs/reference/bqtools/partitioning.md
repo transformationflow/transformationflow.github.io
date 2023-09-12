@@ -50,7 +50,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_table_date_partition`
 _**ID**_ | `bqtools.[region].get_first_table_date_partition`
-_**Description**_ | Returns first date partition corresponding to all existing partitions in a single partitioned table.
+_**Description**_ | Returns the first date partition corresponding to all existing partitions in a single partitioned table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, OUT first_partition DATE`
 _**Returns**_ | `OUT first_partition DATE`
@@ -72,7 +72,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_table_date_partition_id`
 _**ID**_ | `bqtools.[region].get_first_table_date_partition_id`
-_**Description**_ | Returns first date partition id corresponding to all existing partitions in a single partitioned table.
+_**Description**_ | Returns the first date partition id corresponding to all existing partitions in a single partitioned table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, OUT first_partition_id STRING`
 _**Returns**_ | `OUT first_partition_id STRING`
@@ -88,3 +88,48 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partition_ids`, `bqtools-b
         ```sql
         SELECT bqtools.us.get_first_table_date_partition_id(partitioned_table_id, first_partition_id);
         ```
+
+## **`get_last_table_date_partition`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_last_table_date_partition`
+_**ID**_ | `bqtools.[region].get_last_table_date_partition`
+_**Description**_ | Returns the last date partition corresponding to all existing partitions in a single partitioned table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `partitioned_table_id STRING, OUT last_partition DATE`
+_**Returns**_ | `OUT last_partition DATE`
+_**Dependencies**_ | `bqtools.[region].get_table_date_partitions`, `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[region].parse_resource_id`
+
+!!! info "execution: `get_last_table_date_partition`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_last_table_date_partition(partitioned_table_id, last_partition);
+        ```
+    
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_last_table_date_partition(partitioned_table_id, last_partition);
+        ```
+
+## **`get_last_table_date_partition_id`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_last_table_date_partition_id`
+_**ID**_ | `bqtools.[region].get_last_table_date_partition_id`
+_**Description**_ | Returns the last date partition id corresponding to all existing partitions in a single partitioned table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `partitioned_table_id STRING, OUT last_partition_id STRING`
+_**Returns**_ | `OUT last_partition_id STRING`
+_**Dependencies**_ | `bqtools.[region].get_table_date_partition_ids`, `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[region].parse_resource_id`
+
+!!! info "execution: `get_last_table_date_partition_id`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_last_table_date_partition_id(partitioned_table_id, last_partition_id);
+        ```
+
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_last_table_date_partition_id(partitioned_table_id, last_partition_id  );
+        ```
+
