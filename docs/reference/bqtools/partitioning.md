@@ -1,4 +1,4 @@
-These functions support profiling and working with [partitioned tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
+These functions support profiling and working with [partitioned tables](https://cloud.google.com/bigquery/docs/partitioned-tables)...
 
 # Functions
 ## **`get_table_date_partitions`**
