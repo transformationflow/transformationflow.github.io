@@ -38,6 +38,9 @@ nav:
         - Metadata: reference/bqtools/metadata.md
         - Creation: reference/bqtools/creation.md
         - Replication: reference/bqtools/replication.md
+      - Partitions:
+        - Partitioned Tables: reference/bqtools/partitioning.md
+        # - Sharded Tables:
       - Queries:
         - Interaction: reference/bqtools/query.md
       - Data:
