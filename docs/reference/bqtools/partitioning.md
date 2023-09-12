@@ -37,11 +37,11 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[
 !!! info "execution: `get_table_date_partition_ids`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_table_date_partitions(partitioned_table_id, partition_ids);
+        SELECT bqtools.eu.get_table_date_partition_ids(partitioned_table_id, partition_ids);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_table_date_partitions(partitioned_table_id, partition_ids);
+        SELECT bqtools.us.get_table_date_partition_ids(partitioned_table_id, partition_ids);
         ```
 
