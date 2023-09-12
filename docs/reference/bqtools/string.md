@@ -6,10 +6,10 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `parse_resource_id`
 _**ID**_ | `bqtools.[region].parse_resource_id`
-_**Description**_ | Parses valid `resource_ids` into constituent elements.
+_**Description**_ | Parses valid `resource_ids` into constituent components.
 _**Type**_ | `FUNCTION`
 _**Arguments**_ | `resource_id STRING`
-_**Returns**_ | `STRUCT(is_valid BOOL, project_id STRING, dataset_name STRING, resource_name STRING, dataset_id STRING, resource_id STRING`
+_**Returns**_ | `STRUCT<is_valid BOOL, project_id STRING, dataset_name STRING, resource_name STRING, dataset_id STRING, resource_id STRING>`
 _**Dependencies**_ | `None`
 
 !!! info "execution: `parse_resource_id`"
@@ -17,10 +17,19 @@ _**Dependencies**_ | `None`
         ```sql
         SELECT bqtools.eu.parse_resource_id(resource_id);
         ```
+        Individual components can be directly accessed using the following syntax (this will return the `resource_name`):
+        ```sql
+        SELECT bqtools.eu.parse_resource_id(resource_id).resource_name;
+        ```
+
 
     === "US"
         ```sql
         SELECT bqtools.us.parse_resource_id(resource_id);
+        ```
+        Individual components can be directly accessed using the following syntax (this will return the `resource_name`):
+        ```sql
+        SELECT bqtools.us.parse_resource_id(resource_id).resource_name;
         ```
 
 ## **`encode_uri_component`**
