@@ -45,3 +45,24 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[
         SELECT bqtools.us.get_table_date_partition_ids(partitioned_table_id, partition_ids);
         ```
 
+## **`get_first_table_date_partition`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_first_table_date_partition`
+_**ID**_ | `bqtools.[region].get_first_table_date_partition`
+_**Description**_ | Returns first date partition corresponding to all existing partitions in a single partitioned table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `partitioned_table_id STRING, OUT first_partition DATE`
+_**Returns**_ | `OUT first_partition DATE`
+_**Dependencies**_ | `bqtools-qb.[region].get_table_date_partitions`
+
+!!! info "execution: `get_first_table_date_partition`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_first_table_date_partition(partitioned_table_id, first_partition);
+        ```
+
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_first_table_date_partition(partitioned_table_id, first_partition);
+        ```
