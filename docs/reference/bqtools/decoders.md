@@ -6,7 +6,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `decode_pubsub_scheduled_query_data`
 _**ID**_ | `bqtools.[region].decode_pubsub_scheduled_query_data`
-_**Description**_ | Decodes the JSON `data` column into a STRUCT from a Scheduled Query notification sent to BigQuery via a PubSub BigQuery subscription.
+_**Description**_ | Decodes the JSON `data` column from Scheduled Query notifications sent to BigQuery via a PubSub BigQuery subscription into a STRUCT.
 _**Type**_ | `FUNCTION`
 _**Arguments**_ | `data JSON`
 _**Returns**_ | `data STRUCT`
