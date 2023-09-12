@@ -138,7 +138,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_table_date_partitions`
 _**ID**_ | `bqtools.[region].get_missing_table_date_partitions`
-_**Description**_ | Returns an array of missing dates corresponding to all existing partitions in a single partitioned table.
+_**Description**_ | Returns an array of missing dates corresponding to all missing partitions in a single partitioned table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, start_date DATE, end_date DATE, OUT missing_partitions ARRAY<DATE>`
 _**Returns**_ | `OUT missing_partitions ARRAY<DATE>`
@@ -160,7 +160,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_table_date_partition_ids`
 _**ID**_ | `bqtools.[region].get_missing_table_date_partition_ids`
-_**Description**_ | Returns an array of missing date_ids corresponding to all existing partitions in a single partitioned table.
+_**Description**_ | Returns an array of missing date_ids corresponding to all missing partitions in a single partitioned table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, start_date DATE, end_date DATE, OUT missing_partition_ids ARRAY<STRING>`
 _**Returns**_ | `OUT missing_partition_ids ARRAY<STRING>`

@@ -132,3 +132,47 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[r
         ```sql
         SELECT bqtools.us.get_first_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, first_shard_id);
         ```
+
+## **`get_missing_table_date_shards`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_missing_table_date_shards`
+_**ID**_ | `bqtools.[region].get_missing_table_date_shards`
+_**Description**_ | Returns an array of missing dates corresponding to all missing date-sharded tables in a single sharded table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, start_date DATE, end_date DATE, OUT missing_shards ARRAY<DATE>`
+_**Returns**_ | `OUT missing_shards ARRAY<DATE>`
+_**Dependencies**_ | `bqtools.[region].get_table_date_shards`, `bqtools-qb.[region].get_table_date_shards`
+
+!!! info "execution: `get_missing_table_date_shards`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_missing_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shards);
+        ```
+    
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_missing_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shards);
+        ```
+    
+## **`get_missing_table_date_shard_ids`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_missing_table_date_shard_ids`
+_**ID**_ | `bqtools.[region].get_missing_table_date_shard_ids`
+_**Description**_ | Returns an array of missing shard_ids corresponding to all missing date-sharded tables in a single sharded table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, start_date DATE, end_date DATE, OUT missing_shard_ids ARRAY<STRING>`
+_**Returns**_ | `OUT missing_shard_ids ARRAY<STRING>`
+_**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[region].get_table_date_shards`
+
+!!! info "execution: `get_missing_table_date_shard_ids`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_missing_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shard_ids);
+        ```
+    
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_missing_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shard_ids);
+        ```
