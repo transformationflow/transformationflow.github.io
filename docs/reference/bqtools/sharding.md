@@ -45,50 +45,6 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_date_shards`
         SELECT bqtools.us.get_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, shard_ids);
         ```
 
-## **`get_last_table_date_shard`**
-_**Attribute**_ | Value
---- | ---
-_**Function Name**_ | `get_last_table_date_shard`
-_**ID**_ | `bqtools.[region].get_last_table_date_shard`
-_**Description**_ | Returns the last sharded date corresponding to all existing date-sharded tables in a single sharded table.
-_**Type**_ | `PROCEDURE`
-_**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT last_shard DATE`
-_**Returns**_ | `OUT last_shard DATE`
-_**Dependencies**_ | `bqtools.[region].get_table_date_shards`, `bqtools-qb.[region].get_table_date_shards`
-
-!!! info "execution: `get_last_table_date_shard`"
-    === "EU"
-        ```sql
-        SELECT bqtools.eu.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
-        ```
-    
-    === "US"
-        ```sql
-        SELECT bqtools.us.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
-        ```
-
-## **`get_last_table_date_shard_id`**
-_**Attribute**_ | Value
---- | ---
-_**Function Name**_ | `get_last_table_date_shard_id`
-_**ID**_ | `bqtools.[region].get_last_table_date_shard_id`
-_**Description**_ | Returns the last sharded date id corresponding to all existing date-sharded tables in a single sharded table.
-_**Type**_ | `PROCEDURE`
-_**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT last_shard_id STRING`
-_**Returns**_ | `OUT last_shard_id STRING`
-_**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[region].get_table_date_shards`
-
-!!! info "execution: `get_last_table_date_shard_id`"
-    === "EU"
-        ```sql
-        SELECT bqtools.eu.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
-        ```
-    
-    === "US"
-        ```sql
-        SELECT bqtools.us.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
-        ```
-
 ## **`get_first_table_date_shard`**
 _**Attribute**_ | Value
 --- | ---
@@ -131,6 +87,50 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[r
     === "US"
         ```sql
         SELECT bqtools.us.get_first_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, first_shard_id);
+        ```
+
+## **`get_last_table_date_shard`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_last_table_date_shard`
+_**ID**_ | `bqtools.[region].get_last_table_date_shard`
+_**Description**_ | Returns the last sharded date corresponding to all existing date-sharded tables in a single sharded table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT last_shard DATE`
+_**Returns**_ | `OUT last_shard DATE`
+_**Dependencies**_ | `bqtools.[region].get_table_date_shards`, `bqtools-qb.[region].get_table_date_shards`
+
+!!! info "execution: `get_last_table_date_shard`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
+        ```
+    
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
+        ```
+
+## **`get_last_table_date_shard_id`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_last_table_date_shard_id`
+_**ID**_ | `bqtools.[region].get_last_table_date_shard_id`
+_**Description**_ | Returns the last sharded date id corresponding to all existing date-sharded tables in a single sharded table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT last_shard_id STRING`
+_**Returns**_ | `OUT last_shard_id STRING`
+_**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[region].get_table_date_shards`
+
+!!! info "execution: `get_last_table_date_shard_id`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
+        ```
+    
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
         ```
 
 ## **`get_missing_table_date_shards`**
