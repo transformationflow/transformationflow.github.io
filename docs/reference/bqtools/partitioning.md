@@ -1,4 +1,4 @@
-These functions support profiling and working with [partitioned tables](https://cloud.google.com/bigquery/docs/partitioned-tables)...
+These functions support profiling and working with [partitioned tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 
 # Functions
 ## **`get_table_date_partitions`**
@@ -9,7 +9,7 @@ _**ID**_ | `bqtools.[region].get_table_date_partitions`
 _**Description**_ | Returns an array of dates corresponding to all existing partitions in a single partitioned table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, OUT partitions ARRAY<DATE>`
-_**Returns**_ | `OUT partitions ARRAY<STRING>`
+_**Returns**_ | `OUT partitions ARRAY<DATE>`
 _**Dependencies**_ | `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[region].parse_resource_id`
 
 !!! info "execution: `get_table_date_partitions`"
