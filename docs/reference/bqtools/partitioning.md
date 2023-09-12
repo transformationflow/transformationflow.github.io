@@ -130,6 +130,49 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partition_ids`, `bqtools-q
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_last_table_date_partition_id(partitioned_table_id, last_partition_id  );
+        SELECT bqtools.us.get_last_table_date_partition_id(partitioned_table_id, last_partition_id);
         ```
 
+## **`get_missing_table_date_partitions`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_missing_table_date_partitions`
+_**ID**_ | `bqtools.[region].get_missing_table_date_partitions`
+_**Description**_ | Returns an array of missing dates corresponding to all existing partitions in a single partitioned table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `partitioned_table_id STRING, start_date DATE, end_date DATE, OUT missing_partitions ARRAY<DATE>`
+_**Returns**_ | `OUT missing_partitions ARRAY<DATE>`
+_**Dependencies**_ | `bqtools.[region].get_table_date_partitions`, `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[region].parse_resource_id`
+
+!!! info "execution: `get_missing_table_date_partitions`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_missing_table_date_partitions(partitioned_table_id, start_date, end_date, missing_partitions);
+        ```
+
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_missing_table_date_partitions(partitioned_table_id, start_date, end_date, missing_partitions);
+        ```
+
+## **`get_missing_table_date_partition_ids`**
+_**Attribute**_ | Value
+--- | ---
+_**Function Name**_ | `get_missing_table_date_partition_ids`
+_**ID**_ | `bqtools.[region].get_missing_table_date_partition_ids`
+_**Description**_ | Returns an array of missing date_ids corresponding to all existing partitions in a single partitioned table.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `partitioned_table_id STRING, start_date DATE, end_date DATE, OUT missing_partition_ids ARRAY<STRING>`
+_**Returns**_ | `OUT missing_partition_ids ARRAY<STRING>`
+_**Dependencies**_ | `bqtools.[region].get_table_date_partitions`, `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[region].parse_resource_id`
+
+!!! info "execution: `get_missing_table_date_partition_ids`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.get_missing_table_date_partition_ids(partitioned_table_id, start_date, end_date, missing_partition_ids);
+        ```
+
+    === "US"
+        ```sql
+        SELECT bqtools.us.get_missing_table_date_partition_ids(partitioned_table_id, start_date, end_date, missing_partition_ids);
+        ```
