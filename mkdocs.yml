@@ -13,7 +13,6 @@ theme:
   features:
     - content.code.annotate
     - content.code.copy
-    - navigation.expand
     - navigation.indexes
     - navigation.instant
     - navigation.path
