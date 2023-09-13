@@ -2,7 +2,7 @@
 hide:
   - navigation
 ---
-![Transformationflow](assets/Transformationflow Banner Bold Tagline.png)
+![Transformationflow](assets/Transformationflow Logo Banner +.png)
 
 ![Google Cloud Partners](assets/google-cloud-partner-logo-horizontal-outline-400.png){ align=right }
 
@@ -19,10 +19,10 @@ We use [BigQuery](https://cloud.google.com/bigquery) as the foundation for every
 
 - [Google Cloud Storage](https://cloud.google.com/storage) for file ingestion, storage and backup
 - [Pub/Sub](https://cloud.google.com/pubsub) for streaming data, messaging and scheduled query monitoring
-- [Cloud Functions](https://cloud.google.com/functions) for custom actions, notifications and interaction with external APIs (predominantly in Python)
+- [Python Cloud Functions](https://cloud.google.com/functions) for custom actions, notifications and interaction with external APIs
 - [Remote Functions](https://cloud.google.com/bigquery/docs/remote-functions) to deploy Cloud Functions in BigQuery workflows
 - [Scheduled Queries](https://cloud.google.com/bigquery/docs/scheduling-queries) for automation and orchestration
-- [BigQuery ML](https://cloud.google.com/bigquery/docs/bqml-introduction) for AI/ML and Generative AI 
+- [BigQuery ML](https://cloud.google.com/bigquery/docs/bqml-introduction) for AI/ML and generative AI workflows
 - [Looker Studio](https://lookerstudio.google.com/) for end-user and data monitoring dashboards
 
-We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL [procedural language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).  We use these capabilities to build custom and reuseable functions, procedures and table functions which solve complex data automation challenges in a rapid, scalable and replicable manner.
+We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL [procedural language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).  We use these capabilities to build functions, procedures and table functions which solve complex data automation challenges in a rapid, scalable and replicable manner.
