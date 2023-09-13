@@ -30,6 +30,7 @@ nav:
   - Introduction: index.md
   - Products: products.md
   - Reference:
+    - Glossary: reference/glossary.md
 
     - BigQuery Tools:
       - Overview: reference/bqtools/index.md
@@ -91,8 +92,11 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:hello@transformationflow.io
 
-# extra_javascript:
-#   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-#   - javascripts/tables.js
+#extra_css:
+#  - stylesheets/extra.css
+
+#extra_javascript:
+#  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+#  - javascripts/tables.js
 
 copyright: Copyright &copy; 2023 Transformationflow OÜ (16248096), Estonia
