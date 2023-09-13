@@ -6,7 +6,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_table_date_shards`
 _**ID**_ | `bqtools.[region].get_table_date_shards`
-_**Description**_ | Returns an array of dates corresponding to all existing date-sharded tables in a single sharded table.
+_**Description**_ | Returns an array of `shard_dates` corresponding to all existing date shards in a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT shard_dates ARRAY<DATE>`
 _**Returns**_ | `OUT shard_dates ARRAY<DATE>`
@@ -28,7 +28,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_table_date_shard_ids`
 _**ID**_ | `bqtools.[region].get_table_date_shard_ids`
-_**Description**_ | Returns an array of shard_ids corresponding to all existing date-sharded tables in a single sharded table.
+_**Description**_ | Returns an array of `shard_ids` corresponding to all existing date shards in a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT shard_ids ARRAY<STRING>`
 _**Returns**_ | `OUT shard_ids ARRAY<STRING>`
@@ -50,7 +50,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_table_date_shard`
 _**ID**_ | `bqtools.[region].get_first_table_date_shard`
-_**Description**_ | Returns the first sharded date corresponding to all existing date-sharded tables in a single sharded table.
+_**Description**_ | Returns the first `shard_date` from a single sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT first_shard DATE`
 _**Returns**_ | `OUT first_shard DATE`
@@ -72,7 +72,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_table_date_shard_id`
 _**ID**_ | `bqtools.[region].get_first_table_date_shard_id`
-_**Description**_ | Returns the first sharded date id corresponding to all existing date-sharded tables in a single sharded table.
+_**Description**_ | Returns the first `shard_id` from a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT first_shard_id STRING`
 _**Returns**_ | `OUT first_shard_id STRING`
@@ -94,7 +94,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_table_date_shard`
 _**ID**_ | `bqtools.[region].get_last_table_date_shard`
-_**Description**_ | Returns the last sharded date corresponding to all existing date-sharded tables in a single sharded table.
+_**Description**_ | Returns the last `shard_date` from a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT last_shard DATE`
 _**Returns**_ | `OUT last_shard DATE`
@@ -116,7 +116,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_table_date_shard_id`
 _**ID**_ | `bqtools.[region].get_last_table_date_shard_id`
-_**Description**_ | Returns the last sharded date id corresponding to all existing date-sharded tables in a single sharded table.
+_**Description**_ | Returns the last `shard_id` from a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT last_shard_id STRING`
 _**Returns**_ | `OUT last_shard_id STRING`
@@ -138,7 +138,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_table_date_shards`
 _**ID**_ | `bqtools.[region].get_missing_table_date_shards`
-_**Description**_ | Returns an array of missing dates corresponding to all missing date-sharded tables in a single sharded table.
+_**Description**_ | Returns an array containing the missing `date_shards` between the `start_date` and `end_date` in a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, start_date DATE, end_date DATE, OUT missing_shards ARRAY<DATE>`
 _**Returns**_ | `OUT missing_shards ARRAY<DATE>`
@@ -160,7 +160,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_table_date_shard_ids`
 _**ID**_ | `bqtools.[region].get_missing_table_date_shard_ids`
-_**Description**_ | Returns an array of missing shard_ids corresponding to all missing date-sharded tables in a single sharded table.
+_**Description**_ | Returns an array containing the missing `shard_ids` between the `start_date` and `end_date` in a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, start_date DATE, end_date DATE, OUT missing_shard_ids ARRAY<STRING>`
 _**Returns**_ | `OUT missing_shard_ids ARRAY<STRING>`
