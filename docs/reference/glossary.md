@@ -1,5 +1,6 @@
 The following definitions are used consistently across all functions and development work.  These definitions may override some of the standard Google definitions which can be inconsistent across different system functions, views and user interfaces.
 
+# Naming Conventions
 Term | Data Type | Description | Key Functions
 --- | --- | --- | --- 
 `project_id` | `STRING` | The globally unique identifier for each [project](https://cloud.google.com/resource-manager/docs/creating-managing-projects). | `bqtools.[region].parse_resource_id(resource_id).project_id`
@@ -12,4 +13,6 @@ Term | Data Type | Description | Key Functions
 `shard_date` | `DATE` |  A `DATE` representantion of a shard date. | [Sharded Tables](https://transformationflow.io/reference/bqtools/sharding/)
 `partition_id` | `STRING` |  A `STRING` representantion of a partition date in the format `YYYYMMDD`. | [Partitioned Tables](https://transformationflow.io/reference/bqtools/partitioning/)
 `partition_date` | `DATE` |  A `DATE` representantion of a partition date. | [Partitioned Tables](https://transformationflow.io/reference/bqtools/partitioning/)
+
+
 
