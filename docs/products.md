@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # BigQuery Tools
 The `bqtools` functions are the low-level building blocks used to build, deploy and manage data automation solutions, capabilities and products ([docs](https://transformationflow.io/reference/bqtools/)).
 
