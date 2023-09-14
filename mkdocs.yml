@@ -9,7 +9,7 @@ theme:
     primary: teal
     accent: cyan
   logo: assets/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
-  favicon: assets/TransformationFlowLogo3D_100x100.png
+  favicon: assets/TransformationFlowLogo3DTransparent_100x100.png
 
   features:
     - content.code.annotate
