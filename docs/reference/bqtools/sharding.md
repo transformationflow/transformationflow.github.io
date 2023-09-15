@@ -15,12 +15,12 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_date_shards`
 !!! info "execution: `get_table_date_shards`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, shard_dates);
+        CALL bqtools.eu.get_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, shard_dates);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, shard_dates);
+        CALL bqtools.us.get_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, shard_dates);
         ```
 
 ## **`get_table_date_shard_ids`**
@@ -37,12 +37,12 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_date_shards`
 !!! info "execution: `get_table_date_shard_ids`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, shard_ids);
+        CALL bqtools.eu.get_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, shard_ids);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, shard_ids);
+        CALL bqtools.us.get_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, shard_ids);
         ```
 
 ## **`get_first_table_date_shard`**
@@ -59,12 +59,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shards`, `bqtools-qb.[regi
 !!! info "execution: `get_first_table_date_shard`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_first_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, first_shard);
+        CALL bqtools.eu.get_first_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, first_shard);
         ```
     
     === "US"
         ```sql
-        SELECT bqtools.us.get_first_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, first_shard);
+        CALL bqtools.us.get_first_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, first_shard);
         ```
 
 ## **`get_first_table_date_shard_id`**
@@ -81,12 +81,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[r
 !!! info "execution: `get_first_table_date_shard_id`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_first_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, first_shard_id);
+        CALL bqtools.eu.get_first_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, first_shard_id);
         ```
     
     === "US"
         ```sql
-        SELECT bqtools.us.get_first_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, first_shard_id);
+        CALL bqtools.us.get_first_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, first_shard_id);
         ```
 
 ## **`get_last_table_date_shard`**
@@ -103,12 +103,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shards`, `bqtools-qb.[regi
 !!! info "execution: `get_last_table_date_shard`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
+        CALL bqtools.eu.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
         ```
     
     === "US"
         ```sql
-        SELECT bqtools.us.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
+        CALL bqtools.us.get_last_table_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
         ```
 
 ## **`get_last_table_date_shard_id`**
@@ -125,12 +125,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[r
 !!! info "execution: `get_last_table_date_shard_id`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
+        CALL bqtools.eu.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
         ```
     
     === "US"
         ```sql
-        SELECT bqtools.us.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
+        CALL bqtools.us.get_last_table_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
         ```
 
 ## **`get_missing_table_date_shards`**
@@ -147,12 +147,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shards`, `bqtools-qb.[regi
 !!! info "execution: `get_missing_table_date_shards`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_missing_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shards);
+        CALL bqtools.eu.get_missing_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shards);
         ```
     
     === "US"
         ```sql
-        SELECT bqtools.us.get_missing_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shards);
+        CALL bqtools.us.get_missing_table_date_shards(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shards);
         ```
     
 ## **`get_missing_table_date_shard_ids`**
@@ -169,10 +169,10 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_shard_ids`, `bqtools-qb.[r
 !!! info "execution: `get_missing_table_date_shard_ids`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_missing_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shard_ids);
+        CALL bqtools.eu.get_missing_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shard_ids);
         ```
     
     === "US"
         ```sql
-        SELECT bqtools.us.get_missing_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shard_ids);
+        CALL bqtools.us.get_missing_table_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shard_ids);
         ```

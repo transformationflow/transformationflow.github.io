@@ -15,12 +15,12 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[
 !!! info "execution: `get_table_date_partitions`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_table_date_partitions(partitioned_table_id, partitions);
+        CALL bqtools.eu.get_table_date_partitions(partitioned_table_id, partitions);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_table_date_partitions(partitioned_table_id, partitions);
+        CALL bqtools.us.get_table_date_partitions(partitioned_table_id, partitions);
         ```
 
 ## **`get_table_date_partition_ids`**
@@ -37,12 +37,12 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_date_partitions`, `bqtools.[
 !!! info "execution: `get_table_date_partition_ids`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_table_date_partition_ids(partitioned_table_id, partition_ids);
+        CALL bqtools.eu.get_table_date_partition_ids(partitioned_table_id, partition_ids);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_table_date_partition_ids(partitioned_table_id, partition_ids);
+        CALL bqtools.us.get_table_date_partition_ids(partitioned_table_id, partition_ids);
         ```
 
 ## **`get_first_table_date_partition`**
@@ -59,12 +59,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partitions`, `bqtools-qb.[
 !!! info "execution: `get_first_table_date_partition`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_first_table_date_partition(partitioned_table_id, first_partition);
+        CALL bqtools.eu.get_first_table_date_partition(partitioned_table_id, first_partition);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_first_table_date_partition(partitioned_table_id, first_partition);
+        CALL bqtools.us.get_first_table_date_partition(partitioned_table_id, first_partition);
         ```
 
 ## **`get_first_table_date_partition_id`**
@@ -81,12 +81,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partition_ids`, `bqtools-b
 !!! info "execution: `get_first_table_date_partition_id`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_first_table_date_partition_id(partitioned_table_id, first_partition_id);
+        CALL bqtools.eu.get_first_table_date_partition_id(partitioned_table_id, first_partition_id);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_first_table_date_partition_id(partitioned_table_id, first_partition_id);
+        CALL bqtools.us.get_first_table_date_partition_id(partitioned_table_id, first_partition_id);
         ```
 
 ## **`get_last_table_date_partition`**
@@ -103,12 +103,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partitions`, `bqtools-qb.[
 !!! info "execution: `get_last_table_date_partition`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_last_table_date_partition(partitioned_table_id, last_partition);
+        CALL bqtools.eu.get_last_table_date_partition(partitioned_table_id, last_partition);
         ```
     
     === "US"
         ```sql
-        SELECT bqtools.us.get_last_table_date_partition(partitioned_table_id, last_partition);
+        CALL bqtools.us.get_last_table_date_partition(partitioned_table_id, last_partition);
         ```
 
 ## **`get_last_table_date_partition_id`**
@@ -125,12 +125,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partition_ids`, `bqtools-q
 !!! info "execution: `get_last_table_date_partition_id`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_last_table_date_partition_id(partitioned_table_id, last_partition_id);
+        CALL bqtools.eu.get_last_table_date_partition_id(partitioned_table_id, last_partition_id);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_last_table_date_partition_id(partitioned_table_id, last_partition_id);
+        CALL bqtools.us.get_last_table_date_partition_id(partitioned_table_id, last_partition_id);
         ```
 
 ## **`get_missing_table_date_partitions`**
@@ -147,12 +147,12 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partitions`, `bqtools-qb.[
 !!! info "execution: `get_missing_table_date_partitions`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_missing_table_date_partitions(partitioned_table_id, start_date, end_date, missing_partitions);
+        CALL bqtools.eu.get_missing_table_date_partitions(partitioned_table_id, start_date, end_date, missing_partitions);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_missing_table_date_partitions(partitioned_table_id, start_date, end_date, missing_partitions);
+        CALL bqtools.us.get_missing_table_date_partitions(partitioned_table_id, start_date, end_date, missing_partitions);
         ```
 
 ## **`get_missing_table_date_partition_ids`**
@@ -169,10 +169,10 @@ _**Dependencies**_ | `bqtools.[region].get_table_date_partitions`, `bqtools-qb.[
 !!! info "execution: `get_missing_table_date_partition_ids`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.get_missing_table_date_partition_ids(partitioned_table_id, start_date, end_date, missing_partition_ids);
+        CALL bqtools.eu.get_missing_table_date_partition_ids(partitioned_table_id, start_date, end_date, missing_partition_ids);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.get_missing_table_date_partition_ids(partitioned_table_id, start_date, end_date, missing_partition_ids);
+        CALL bqtools.us.get_missing_table_date_partition_ids(partitioned_table_id, start_date, end_date, missing_partition_ids);
         ```

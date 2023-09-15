@@ -57,7 +57,7 @@ nav:
     
     - Decode Data for GA4:
       - Overview: reference/decodedata-ga4/index.md
-      - Event Profiler: reference/decodedata-ga4/profiler.md
+      - Event Profiling: reference/decodedata-ga4/profiling.md
 
 markdown_extensions:
   - admonition
