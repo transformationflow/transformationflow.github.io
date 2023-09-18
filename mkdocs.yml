@@ -53,6 +53,9 @@ nav:
 
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
+      - Definitions:
+        - Configuration: reference/bqmanager/configuration.md
+        - Common Arguments: reference/bqmanager/arguments.md
       - Information Schema: reference/bqmanager/information_schema.md
     
     - Decode Data for GA4:
