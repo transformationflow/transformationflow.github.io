@@ -8,8 +8,8 @@ _**Name**_ | `get_dataset_ids`
 _**ID**_ | `bqtools.[region].get_dataset_ids`
 _**Description**_ | Returns the dataset_ids for all datasets across multiple projects.
 _**Type**_ | `PROCEDURE`
-_**Arguments**_ | `project_ids ARRAY<STRING>`
-_**Returns**_ | `dataset_ids ARRAY<STRING>`
+_**Arguments**_ | `project_ids ARRAY<STRING>, OUT dataset_ids ARRAY<STRING>`
+_**Returns**_ | `OUT dataset_ids ARRAY<STRING>`
 _**Dependencies**_ | `bqtools-qb.[region].get_dataset_ids`
 
 !!! info "execution: `get_dataset_ids`"
@@ -130,7 +130,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_function_ids`
 
     === "US"
         ```sql
-        CALL bqtools.us.get_table_function_ids(dataset_id, function_ids);
+        CALL bqtools.us.get_function_ids(dataset_id, function_ids);
         ```
 
 ## **`get_procedure_ids`**
@@ -153,7 +153,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_procedure_ids`
     === "US"
         ```sql
         CALL bqtools.us.get_procedure_ids(dataset_id, procedure_ids);
-        ``````
+        ```
 
 ## **`get_sql`**
 _**Attribute**_ | Value
@@ -162,8 +162,8 @@ _**Function Name**_ | `get_sql`
 _**ID**_ | `bqtools.[region].get_sql`
 _**Description**_ | Returns the SQL definition of a single `ROUTINE` or `VIEW`.
 _**Type**_ | `PROCEDURE`
-_**Arguments**_ | `routine_or_view_id STRING`
-_**Returns**_ | `sql STRING`
+_**Arguments**_ | `routine_or_view_id STRING, INOUT sql STRING`
+_**Returns**_ | `OUT sql STRING`
 _**Dependencies**_ | `bqtools-qb.[region].get_sql`
 
 !!! info "execution: `get_sql`"
