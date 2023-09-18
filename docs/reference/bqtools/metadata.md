@@ -153,7 +153,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_procedure_ids`
     === "US"
         ```sql
         CALL bqtools.us.get_procedure_ids(dataset_id, procedure_ids);
-        ``````
+        ```
 
 ## **`get_sql`**
 _**Attribute**_ | Value
