@@ -130,7 +130,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_function_ids`
 
     === "US"
         ```sql
-        CALL bqtools.us.get_table_function_ids(dataset_id, function_ids);
+        CALL bqtools.us.get_function_ids(dataset_id, function_ids);
         ```
 
 ## **`get_procedure_ids`**
