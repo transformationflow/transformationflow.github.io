@@ -53,6 +53,7 @@ nav:
 
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
+      - Quickstart: reference/bqmanager/quickstart.md
       - Definitions:
         - Configuration: reference/bqmanager/configuration.md
         - Common Arguments: reference/bqmanager/arguments.md
