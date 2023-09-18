@@ -3,7 +3,7 @@ The `BQMANAGER` library adds additional functionality to BigQuery to support com
 # Functions
 Once deployed to a client project, all user-facing functions, tables and table functions are found in the `[project_id].BQMANAGER` dataset.
 
-## **`BQMANAGER.TABLES`**
+## **`TABLES`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `TABLES`
@@ -13,7 +13,7 @@ _**Type**_ | `VIEW`
 _**Configuration**_ | The `project_ids` to include in the source tables are set in the `BQMANAGER.PROJECT_IDS` function.
 _**Dependencies**_ | `BQMANAGER.INFORMATION_SCHEMA_TABLES`, `BQMANAGER.INFORMATION_SCHEMA_TABLES_METADATA`, `BQMANAGER.INFORMATION_SCHEMA_PARTITIONS`, `BQMANAGER.INFORMATION_SCHEMA_TABLE_OPTIONS`.
 
-## **`BQMANAGER.GET_SCHEDULED_QUERY_LOGS()`**
+## **`GET_SCHEDULED_QUERY_LOGS()`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `GET_SCHEDULED_QUERY_LOGS`
@@ -24,7 +24,7 @@ _**Arguments**_ | `None`
 _**Configuration**_ | To capture logs from a Scheduled Query, the query notification cloud pub/sub topic needs to be set to `projects/[project_id]/topics/BQMANAGER.SCHEDULED_QUERY_LOGS`.
 _**Dependencies**_ | PubSub Topic: `projects/[project_id]/topics/BQMANAGER.SCHEDULED_QUERY_LOGS`, Log Table: `BQMANAGER.SCHEDULED_QUERY_LOGS`.
 
-## **`BQMANAGER.INFORMATION_SCHEMA_JOBS`**
+## **`INFORMATION_SCHEMA_JOBS`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `INFORMATION_SCHEMA_JOBS`
@@ -39,7 +39,7 @@ _**Dependencies**_ | `bqtools.[region].INFORMATION_SCHEMA_JOBS`
 # Data Refresh
 In order to refresh the data in the underlying raw tables, the following functions are used.
 
-## **`BQMANAGER.REFRESH_INFORMATION_SCHEMAS()`**
+## **`REFRESH_INFORMATION_SCHEMAS()`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `REFRESH_INFORMATION_SCHEMAS`
@@ -51,7 +51,7 @@ _**Dependencies**_ | `bqtools.[region].INFORMATION_SCHEMA_JOBS`
 _**Automation**_ | The recommended scheduled query name is `BQMANAGER.REFRESH_INFORMATION_SCHEMAS`.  Adding query labels to the scheduled query using `SET @@query_label = "scheduled_query_id:bqmanager_refresh_information_schemas"` will enable the precise job logs to be attributed to specific scheduled queries. 
 _**Cost**_ | This is an aggregate metadata query, but the scale of the processed/billed data will vary based on the number of projects and datasets.  As such it is recommended to test and set a schedule based on specific needs (e.g. weekly then on-demand when conducting analysis).
 
-## **`BQMANAGER.REFRESH_INFORMATION_SCHEMA_JOBS()`**
+## **`REFRESH_INFORMATION_SCHEMA_JOBS()`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `REFRESH_INFORMATION_SCHEMA_JOBS`
