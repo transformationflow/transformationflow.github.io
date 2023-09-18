@@ -162,8 +162,8 @@ _**Function Name**_ | `get_sql`
 _**ID**_ | `bqtools.[region].get_sql`
 _**Description**_ | Returns the SQL definition of a single `ROUTINE` or `VIEW`.
 _**Type**_ | `PROCEDURE`
-_**Arguments**_ | `routine_or_view_id STRING`
-_**Returns**_ | `sql STRING`
+_**Arguments**_ | `routine_or_view_id STRING, INOUT sql STRING`
+_**Returns**_ | `OUT sql STRING`
 _**Dependencies**_ | `bqtools-qb.[region].get_sql`
 
 !!! info "execution: `get_sql`"
