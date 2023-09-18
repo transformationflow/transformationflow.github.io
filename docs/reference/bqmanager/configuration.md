@@ -1,4 +1,3 @@
-# Configuration
 ## **`PROJECT_IDS`**
 _**Attribute**_ | Value
 --- | ---

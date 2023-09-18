@@ -1,5 +1,3 @@
-# Common Arguments
-
 ## **`destination_project_id`**
 _**Attribute**_ | Value
 --- | ---
