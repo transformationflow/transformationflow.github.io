@@ -2,7 +2,7 @@
 hide:
   - navigation
 ---
-![Transformationflow](assets/Transformationflow Logo Banner +.png)
+![Transformationflow](assets/Transformationflow Banner Web.png)
 
 ![Google Cloud Partners](assets/google-cloud-partner-logo-horizontal-outline-400.png){ align=right }
 
