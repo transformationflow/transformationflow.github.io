@@ -8,8 +8,8 @@ _**Name**_ | `get_dataset_ids`
 _**ID**_ | `bqtools.[region].get_dataset_ids`
 _**Description**_ | Returns the dataset_ids for all datasets across multiple projects.
 _**Type**_ | `PROCEDURE`
-_**Arguments**_ | `project_ids ARRAY<STRING>`
-_**Returns**_ | `dataset_ids ARRAY<STRING>`
+_**Arguments**_ | `project_ids ARRAY<STRING>, OUT dataset_ids ARRAY<STRING>`
+_**Returns**_ | `OUT dataset_ids ARRAY<STRING>`
 _**Dependencies**_ | `bqtools-qb.[region].get_dataset_ids`
 
 !!! info "execution: `get_dataset_ids`"
