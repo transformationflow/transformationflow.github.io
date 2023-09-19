@@ -18,14 +18,13 @@ _**Name**_ | `profile_events`
 _**ID**_ | `decodedata-ga4.[region].profile_events`
 _**Description**_ | Analyzes date-filtered event data and returns a JSON summary of `event_name`, `event_params` and `user_properties` counts and data types.
 _**Type**_ | `PROCEDURE`
-_**Arguments**_ | `(dataset_id STRING, start_date STRING, end_date STRING, OUT event_profile JSON)`
+_**Arguments**_ | `dataset_id STRING, start_date STRING, end_date STRING, OUT event_profile JSON`
 _**Returns**_ | `event_profile JSON`
 _**Dependencies**_ | `None`
 
 !!! info "execution: `profile_events`"
     === "EU"
         ```sql
-        decodedata-ga4.eu.profile_events
         CALL `decodedata-ga4.eu`.profile_events(dataset_id, start_date, end_date, event_profile);
         ```
 

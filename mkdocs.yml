@@ -36,20 +36,20 @@ nav:
     - BigQuery Tools:
       - Overview: reference/bqtools/index.md
       - Resources:
-        - Metadata: reference/bqtools/metadata.md
-        - Creation: reference/bqtools/creation.md
-        - Replication: reference/bqtools/replication.md
-      - Table Partitions:
-        - Partitioned Tables: reference/bqtools/partitioning.md
-        - Sharded Tables: reference/bqtools/sharding.md
-      - Query SQL:
-        - Profiling: reference/bqtools/profiling.md
-        - Interaction: reference/bqtools/query.md
+        - Metadata: reference/bqtools/resources/metadata.md
+        - Create: reference/bqtools/resources/create.md
+        - Copy: reference/bqtools/resources/copy.md
+      - Partitions:
+        - Partitioned Tables: reference/bqtools/partitions/partitioning.md
+        - Sharded Tables: reference/bqtools/partitions/sharding.md
+      - Queries:
+        - Profiling: reference/bqtools/queries/profiling.md
+        - Actions: reference/bqtools/queries/actions.md
       - Data:
-        - String: reference/bqtools/string.md
-        - Array: reference/bqtools/array.md
-        - Decoding: reference/bqtools/decoders.md
-        - Interaction: reference/bqtools/data.md
+        - Strings: reference/bqtools/data/strings.md
+        - Decoders: reference/bqtools/data/decoders.md
+        - Arrays: reference/bqtools/data/arrays.md
+        - Manipulation: reference/bqtools/data/manipulation.md
 
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
