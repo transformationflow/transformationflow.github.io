@@ -44,12 +44,12 @@ nav:
         - Sharded Tables: reference/bqtools/partitions/sharding.md
       - Queries:
         - Profiling: reference/bqtools/queries/profiling.md
-        - Actions: reference/bqtools/queries/actions.md
+        - Manipulation: reference/bqtools/queries/manipulation.md
       - Data:
         - Strings: reference/bqtools/data/strings.md
-        - Decoders: reference/bqtools/data/decoders.md
         - Arrays: reference/bqtools/data/arrays.md
         - Manipulation: reference/bqtools/data/manipulation.md
+        - Decoders: reference/bqtools/data/decoders.md
 
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
