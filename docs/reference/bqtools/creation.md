@@ -6,14 +6,14 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_table`
 _**ID**_ | `bqtools.[region].create_table`
-_**Description**_ | Creates or replaces a single `BASE TABLE` defined by an arbitrary sql `query_statement`, with options defined in alignment with the `CREATE TABLE` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_statement).
+_**Description**_ | Creates or replaces a single `BASE TABLE` defined by an arbitrary sql `query_statement`, with options defined in alignment with the `CREATE TABLE` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_statement). See the example below for `table_options` structure.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `table_id STRING, query_statement STRING, table_options JSON`
 _**Returns**_ | `None`
 _**Dependencies**_ | `bqtools-qb.[region].create_table`
 
 !!! warning "Beta"
-    This `create_table` function is in beta as not all of the `table_options` have been implemented.
+    This `create_table` function is in beta as only the [`partition_expression`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#partition_expression) and [`clustering_column_list`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#clustering_column_list) options of the `table_options` have been implemented. See the example below for the JSON argument structure.
 
 !!! info "execution: `create_table`"
     === "EU"
@@ -26,6 +26,25 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table`
         CALL bqtools.us.create_table(table_id, query_statement, table_options);
         ```
 
+??? abstract "example: `create_table`"
+    === "Partitioned and Clustered Table"
+        ```sql
+        DECLARE table_id, query_statement STRING;
+        DECLARE table_options JSON;
+
+        SET table_id = 'project_id.dataset_name.destination_table_name';
+        SET query_statement = 'SELECT * FROM `project_id.dataset_name.source_table_name`';
+
+        SET table_options = JSON """
+        {
+         "partition_expression": "DATE(_PARTITIONTIME)",
+         "clustering_column_list": "column_a, column_b"
+        }   
+        """;
+
+        CALL bqtools.[region].create_table(table_id, query_statement, table_options);
+        ```
+    
 ## **`create_view`**
 _**Attribute**_ | Value
 --- | ---
