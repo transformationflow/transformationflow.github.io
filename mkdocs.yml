@@ -97,6 +97,8 @@ extra:
       link: https://github.com/transformationflow   
     - icon: fontawesome/solid/paper-plane
       link: mailto:hello@transformationflow.io
+    - icon: fontawesome/solid/calendar
+      link: https://calendly.com/transformationflow/15
 
 #extra_css:
 #  - stylesheets/extra.css
