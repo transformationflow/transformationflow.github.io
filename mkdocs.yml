@@ -51,6 +51,7 @@ nav:
         - Arrays: reference/bqtools/data/arrays.md
         - Manipulation: reference/bqtools/data/manipulation.md
         - Decoders: reference/bqtools/data/decoders.md
+        - Export: reference/bqtools/data/export.md
 
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
