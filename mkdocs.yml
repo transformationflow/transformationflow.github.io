@@ -46,6 +46,7 @@ nav:
         - Profiling: reference/bqtools/queries/profiling.md
         - Manipulation: reference/bqtools/queries/manipulation.md
       - Data:
+        - Dates: reference/bqtools/data/dates.md
         - Strings: reference/bqtools/data/strings.md
         - Arrays: reference/bqtools/data/arrays.md
         - Manipulation: reference/bqtools/data/manipulation.md

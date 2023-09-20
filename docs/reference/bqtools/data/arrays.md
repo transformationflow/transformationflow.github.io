@@ -1,4 +1,4 @@
-These functions are used to parse and manipulate and `ARRAY` inputs.
+These functions are used to parse and manipulate `ARRAY` inputs.
 
 # Functions
 ## **`array_unique_string`**
