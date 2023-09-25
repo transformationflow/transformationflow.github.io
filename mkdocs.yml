@@ -46,12 +46,13 @@ nav:
         - Profiling: reference/bqtools/queries/profiling.md
         - Manipulation: reference/bqtools/queries/manipulation.md
       - Data:
-        - Dates: reference/bqtools/data/dates.md
-        - Strings: reference/bqtools/data/strings.md
-        - Arrays: reference/bqtools/data/arrays.md
         - Manipulation: reference/bqtools/data/manipulation.md
         - Decoders: reference/bqtools/data/decoders.md
         - Export: reference/bqtools/data/export.md
+      - Types:
+        - Dates: reference/bqtools/types/dates.md
+        - Strings: reference/bqtools/types/strings.md
+        - Arrays: reference/bqtools/types/arrays.md
 
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md

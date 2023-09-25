@@ -15,10 +15,10 @@ _**Dependencies**_ | `bqtools-qb.[region].export_data`
 !!! info "execution: `export_data`"
     === "EU"
         ```sql
-        SELECT bqtools.eu.export_data(query_statement, export_format, export_uri, export_option_list);
+        CALL bqtools.eu.export_data(query_statement, export_format, export_uri, export_option_list);
         ```
 
     === "US"
         ```sql
-        SELECT bqtools.us.export_data(query_statement, export_format, export_uri, export_option_list);
+        CALL bqtools.us.export_data(query_statement, export_format, export_uri, export_option_list);
         ```
