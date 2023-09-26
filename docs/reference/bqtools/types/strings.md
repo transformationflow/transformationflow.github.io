@@ -95,3 +95,41 @@ _**Dependencies**_ | `decodeURIComponent()`
     ```sql
     response: "test?"
     ```
+
+## **`replace_resource_project_id`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `replace_resource_project_id`
+_**ID**_ | `bqtools.[region].replace_resource_project_id`
+_**Description**_ | Replaces the `resource_project_id` of the `original_resource_id` by the new `replacement_project_id`.
+_**Type**_ | `FUNCTION`
+_**Arguments**_ | `original_resource_id STRING, replacement_project_id STRING`
+_**Returns**_ | `resource_id STRING`
+_**Dependencies**_ | `bqtools.[region].parse_resource_id`
+
+!!! info "execution: `replace_resource_project_id`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.parse_resource_id(original_resource_id, replacement_project_id);
+        ```
+
+    === "US"
+        ```sql
+        CALL bqtools.us.parse_resource_id(original_resource_id, replacement_project_id);
+        ```
+
+??? note "example: `replace_resource_project_id`"
+
+    ```sql
+    DECLARE original_resource_id STRING;
+    DECLARE replacement_project_id STRING;
+    
+    SET original_resource_id = "project_id.dataset_name.resource_name";
+    SET replacement_project_id = "new_project_id";
+
+    SELECT bqtools.eu.replace_resource_project_id(original_resource_id, replacement_project_id);
+    ```
+
+    ```sql
+    response: "new_project_id.dataset_name.resource_name"
+    ```
