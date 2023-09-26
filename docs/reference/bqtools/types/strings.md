@@ -156,7 +156,7 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`
         CALL bqtools.us.replace_resource_dataset_name(original_resource_id, replacement_dataset_name);
         ```
 
-??? note "example: `replace_resource_project_id`"
+??? note "example: `replace_resource_dataset_name`"
 
     ```sql
     DECLARE original_resource_id STRING;
@@ -170,4 +170,43 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`
 
     ```sql
     response: "project_id.new_dataset_name.resource_name"
+    ```
+
+
+## **`replace_resource_table_name`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `replace_resource_table_name`
+_**ID**_ | `bqtools.[region].replace_resource_table_name`
+_**Description**_ | Replaces the `resource_table_name` of the `original_resource_id` by the new `replacement_table_name`.
+_**Type**_ | `FUNCTION`
+_**Arguments**_ | `original_resource_id STRING, replacement_table_name STRING`
+_**Returns**_ | `resource_id STRING`
+_**Dependencies**_ | `bqtools.[region].parse_resource_id`
+
+!!! info "execution: `replace_resource_table_name`"
+    === "EU"
+        ```sql
+        SELECT bqtools.eu.replace_resource_table_name(original_resource_id, replacement_table_name);
+        ```
+
+    === "US"
+        ```sql
+        CALL bqtools.us.replace_resource_table_name(original_resource_id, replacement_table_name);
+        ```
+
+??? note "example: `replace_resource_table_name`"
+
+    ```sql
+    DECLARE original_resource_id STRING;
+    DECLARE replacement_table_name STRING;
+
+    SET original_resource_id = "project_id.dataset_name.table_name";
+    SET replacement_table_name = "new_table_name";
+
+    SELECT bqtools.eu.replace_resource_table_name(original_resource_id, replacement_table_name);
+    ```
+
+    ```sql
+    response: "project_id.dataset_name.new__table_name"
     ```
