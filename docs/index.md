@@ -2,9 +2,9 @@
 hide:
   - navigation
 ---
-![Transformationflow](assets/Transformationflow Banner Web.png)
+![Transformationflow](assets/logos/Transformationflow Banner Web.png)
 
-![Google Cloud Partners](assets/google-cloud-partner-logo-horizontal-outline-400.png){ align=right }
+![Google Cloud Partners](assets/logos/google-cloud-partner-logo-horizontal-outline-400.png){ align=right }
 
 ## What we do
 We design, build, manage and license serverless Google Cloud data automation solutions, capabilities and products.
