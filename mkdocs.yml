@@ -66,6 +66,7 @@ nav:
       - Overview: reference/decodedata-ga4/index.md
       - Event Profiling: reference/decodedata-ga4/profiling.md
 
+
 markdown_extensions:
   - admonition
   - attr_list
