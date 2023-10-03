@@ -69,3 +69,52 @@ _**Dependencies**_ | `bqtools-qb.[region].create_view`
         ```sql
         CALL bqtools.us.create_view(view_id, query_statement, view_options);
         ```
+
+## **`create_table_from_table_function`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `create_table_from_table_function`
+_**ID**_ | `bqtools.[region].create_table_from_table_function`
+_**Description**_ | Creates or replaces a single `Table` defined by an arbitrary sql `Table Function ID`, with options defined in alignment with the `CREATE TABLE` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_statement).
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `destination_table_id STRING, source_table_function_id STRING, start_date DATE, end_date DATE, table_options JSON`
+_**Returns**_ | `None`
+_**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bqtools-qb.[region].create_table`
+
+!!! warning "Beta"
+    This `create_table_from_table_function` function is in beta as only the [`partition_expression`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#partition_expression) and [`clustering_column_list`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#clustering_column_list) options of the `table_options` have been implemented. See the example below for the JSON argument structure.
+
+!!! info "execution: `create_table_from_table_function`"
+    === "EU"
+        ```sql
+        CALL bqtools.eu.create_table_from_table_function(destination_table_id, source_table_function_id, start_date, end_date, table_options);
+        ```
+
+    === "US"
+        ```sql
+        CALL bqtools.us.create_table_from_table_function(destination_table_id, source_table_function_id, start_date, end_date, table_options);
+        ```
+
+??? abstract "example: `create_table`"
+    === "Partitioned and Clustered Table"
+        ```sql
+        DECLARE destination_table_id STRING;
+        DECLARE source_table_function_id STRING;
+        DECLARE start_date DATE;
+        DECLARE end_date DATE;
+        DECLARE table_options JSON;
+
+        SET destination_table_id = 'project_id.dataset_name.destination_table_name';
+        SET source_table_function_id = 'project_id.dataset_name.function_table_name';
+        SET start_date = PARSE_DATE('%Y%m%d', '20081231');
+        SET end_date = PARSE_DATE('%Y%m%d', '20231231');
+
+        SET table_options = JSON """
+        {
+         "partition_expression": "DATE(_PARTITIONTIME)",
+         "clustering_column_list": "column_a, column_b"
+        }   
+        """;
+
+        SELECT `bqtools-qb.us.create_table_from_table_function`(destination_table_id, source_table_function_id, start_date, end_date, table_options);
+        ```
