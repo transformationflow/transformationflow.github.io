@@ -30,6 +30,10 @@ plugins:
 nav:
   - Introduction: index.md
   - Products: products.md
+  
+  - GA4:
+    - Decode Data for GA4: ga4/decodedata.md
+
   - Reference:
     - Glossary: reference/glossary.md
 
