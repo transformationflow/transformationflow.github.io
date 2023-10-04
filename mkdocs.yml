@@ -1,13 +1,29 @@
 site_name: Transformation Flow
 site_url: https://transformationflow.io/
 
+# Repository
+repo_name: transformationflow/transformationflow.github.io
+repo_url: https://github.com/transformationflow/transformationflow.github.io
+
 theme:
   name: material
   font:
     text: Monserrat
   palette:
-    primary: teal
-    accent: cyan
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny 
+        name: Switch to dark mode
+      primary: teal
+      accent:  cyan 
+    - scheme: slate 
+      toggle:
+        icon: material/weather-night 
+        name: Switch to light mode    
+      primary: teal
+      accent: cyan
+  icon:
+    repo: fontawesome/brands/github
   logo: assets/logos/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
   favicon: assets/logos/TransformationFlowLogo3DTransparent_100x100.png
 
