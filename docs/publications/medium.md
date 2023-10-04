@@ -18,6 +18,31 @@ hide:
     [:octicons-arrow-right-24: Continue reading](https://medium.com/towards-data-science/google-pub-sub-to-bigquery-the-simple-way-de116234fb87){:target="_blank"}
 
 
+-   [:fontawesome-brands-medium:{ .lg .middle }](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"} May 25, 2022  :material-clock-fast:{ .lg .middle } 5 min read 
+    
+    # [Getting Started with BigQuery SQL User Defined Functions (SQL UDFs)](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"}
+
+    [![Getting Started with BigQuery SQL User Defined Functions (SQL UDFs)](../assets/medium/Getting_Started_with_BigQuery_SQL_User_Defined_Functions_(SQL_UDFs).jpg){ align=center }](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"}
+
+    ---
+    
+    A powerful and fundamental building block which enables custom extension of the core BigQuery platform functionality
+
+    [:octicons-arrow-right-24: Continue reading](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"}
+
+
+-   [:fontawesome-brands-medium:{ .lg .middle }](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"} Apr 22, 2021  :material-clock-fast:{ .lg .middle } 6 min read 
+    
+    # [Google Cloud Storage (GCS) to BigQuery the simple way](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"}
+
+    [![Google Cloud Storage (GCS) to BigQuery the simple way](../assets/medium/Google_Cloud_Storage_(GCS)_to_BigQuery_the_simple_way.jpg){ align=center }](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"}
+
+    ---
+    
+    Because simple is better than complex (but complex is better than complicated)
+
+    [:octicons-arrow-right-24: Continue reading](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"}
+
 
 -   [:fontawesome-brands-medium:{ .lg .middle }](https://towardsdatascience.com/how-to-build-a-unique-md5-row-hash-using-sql-in-bigquery-plus-a-few-related-things-e6f71820f38b){:target="_blank"} Aug 5, 2022  :material-clock-fast:{ .lg .middle } 9 min read 
     
@@ -30,19 +55,6 @@ hide:
     Using native BigQuery functionality to generate a dynamic, unique row identifier in SQL
 
     [:octicons-arrow-right-24: Continue reading](https://towardsdatascience.com/how-to-build-a-unique-md5-row-hash-using-sql-in-bigquery-plus-a-few-related-things-e6f71820f38b){:target="_blank"}
-
-
--   [:fontawesome-brands-medium:{ .lg .middle }](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"} May 25, 2022  :material-clock-fast:{ .lg .middle } 5 min read 
-    
-    # [Getting Started with BigQuery SQL User Defined Functions (SQL UDFs)](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"}
-
-    [![Getting Started with BigQuery SQL User Defined Functions (SQL UDFs)](../assets/medium/Getting_Started_with_BigQuery_SQL_User_Defined_Functions_(SQL_UDFs).jpg){ align=center }](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"}
-
-    ---
-    
-    A powerful and fundamental building block which enables custom extension of the core BigQuery platform functionality
-
-    [:octicons-arrow-right-24: Continue reading](https://towardsdatascience.com/getting-started-with-bigquery-sql-user-defined-functions-sql-udfs-a99c79689d4b){:target="_blank"}
 
 
 -   [:fontawesome-brands-medium:{ .lg .middle }](https://towardsdatascience.com/plotting-bar-charts-in-bigquery-using-a-sql-user-defined-function-udf-ca6056aac680){:target="_blank"} Mar 15, 2022  :material-clock-fast:{ .lg .middle } 9 min read 
@@ -96,17 +108,5 @@ hide:
 
     [:octicons-arrow-right-24: Continue reading](https://blog.devgenius.io/connecting-bigquery-to-colab-and-converting-query-results-to-python-dictionaries-9a19a4bac065){:target="_blank"}
 
-
--   [:fontawesome-brands-medium:{ .lg .middle }](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"} Apr 22, 2021  :material-clock-fast:{ .lg .middle } 6 min read 
-    
-    # [Google Cloud Storage (GCS) to BigQuery the simple way](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"}
-
-    [![Google Cloud Storage (GCS) to BigQuery the simple way](../assets/medium/Google_Cloud_Storage_(GCS)_to_BigQuery_the_simple_way.jpg){ align=center }](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"}
-
-    ---
-    
-    Because simple is better than complex (but complex is better than complicated)
-
-    [:octicons-arrow-right-24: Continue reading](https://towardsdatascience.com/google-cloud-storage-gcs-to-bigquery-the-simple-way-4bb74216b8c8){:target="_blank"}
 
 </div>
