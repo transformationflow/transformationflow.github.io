@@ -58,3 +58,47 @@ _**Dependencies**_ | `None`
         ```sql
         CALL `decodedata-ga4.us`.profile_events(dataset_id, start_date, end_date, event_profile);
         ```
+
+## **`create_event_profile_table`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `create_event_profile_table`
+_**ID**_ | `decodedata-ga4.[region].create_event_profile_table`
+_**Description**_ | Creates an `EVENT_PROFILES` table to store `event_profile` objects and associated metadata.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `table_id STRING`
+_**Returns**_ | `None`
+_**Dependencies**_ | `bqtools.[region].create_profile_table`
+
+!!! info "execution: `create_event_profile_table`"
+    === "EU"
+        ```sql
+        CALL `decodedata-ga4.eu`.create_event_profile_table(table_id);
+        ```
+
+    === "US"
+        ```sql
+        CALL `decodedata-ga4.us`.create_event_profile_table(table_id);
+        ```
+
+## **`create_query_profile_table`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `create_query_profile_table`
+_**ID**_ | `decodedata-ga4.[region].create_query_profile_table`
+_**Description**_ | Creates an `QUERY_PROFILES` table to store `cte_profile` objects and associated metadata.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `table_id STRING`
+_**Returns**_ | `None`
+_**Dependencies**_ | `bqtools.[region].create_profile_table`
+
+!!! info "execution: `create_query_profile_table`"
+    === "EU"
+        ```sql
+        CALL `decodedata-ga4.eu`.create_query_profile_table(table_id);
+        ```
+
+    === "US"
+        ```sql
+        CALL `decodedata-ga4.us`.create_query_profile_table(table_id);
+        ```
