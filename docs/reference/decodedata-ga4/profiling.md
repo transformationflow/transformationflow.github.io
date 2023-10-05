@@ -10,6 +10,32 @@ Field Name | Field Type | Field Description
 `event_params`| `ARRAY<STRUCT<key STRING, values <ARRAY<STRUCT<type STRING, count STRING>>>` | Unique observed values for `event_params.key` in the observation time period, with event counts by data type.
 `user_properties` | `STRING` | Unique observed values for `user_properties.key` in the observation time period, with event counts by data type.
 
+# Tables
+## **`EVENT_PROFILES`**
+The `EVENT_PROFILES` table is a profile table used to store `event_profile` objects and associated metadata.
+
+Column Name | Data Type | Description
+--- | --- | ---
+`profile_uid` | STRING | Unique profile ID (JSON hash of all other columns)
+`timestamp`	| TIMESTAMP | Profile insert timestamp
+`source_resource_id` | STRING |	Specific resource_id profiled (`project_id.dataset_name.table_name`)
+`profile_type`	| STRING | Reference for type of profile (`= 'ga4_event_profile'`)
+`profile_id`	| STRING | Profile identifier (`= ga4_dataset_id`)
+`event_profile`	| JSON | Profile in JSON format
+
+## **`QUERY_PROFILES`**
+The `QUERY_PROFILES` table is a profile table used to store `cte_profile` objects and associated metadata.
+
+Column Name | Data Type | Description
+--- | --- | ---
+`profile_uid` | STRING | Unique profile ID (JSON hash of all other columns)
+`timestamp`	| TIMESTAMP | Profile insert timestamp
+`source_resource_id` | STRING |	Specific resource_id profiled (`project_id.dataset_name.table_name`)
+`profile_type`	| STRING | Reference for type of profile (`= 'cte_profile'`)
+`profile_id`	| STRING | Profile identifier (e.g. `'base_ga4_decoder_profile'`)
+`event_profile`	| JSON | Profile in JSON format
+
+
 # Functions
 ## **`profile_events`**
 _**Attribute**_ | Value

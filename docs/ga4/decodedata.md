@@ -96,4 +96,4 @@ PARSE_DATE("%Y%m%d", @DS_END_DATE));
 For event streams which have either a high query load, a large amount of data or both, we can use `bqtools` to build and periodically update a date-partitioned table, to which downstream tools can connect directly.  This will optimise performance and cost, but requires a scheduled query to keep updating with the latest partitions.
 
 ### Multi-Property Decoding
-It is also possible to 'merge' multiple `event_profile` objects to build a universal decoder, which will result in a perfectly aligned schema across multiple GA$ properties regardless of discrepencies seen in actual observed data.  This means that the downstream data can be integrated trivially.  
+It is also possible to 'merge' multiple `event_profile` objects to build a universal decoder, which will result in a perfectly aligned schema across multiple GA4 properties regardless of discrepencies seen in actual observed data.  This means that the downstream data can be integrated trivially.  

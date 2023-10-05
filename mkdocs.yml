@@ -14,17 +14,18 @@ theme:
       toggle:
         icon: material/weather-sunny 
         name: Switch to dark mode
-      primary: teal
-      accent:  cyan 
+      primary: white
+      accent:  blue grey 
     - scheme: slate 
       toggle:
         icon: material/weather-night 
         name: Switch to light mode    
-      primary: teal
+      primary: black
       accent: cyan
   icon:
     repo: fontawesome/brands/github
-  logo: assets/logos/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
+  #logo: assets/logos/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
+  logo: assets/logos/TransformationFlowLogo3DTransparent.png
   favicon: assets/logos/TransformationFlowLogo3DTransparent_100x100.png
 
   features:

@@ -2,7 +2,6 @@
 hide:
   - navigation
 ---
-![Transformationflow](assets/logos/Transformationflow Banner Web.png)
 
 ![Google Cloud Partners](assets/logos/google-cloud-partner-logo-horizontal-outline-400.png){ align=right }
 
@@ -26,3 +25,6 @@ We use [BigQuery](https://cloud.google.com/bigquery) as a foundation, in additio
 - [Looker Studio](https://lookerstudio.google.com/) for end-user and data monitoring dashboards
 
 We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL [procedural language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).  We use these capabilities to build functions, procedures and table functions which solve complex data automation challenges in a rapid, scalable and replicable manner.
+
+![Transformationflow](assets/logos/Transformationflow Banner Web Small.png){ align=center }
+
