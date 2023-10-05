@@ -27,14 +27,33 @@ The approach we take, in order to enable users to remodel their raw data into a 
 Neither the `ecommerce` nor the `items` are included in the profiler at this stage.
 
 ### Data Type Coercion
-In order to avoid potential data loss due to data type inconsistency, we leverage a number of simple functions to extract _all_ data from a value `STRUCT`.  The function used to extract data from each column is determined by the `event_profile` derived in the profiling stage.  The potential data types returned in the `event_params` and `user_properties` `value` columns are:
+In order to avoid potential data loss due to data type inconsistency, we leverage a number of simple functions to extract _all_ data from a value `STRUCT`.  The function used to extract data from each column is determined by the `event_profile` derived in the profiling stage and the logic is derived from the BigQuery [conversion rules](https://cloud.google.com/bigquery/docs/reference/standard-sql/conversion_rules).
 
-Value Column | Data Type |  Coercion Logic 
---- | --- | --- 
-`value.string_value` |  `STRING` | Any data type can be reliably coerced into a `STRING`
-`value.int_value` | `INT64` | Neither `FLOAT64` nor `STRING` values can be reliably coerced into an `INT64`
-`value.float_value` | `FLOAT64` | Only an `INT64` value can be reliably coerced into a `FLOAT64`
-`value.double_value` | `FLOAT64` | Only an `INT64` value can be reliably coerced into a `FLOAT64`
+The potential data conversion rules between the different possible data types (using the `CAST` or `SAFE_CAST` functions) are:
+
+```mermaid
+flowchart TB
+
+STRING
+INT64
+FLOAT64
+
+INT64-->STRING
+FLOAT64-->STRING
+INT64-->FLOAT64
+```
+
+The logic to define output data types for each parameter or property is governed by these relationships and the data types identified in the `event_profile`.
+
+Observed Data Type(s) |  Output Data Type
+--- | --- 
+`STRING` | `STRING`
+`INT64` | `INT64`
+`FLOAT64` | `FLOAT64`
+`STRING`, `INT64` | `STRING`
+`STRING`, `FLOAT64` | `STRING`
+`INT64`, `FLOAT64` | `FLOAT64`
+`STRING`, `INT64`, `FLOAT64` | `STRING`
 
 ### Decoding Expressions
 Once the data has been profiled and we understand the event characteristics, we can build the SQL required to decode the complex structures into the desired output structures.  For the `event_name`, `event_params` and `user_properties` the strategies employed are:
