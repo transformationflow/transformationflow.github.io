@@ -86,7 +86,8 @@ nav:
     - Decode Data for GA4:
       - Overview: reference/decodedata-ga4/index.md
       - Event Profiling: reference/decodedata-ga4/profiling.md
-  
+
+
   - Publications:
     - Medium: publications/medium.md
 

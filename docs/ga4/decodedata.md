@@ -116,3 +116,21 @@ For event streams which have either a high query load, a large amount of data or
 
 ### Multi-Property Decoding
 It is also possible to 'merge' multiple `event_profile` objects to build a universal decoder, which will result in a perfectly aligned schema across multiple GA4 properties regardless of discrepencies seen in actual observed data.  This means that the downstream data can be integrated trivially.  
+
+
+# Event Decoding
+## Summary Logic
+The decoder function is a common-table-expression structured, date parameterised table function.  It takes a `start_date` and an `end_date` parameter which pre-filters for a range of date shards in the inbound event data, and then executes a set of logical steps to remodel the data in a clean and extensible manner.
+
+Name | Description
+--- | ---
+get_raw_events | Get inbound dates by date shard range.
+add_event_id | Add a hexadecimal SHA256 hash of the JSON representation of each row as a unique `event_id`.
+add_session_id | Add a hexadecimal SHA256 hash of the JSON representation of the `user_pseudo_id` and the `ga_session_id` extracted from the `event_params` `ARRAY`.
+convert_dates_and_timestamps | Converts UNIX dates and timestamps to `DATE` and `TIMESTAMP` data types.
+add_event_name_counts | Custom structure for each GA4 property. Creates an `event_count` `STRUCT` containing `event_name` count columns for each observed `event_name` value, in addition to total `events` and total observed `conversions`.
+decode_event_params | Custom structure for each GA4 property. Creates an `event_param` `STRUCT` with a column for each observed value in the `event_params` `ARRAY`.  Output data types are determined by observed data types in the profiling stage and the logical approach outlined in the [docs](https://transformationflow.io/ga4/decodedata/#data-type-coercion).
+decode_user_properties | Custom structure for each GA4 property. Creates an `user_property` `STRUCT` with a column for each observed value in the `user_properties` `ARRAY`.  Output data types are determined by observed data types in the profiling stage and the logical approach outlined in the [docs](https://transformationflow.io/ga4/decodedata/#data-type-coercion).
+correct_attribution | Optional fix for the known [misattribution bug](https://issuetracker.google.com/issues/241258655?ref=ga4bigquery.com) for `Google / Paid Search`.
+additional_logic | Placeholder for additional custom logic.
+exclude_columns | Configurable exclusion of non-required columns for schema simplification purposed (e.g. `event_params` and `user_properties` `ARRAYS`)
