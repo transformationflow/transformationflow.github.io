@@ -22,24 +22,46 @@ _**Dependencies**_ | `bqtools.[region].get_cte_profile_index`
         CALL bqtools.us.update_cte_sql(cte_profile, update_cte_name, update_cte_sql);
         ```
 
-## **`build_sql_from_cte_profile`**
+## **`build_query_from_cte_profile`**
 _**Attribute**_ | Value
 --- | ---
-_**Name**_ | `build_sql_from_cte_profile`
-_**ID**_ | `bqtools.[region].build_sql_from_cte_profile`
-_**Description**_ | Builds a SQL query from a `cte_profile` object
+_**Name**_ | `build_query_from_cte_profile`
+_**ID**_ | `bqtools.[region].build_query_from_cte_profile`
+_**Description**_ | Builds a CTE-structured SQL query from a `cte_profile` object.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `cte_profile JSON, OUT sql STRING`
 _**Returns**_ | `OUT sql STRING`
 _**Dependencies**_ | `bqtools.[region].get_cte_profile_index`
 
-!!! info "execution: `build_sql_from_cte_profile`"
+!!! info "execution: `build_query_from_cte_profile`"
     === "EU"
         ```sql
-        CALL `bqtools-qb.eu.build_sql_from_cte_profile`(cte_profile, sql);
+        CALL `bqtools-qb.eu.build_query_from_cte_profile`(cte_profile, sql);
         ```
 
     === "US"
         ```sql
-        CALL `bqtools-qb.us.build_sql_from_cte_profile`(cte_profile, sql);
+        CALL `bqtools-qb.us.build_query_from_cte_profile`(cte_profile, sql);
+        ```
+
+## **`build_struct_query_from_cte_profile`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `build_struct_query_from_cte_profile`
+_**ID**_ | `bqtools.[region].build_struct_query_from_cte_profile`
+_**Description**_ | Builds a CTE-structured SQL query from a `cte_profile` object, using a `SELECT AS STRUCT *` as the final select query.
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `cte_profile JSON, OUT sql STRING`
+_**Returns**_ | `OUT sql STRING`
+_**Dependencies**_ | `bqtools.[region].get_cte_profile_index`
+
+!!! info "execution: `build_struct_query_from_cte_profile`"
+    === "EU"
+        ```sql
+        CALL `bqtools-qb.eu.build_struct_query_from_cte_profile`(cte_profile, sql);
+        ```
+
+    === "US"
+        ```sql
+        CALL `bqtools-qb.us.build_struct_query_from_cte_profile`(cte_profile, sql);
         ```
