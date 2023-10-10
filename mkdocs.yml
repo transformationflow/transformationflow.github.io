@@ -49,6 +49,7 @@ nav:
   - Products: products.md
   
   - GA4:
+    - Quickstart: ga4/quickstart.md
     - Decode Data for GA4: ga4/decodedata.md
 
   - Reference:
