@@ -24,11 +24,6 @@ subgraph transformation_dataset["CUSTOM FUNCTIONS: Transformation Dataset"]
     decode_user_properties
 end
 
-subgraph decodedata-ga4.region["PUBLIC FUNCTIONS: decodedata-ga4.region"]
-    event_params_extract_values
-    user_properties_extract_values
-end
-
 subgraph ga4_dataset["SOURCE DATA: analytics_########.events"]
     events_YYYYMMDD
 end
@@ -37,8 +32,6 @@ events_YYYYMMDD --> |start_date,<br>end_date| events
 events --> |event_name| add_event_counts
 events --> |event_params| decode_event_params
 events --> |user_properties| decode_user_properties
-decode_event_params --> event_params_extract_values
-decode_user_properties --> user_properties_extract_values
 ```
 
 Note that custom functions can be deployed to the inbound GA4 dataset, however permissions limitations might mean that deploying them into a separate but regionally co-located dataset is preferable.

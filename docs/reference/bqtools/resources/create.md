@@ -118,3 +118,17 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bq
 
         SELECT `bqtools-qb.us.create_table_from_table_function`(destination_table_id, source_table_function_id, start_date, end_date, table_options);
         ```
+
+## **`create_function`**
+_**Attribute**_ | Value
+--- | ---
+_**Name**_ | `create_function`
+_**ID**_ | `bqtools.[region].create_function`
+_**Description**_ | Creates or replaces a function
+
+
+single `Table` defined by an arbitrary sql `Table Function ID`, with options defined in alignment with the `CREATE TABLE` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_statement).
+_**Type**_ | `PROCEDURE`
+_**Arguments**_ | `destination_table_id STRING, source_table_function_id STRING, start_date DATE, end_date DATE, table_options JSON`
+_**Returns**_ | `None`
+_**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bqtools-qb.[region].create_table`

@@ -26,8 +26,9 @@ The approach we take, in order to enable users to remodel their raw data into a 
 
 Neither the `ecommerce` nor the `items` are included in the profiler at this stage.
 
-### Data Type Coercion
-In order to avoid potential data loss due to data type inconsistency, we leverage a number of simple functions to extract _all_ data from a value `STRUCT`.  The function used to extract data from each column is determined by the `event_profile` derived in the profiling stage and the logic is derived from the BigQuery [conversion rules](https://cloud.google.com/bigquery/docs/reference/standard-sql/conversion_rules).
+### Data Type Selection
+
+In order to avoid potential data loss due to data type inconsistency, the profiling stage identifies observed data types and occurrence counts.  This enables identification of any data type inconsistencies, which can happen as implementation is prone to potential human error. If there are inconsistencies, then we can deploy custom code for these edge cases in line with the BigQuery [conversion rules](https://cloud.google.com/bigquery/docs/reference/standard-sql/conversion_rules).
 
 The potential data conversion rules between the different possible data types (using the `CAST` or `SAFE_CAST` functions) are:
 
@@ -92,15 +93,22 @@ _**Default Values**_ | None
 _**Challenges**_ | Extracting values from this complex `ARRAY` column requires previous knowledge of both the `user_properties.key` to be extracted and the data type, as well as using the `UNNEST` operator to access array elements, which is a complicated syntax to master, e.g. <br>```(SELECT user_property.value.int_value FROM UNNEST(user_properties) AS user_property WHERE user_property.key = 'ga_session_id')```<br> Using this structure in a downstream reporting tool is near-impossible as it requires complex calculated fields for every possible key expected in the data.
 _**Approach**_ | The decoding expression for the `user_properties` column is generated programmatically from the `event_profile` derived in the profiling stage, and leverages a set of extract functions (`extract_user_properties_double_value`, `extract_user_properties_float_value`, `extract_user_properties_int_value`, `extract_user_properties_string_value`) to avoid data loss due to type inconsistencies. 
 
-### Base Query
-We start with a base query, which is structured as a sequence of common table expressions (explicitly named SQL-defined logical steps), stored as a `cte_profile` object in a `profile_table`.  We then use the `update_cte_sql` from our `bqtools` library to update the `decode_event_names`, `decode_event_params` and `decode_user_properties` ctes with the programmatically generated custom SQL. This results in a custom decoder query, specific to the event stream profiled using the `profile_events` function.
+### Standard Base Query
+We start with a base query, which is standard structured as a sequence of common table expressions (explicitly named SQL-defined logical steps). This query then calls the custom queries (`add_event_counts`, `decode_event_params` and `decode_user_properties`) which are deployed in either the inbound GA4 dataset or a separate, regionally co-located dataset.  We can then periodically refresh the custom queries to ensure that new `event_name`, `event_params` and `user_properties` values are refelcted in the downstream data.
 
 ### Decoder Table Function
-This custom decoder query is then deployed in the GA4 BigQuery dataset as a date-paramterised Table Function called `events`, which can be efficiently queried directly by specifying a `start_date` and `end_date` `DATE` parameter, e.g. for the past 30 days
+This base query (along with the referenced custom queries) is then deployed in the GA4 BigQuery dataset as a date-paramterised Table Function called `events`, which can be efficiently queried directly by specifying a `start_date` and `end_date` `DATE` parameter, e.g. for the past 30 days
 
+#### GA4 Dataset
 ```sql
 SELECT * 
-FROM `[project_id].analytics_########.events`(CURRENT_DATE - 30, CURRENT_DATE)
+FROM `[project_id].analytics_########.events`(CURRENT_DATE - 30, CURRENT_DATE);
+```
+
+#### Separate Dataset
+```sql
+SELECT * 
+FROM `[project_id].[dataset_name].events`(CURRENT_DATE - 30, CURRENT_DATE);
 ```
 
 It can also be queried directly from Looker Studio with report date parameters, using the following code sytnax to parse the `DS_START_DATE` and `DS_END_DATE` parameters into SQL `DATE` values:
@@ -131,8 +139,8 @@ Name | Description
 `add_session_id` | Add a hexadecimal SHA256 hash of the JSON representation of the `user_pseudo_id` and the `ga_session_id` extracted from the `event_params` `ARRAY`.
 `convert_dates_and_timestamps` | Converts UNIX dates and timestamps to `DATE` and `TIMESTAMP` data types.
 `add_event_counts` | Custom function for each GA4 property. Returns an `event_count` `STRUCT` containing `event_name` count columns for each observed `event_name` value, in addition to total `events` and total observed `conversions`.
-`decode_event_params` | Custom function for each GA4 property. Returns an `event_param` `STRUCT` with a column for each observed value in the `event_params` `ARRAY`.  Output data types are determined by observed data types in the profiling stage and the logical approach outlined in the [docs](https://transformationflow.io/ga4/decodedata/#data-type-coercion).
-`decode_user_properties` | Custom function for each GA4 property. Returns a `user_property` `STRUCT` with a column for each observed value in the `user_properties` `ARRAY`.  Output data types are determined by observed data types in the profiling stage and the logical approach outlined in the [docs](https://transformationflow.io/ga4/decodedata/#data-type-coercion).
+`decode_event_params` | Custom function for each GA4 property. Returns an `event_param` `STRUCT` for each event with a column for each observed value in the `event_params` `ARRAY`.  Output data types are determined by observed data types in the profiling stage and the logical approach outlined in the [docs](https://transformationflow.io/ga4/decodedata/#data-type-coercion).
+`decode_user_properties` | Custom function for each GA4 property. Returns a `user_property` `STRUCT` for each event with a column for each observed value in the `user_properties` `ARRAY`.  Output data types are determined by observed data types in the profiling stage and the logical approach outlined in the [docs](https://transformationflow.io/ga4/decodedata/#data-type-coercion).
 `correct_attribution` | Optional fix for the known [misattribution bug](https://issuetracker.google.com/issues/241258655?ref=ga4bigquery.com) for `Google / Paid Search`.
 `additional_logic` | Placeholder for additional custom logic.
 `exclude_columns` | Configurable exclusion of non-required columns for schema simplification purposed (e.g. `event_params` and `user_properties` `ARRAYS` but can be trivially extended if e.g. `items` or `ecommerce` are not required).
