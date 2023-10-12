@@ -46,7 +46,7 @@ INT64-->FLOAT64
 
 The logic to define output data types for each parameter or property is governed by these relationships and the data types identified in the `event_profile`.
 
-Observed Data Type(s) |  Output Data Type
+Observed Data Type(s) |  Potential Output Data Type
 --- | --- 
 `STRING` | `STRING`
 `INT64` | `INT64`
