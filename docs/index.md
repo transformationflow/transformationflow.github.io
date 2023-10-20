@@ -3,15 +3,16 @@ hide:
   - navigation
 ---
 
-![Google Cloud Partners](assets/logos/google-cloud-partner-logo-horizontal-outline-400.png){ align=right }
+## Who we are
+![Google Cloud Partners](assets/logos/google-cloud-partner-logo-horizontal-outline-400.png)
+
+Transformationflow OÜ is a [Google Cloud Partner](https://cloud.google.com/find-a-partner/partner/transformationflow-%C3%96u), headquartered in Estonia (EU). 
+
+We are a remote, specialist team of Google Cloud Certified [Professional Data Engineers](https://cloud.google.com/learn/certification/data-engineer) who build data automation solutions, capabilities and products on Google Cloud.  We have been working exclusively with Google Cloud and BigQuery since 2017.
 
 ## What we do
 We design, build, manage and license serverless Google Cloud data automation solutions, capabilities and products.
 
-## Who we are
-Transformationflow OÜ is a [Google Cloud Partner](https://cloud.google.com/find-a-partner/partner/transformationflow-%C3%96u), headquartered in Estonia (EU). 
-
-We are a remote, specialist team of Google Cloud Certified [Professional Data Engineers](https://cloud.google.com/learn/certification/data-engineer) who build data automation solutions, capabilities and products on Google Cloud.  We have been working exclusively with Google Cloud and BigQuery since 2017.
 
 ## How we do it
 We use [BigQuery](https://cloud.google.com/bigquery) as a foundation, in addition to complementary Google Cloud products such as:
@@ -25,6 +26,4 @@ We use [BigQuery](https://cloud.google.com/bigquery) as a foundation, in additio
 - [Looker Studio](https://lookerstudio.google.com/) for end-user and data monitoring dashboards
 
 We have advanced capabilities in all aspects of [GoogleSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and the GoogleSQL [procedural language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).  We use these capabilities to build functions, procedures and table functions which solve complex data automation challenges in a rapid, scalable and replicable manner.
-
-![Transformationflow](assets/logos/Transformationflow Banner Web Small.png){ align=center }
 
