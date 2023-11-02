@@ -47,8 +47,11 @@ plugins:
 nav:
   - Introduction: index.md
   - Products: products.md
-  
-  - GA4:
+  - BigQuery Manager:
+    - Objectives: bqmanager/objectives.md
+    - Architecture: bqmanager/architecture.md
+
+  - Decode Data for GA4:
     - Quickstart: ga4/quickstart.md
     - Decode Data for GA4: ga4/decodedata.md
 
@@ -78,11 +81,11 @@ nav:
 
     - BigQuery Manager:
       - Overview: reference/bqmanager/index.md
-      - Quickstart: reference/bqmanager/quickstart.md
+      - Resources: reference/bqmanager/resources.md
       - Definitions:
         - Configuration: reference/bqmanager/configuration.md
         - Common Arguments: reference/bqmanager/arguments.md
-      - Information Schema: reference/bqmanager/information_schema.md
+      # - Information Schema: reference/bqmanager/information_schema.md
     
     - Decode Data for GA4:
       - Overview: reference/decodedata-ga4/index.md

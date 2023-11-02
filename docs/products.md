@@ -24,8 +24,7 @@ hide:
 
     ---
 
-    [BigQuery Manager :octicons-arrow-right-24:](reference/bqmanager/index.md){ .md-button }
-
+    [BigQuery Manager :octicons-arrow-right-24:](bqmanager/objectives.md){ .md-button }
 
 -   ## :octicons-search-16:{ .lg .middle } Decode Data for GA4
 
