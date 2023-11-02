@@ -1,5 +1,5 @@
 ## Overview
-The standard BigQuery Manager (`BQMANAGER`) deployment is build entirely from native BigQuery resources, function and components, with no external dependencies or APIs.  
+The standard BigQuery Manager (`BQMANAGER`) deployment is build entirely from native BigQuery resources, functions and components, with no external dependencies or APIs.  
 
 ```mermaid
 flowchart BT
