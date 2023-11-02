@@ -13,7 +13,7 @@ Date Warehouse performance and efficiency improvements result in faster speed _a
 
 
 # Capabilities
-These objectives are achieved via the following capabilities, enabled by the architecture outlined in the [BigQuery Manager Architecture](http://transformationflow.io/bqmanager/architecture/) section.
+These objectives are achieved via the following capabilities, enabled by the architecture outlined in the [BigQuery Manager Architecture](architecture.md) section.
 
 ```mermaid
 flowchart LR

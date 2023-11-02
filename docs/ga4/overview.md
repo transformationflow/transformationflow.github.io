@@ -1,5 +1,3 @@
-# Event Profiling
-
 ## Context
 Google Analytics 4 event data has a schema which can be extremely difficult to work with, even for SQL experts.  All automatic and custom parameters and properties (e.g. `event_params`, `user_properties`) are returned in `ARRAYS` of complex key-value `STRUCT` pairs, which require prior knowledge of the name _and_ the data type of the paremeters and properties.  
 

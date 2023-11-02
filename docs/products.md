@@ -34,7 +34,7 @@ hide:
 
     ---
 
-    [Decode Data for GA4 :octicons-arrow-right-24:](ga4/quickstart.md){ .md-button }
+    [Decode Data for GA4 :octicons-arrow-right-24:](ga4/overview.md){ .md-button }
 
 
 </div>

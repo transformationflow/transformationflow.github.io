@@ -52,8 +52,8 @@ nav:
     - Architecture: bqmanager/architecture.md
 
   - Decode Data for GA4:
-    - Quickstart: ga4/quickstart.md
-    - Decode Data for GA4: ga4/decodedata.md
+    - Overview: ga4/overview.md
+    - Architecture: ga4/architecture.md
 
   - Reference:
     - Glossary: reference/glossary.md
