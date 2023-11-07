@@ -52,6 +52,7 @@ nav:
     - Architecture: bqmanager/architecture.md
 
   - Decode Data for GA4:
+    - Deployment: ga4/deployment.md
     - Overview: ga4/overview.md
     - Architecture: ga4/architecture.md
 
