@@ -50,4 +50,3 @@ sequenceDiagram
 ```
 
 Note that there are additional dependencies on the `bqtools` and `bqtools-qb` libraries.
-
