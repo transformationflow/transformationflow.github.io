@@ -49,4 +49,4 @@ sequenceDiagram
     decodedata-ga4 ->> ga4_dataset_id: DEPLOY: events(start_date, end_date) 
 ```
 
-Note that there are additional dependencies on the `bqtools` and `bqtools-qb` libraries.
+Note that there are additional dependencies on the `bqtools` and `bqtools-qb` libraries to execute common actions such as resource creation and text parsing.
