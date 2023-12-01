@@ -1,7 +1,6 @@
 These functions are used to parse and manipulate `ARRAY` inputs.
 
-# Functions
-## **`array_unique_string`**
+# **`array_unique_string`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `array_unique_string`
@@ -23,7 +22,7 @@ _**Dependencies**_ | `None`
         SELECT bqtools.us.array_unique_string(input_array);
         ```
 
-## **`array_remove_empty_elements`**
+# **`array_remove_empty_elements`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `array_remove_empty_elements`
@@ -45,7 +44,7 @@ _**Dependencies**_ | `None`
         SELECT bqtools.us.array_remove_empty_elements(input_array);
         ```
 
-## **`array_exclude_elements`**
+# **`array_exclude_elements`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `array_exclude_elements`

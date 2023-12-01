@@ -1,7 +1,6 @@
 These functions return metadata related to BigQuery resources.
 
-# Functions
-## **`get_dataset_ids`**
+# **`get_dataset_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_dataset_ids`
@@ -23,7 +22,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_dataset_ids`
         CALL bqtools.us.get_dataset_ids(project_ids, dataset_ids);
         ```
 
-## **`get_base_table_ids`**
+# **`get_base_table_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_base_table_ids`
@@ -45,7 +44,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_base_table_ids`
         CALL bqtools.us.get_base_table_ids(dataset_id, base_table_ids);
         ```
 
-## **`get_view_ids`**
+# **`get_view_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_view_ids`
@@ -67,7 +66,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_view_ids`
         CALL bqtools.us.get_view_ids(dataset_id, view_ids);
         ```
 
-## **`get_external_table_ids`**
+# **`get_external_table_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_external_table_ids`
@@ -89,7 +88,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_external_table_ids`
         CALL bqtools.us.get_external_table_ids(dataset_id, external_table_ids);
         ```
 
-## **`get_table_function_ids`**
+# **`get_table_function_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_table_function_ids`
@@ -111,7 +110,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_table_function_ids`
         CALL bqtools.us.get_table_function_ids(dataset_id, table_function_ids);
         ```
 
-## **`get_function_ids`**
+# **`get_function_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_function_ids`
@@ -133,7 +132,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_function_ids`
         CALL bqtools.us.get_function_ids(dataset_id, function_ids);
         ```
 
-## **`get_procedure_ids`**
+# **`get_procedure_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_procedure_ids`
@@ -155,7 +154,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_procedure_ids`
         CALL bqtools.us.get_procedure_ids(dataset_id, procedure_ids);
         ```
 
-## **`get_sql`**
+# **`get_sql`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_sql`

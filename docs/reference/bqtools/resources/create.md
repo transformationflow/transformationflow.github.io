@@ -1,7 +1,6 @@
 These functions are used to create resources from arbitrary SQL definitions and options.
 
-# Functions
-## **`create_table`**
+# **`create_table`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_table`
@@ -45,7 +44,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table`
         CALL bqtools.[region].create_table(table_id, query_statement, table_options);
         ```
     
-## **`create_view`**
+# **`create_view`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_view`
@@ -70,7 +69,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_view`
         CALL bqtools.us.create_view(view_id, query_statement, view_options);
         ```
 
-## **`create_table_from_table_function`**
+# **`create_table_from_table_function`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_table_from_table_function`
@@ -119,7 +118,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bq
         SELECT `bqtools-qb.us.create_table_from_table_function`(destination_table_id, source_table_function_id, start_date, end_date, table_options);
         ```
 
-## **`create_function`**
+# **`create_function`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_function`

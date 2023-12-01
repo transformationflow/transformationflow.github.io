@@ -1,7 +1,6 @@
 These functions enable copying of BigQuery resources (`EXTERNAL TABLE`, `FUNCTION`, `TABLE FUNCTION`, `PROCEDURE`), maintaining all options from the source resource, and updating all references from the source to the destination dataset.  
 
-# Functions
-## **`copy_external_table`**
+# **`copy_external_table`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_external_table`
@@ -23,7 +22,7 @@ _**Dependencies**_ | `bqtools-qb.[region].copy_external_table`
         CALL bqtools.us.copy_external_table(source_table_id, destination_table_id);
         ```
 
-## **`copy_external_tables`**
+# **`copy_external_tables`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_external_tables`
@@ -45,7 +44,7 @@ _**Dependencies**_ | `bqtools.[region].get_external_table_ids`, `bqtools.[region
         CALL bqtools.us.copy_external_tables(source_dataset_id, destination_dataset_id, exclude_table_ids);
         ```
 
-## **`copy_function`**
+# **`copy_function`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_function`
@@ -67,7 +66,7 @@ _**Dependencies**_ | `bqtools-qb.[region].copy_function`
         CALL bqtools.us.copy_function(source_function_id, destination_function_id);
         ```
 
-## **`copy_functions`**
+# **`copy_functions`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_functions`
@@ -89,7 +88,7 @@ _**Dependencies**_ | `bqtools.[region].get_function_ids`, `bqtools.[region].copy
         CALL bqtools.us.copy_functions(source_dataset_id, destination_dataset_id, exclude_function_ids);
         ```
 
-## **`copy_table_function`**
+# **`copy_table_function`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_table_function`
@@ -111,7 +110,7 @@ _**Dependencies**_ | `bqtools-qb.[region].copy_table_function`
         CALL bqtools.us.copy_table_function(source_table_function_id, destination_table_function_id);
         ```
 
-## **`copy_table_functions`**
+# **`copy_table_functions`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_table_functions`
@@ -133,7 +132,7 @@ _**Dependencies**_ | `bqtools.[region].get_function_ids`, `bqtools.[region].copy
         CALL bqtools.us.copy_table_functions(source_dataset_id, destination_dataset_id, exclude_table_function_ids);
         ```
 
-## **`copy_procedure`**
+# **`copy_procedure`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_procedure`
@@ -155,7 +154,7 @@ _**Dependencies**_ | `bqtools-qb.[region].copy_procedure`
         CALL bqtools.us.copy_procedure(source_procedure_id, destination_procedure_id);
         ```
 
-## **`copy_procedures`**
+# **`copy_procedures`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `copy_procedures`

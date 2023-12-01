@@ -1,7 +1,6 @@
 These functions support profiling and working with [partitioned tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 
-# Functions
-## **`get_date_partitions`**
+# **`get_date_partitions`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_date_partitions`
@@ -23,7 +22,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_date_partitions`, `bqtools.[region
         CALL bqtools.us.get_date_partitions(partitioned_table_id, partitions);
         ```
 
-## **`get_date_partition_ids`**
+# **`get_date_partition_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_date_partition_ids`
@@ -45,7 +44,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_date_partitions`, `bqtools.[region
         CALL bqtools.us.get_date_partition_ids(partitioned_table_id, partition_ids);
         ```
 
-## **`get_first_date_partition`**
+# **`get_first_date_partition`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_date_partition`
@@ -67,7 +66,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partitions`, `bqtools.[region].p
         CALL bqtools.us.get_first_date_partition(partitioned_table_id, first_partition);
         ```
 
-## **`get_first_date_partition_id`**
+# **`get_first_date_partition_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_date_partition_id`
@@ -89,7 +88,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partition_ids`, `bqtools.[region
         CALL bqtools.us.get_first_date_partition_id(partitioned_table_id, first_partition_id);
         ```
 
-## **`get_last_date_partition`**
+# **`get_last_date_partition`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_date_partition`
@@ -111,7 +110,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partitions`, `bqtools.[region].p
         CALL bqtools.us.get_last_date_partition(partitioned_table_id, last_partition);
         ```
 
-## **`get_last_date_partition_id`**
+# **`get_last_date_partition_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_date_partition_id`
@@ -133,7 +132,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partition_ids`, `bqtools.[region
         CALL bqtools.us.get_last_date_partition_id(partitioned_table_id, last_partition_id);
         ```
 
-## **`get_missing_date_partitions`**
+# **`get_missing_date_partitions`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_date_partitions`
@@ -155,7 +154,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partitions`, `bqtools.[region].p
         CALL bqtools.us.get_missing_date_partitions(partitioned_table_id, start_date, end_date, missing_partitions);
         ```
 
-## **`get_missing_date_partition_ids`**
+# **`get_missing_date_partition_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_date_partition_ids`
@@ -177,7 +176,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partitions`, `bqtools.[region].p
         CALL bqtools.us.get_missing_date_partition_ids(partitioned_table_id, start_date, end_date, missing_partition_ids);
         ```
 
-## **`overwrite_date_partitions`**
+# **`overwrite_date_partitions`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `overwrite_date_partitions`
@@ -199,7 +198,7 @@ _**Dependencies**_ | `bqtools.[region].get_last_date_partition`, `bqtools.[regio
         CALL bqtools.us.overwrite_date_partitions(destination_table_id, date_column_name, source_table_function_id, start_date, end_date);
         ```
 
-## **`delete_date_partitions`**
+# **`delete_date_partitions`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `delete_date_partitions`
@@ -221,7 +220,7 @@ _**Dependencies**_ | `bqtools-qb.[region].delete_date_partitions`
         CALL bqtools.us.overwrite_date_partitions(destination_table_id, date_column_name, start_date, end_date);
         ```
 
-## **`insert_date_partitions`**
+# **`insert_date_partitions`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `insert_date_partitions`

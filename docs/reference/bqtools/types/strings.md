@@ -1,7 +1,6 @@
 These functions are used to parse and manipulate `STRING` inputs.
 
-# Functions
-## **`parse_resource_id`**
+# **`parse_resource_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `parse_resource_id`
@@ -32,7 +31,7 @@ _**Dependencies**_ | `None`
         SELECT bqtools.us.parse_resource_id(resource_id).resource_name;
         ```
 
-## **`encode_uri_component`**
+# **`encode_uri_component`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `encode_uri_component`
@@ -64,7 +63,7 @@ _**Dependencies**_ | `encodeURIComponent()`
     response: "test%3F"
     ```
     
-## **`decode_uri_component`**
+# **`decode_uri_component`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `decode_uri_component`
@@ -96,7 +95,7 @@ _**Dependencies**_ | `decodeURIComponent()`
     response: "test?"
     ```
 
-## **`replace_resource_project_id`**
+# **`replace_resource_project_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `replace_resource_project_id`
@@ -130,7 +129,7 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`
     SELECT bqtools.eu.replace_resource_project_id(original_resource_id, replacement_project_id);
     ```
 
-## **`replace_resource_dataset_id`**
+# **`replace_resource_dataset_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `replace_resource_dataset_id`
@@ -168,7 +167,7 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`
     response: "new_project_id.new_dataset_name.resource_name"
     ```
 
-## **`replace_resource_dataset_name`**
+# **`replace_resource_dataset_name`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `replace_resource_dataset_name`
@@ -207,7 +206,7 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`
     ```
 
 
-## **`replace_resource_table_name`**
+# **`replace_resource_table_name`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `replace_resource_table_name`

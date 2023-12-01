@@ -1,7 +1,6 @@
 These functions are used to decode common input data structures into BigQuery structured data columns.
 
-# Functions
-## **`decode_pubsub_scheduled_query_data`**
+# **`decode_pubsub_scheduled_query_data`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `decode_pubsub_scheduled_query_data`
@@ -51,7 +50,7 @@ _**Dependencies**_ | `None`
     | `data.updateTime` | `NULLABLE` | `TIMESTAMP` |		
     | `data.userId` | `NULLABLE` | `STRING` |		
 
-## **`decode_pubsub_scheduled_query_attributes`**
+# **`decode_pubsub_scheduled_query_attributes`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `decode_pubsub_scheduled_query_attributes`

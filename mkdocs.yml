@@ -47,14 +47,14 @@ plugins:
 nav:
   - Introduction: index.md
   - Products: products.md
-  - BigQuery Manager:
-    - Objectives: bqmanager/objectives.md
-    - Architecture: bqmanager/architecture.md
+  # - BigQuery Manager:
+  #  - Objectives: bqmanager/objectives.md
+  #  - Architecture: bqmanager/architecture.md
 
-  - Decode Data for GA4:
-    - Deployment: ga4/deployment.md
-    - Overview: ga4/overview.md
-    - Architecture: ga4/architecture.md
+  # - Decode Data for GA4:
+  # - Deployment: ga4/deployment.md
+  # - Overview: ga4/overview.md
+  # - Architecture: ga4/architecture.md
 
   - Reference:
     - Glossary: reference/glossary.md
@@ -79,18 +79,20 @@ nav:
         - Dates: reference/bqtools/types/dates.md
         - Strings: reference/bqtools/types/strings.md
         - Arrays: reference/bqtools/types/arrays.md
+      - Objects:
+        - Profiling: reference/bqtools/objects/profiling.md
 
-    - BigQuery Manager:
-      - Overview: reference/bqmanager/index.md
-      - Resources: reference/bqmanager/resources.md
-      - Definitions:
-        - Configuration: reference/bqmanager/configuration.md
-        - Common Arguments: reference/bqmanager/arguments.md
+    # - BigQuery Manager:
+    #   - Overview: reference/bqmanager/index.md
+    #   - Resources: reference/bqmanager/resources.md
+    #   - Definitions:
+    #     - Configuration: reference/bqmanager/configuration.md
+    #     - Common Arguments: reference/bqmanager/arguments.md
       # - Information Schema: reference/bqmanager/information_schema.md
     
-    - Decode Data for GA4:
-      - Overview: reference/decodedata-ga4/index.md
-      - Event Profiling: reference/decodedata-ga4/profiling.md
+    # - Decode Data for GA4:
+    #  - Overview: reference/decodedata-ga4/index.md
+    #  - Event Profiling: reference/decodedata-ga4/profiling.md
 
 
   - Publications:

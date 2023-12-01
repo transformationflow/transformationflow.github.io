@@ -1,7 +1,6 @@
 These functions are used to parse and manipulate `DATE` inputs.
 
-# Functions
-## **`convert_date_to_date_id`**
+# **`convert_date_to_date_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `convert_date_to_date_id`
@@ -23,7 +22,7 @@ _**Dependencies**_ | `None`
         SELECT bqtools.us.convert_date_to_date_id(date);
         ```
 
-## **`convert_date_id_to_date`**
+# **`convert_date_id_to_date`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `convert_date_id_to_date`
@@ -45,7 +44,7 @@ _**Dependencies**_ | `None`
         SELECT bqtools.us.convert_date_id_to_date(date);
         ```
 
-## **`generate_date_id_array`**
+# **`generate_date_id_array`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `generate_date_id_array`

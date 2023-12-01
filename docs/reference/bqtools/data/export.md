@@ -1,7 +1,6 @@
 These functions are used to export data from BigQuery.
 
-# Functions
-## **`export_data`**
+# **`export_data`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `export_data`

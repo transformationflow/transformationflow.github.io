@@ -1,7 +1,6 @@
 These functions are used to manipulate data in existing tables.
 
-# Functions
-## **`insert_data`**
+# **`insert_data`**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `insert_data`

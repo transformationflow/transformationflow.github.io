@@ -1,7 +1,6 @@
 These functions support profiling and working with [date-sharded tables](https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard).
 
-# Functions
-## **`get_date_shards`**
+# **`get_date_shards`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_date_shards`
@@ -23,7 +22,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_date_shards`
         CALL bqtools.us.get_date_shards(sharded_table_dataset_id, sharded_table_prefix, shard_dates);
         ```
 
-## **`get_date_shard_ids`**
+# **`get_date_shard_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_date_shard_ids`
@@ -45,7 +44,7 @@ _**Dependencies**_ | `bqtools-qb.[region].get_date_shards`
         CALL bqtools.us.get_date_shard_ids(sharded_table_dataset_id, sharded_table_prefix, shard_ids);
         ```
 
-## **`get_first_date_shard`**
+# **`get_first_date_shard`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_date_shard`
@@ -67,7 +66,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_shards`, `bqtools-qb.[region].ge
         CALL bqtools.us.get_first_date_shard(sharded_table_dataset_id, sharded_table_prefix, first_shard);
         ```
 
-## **`get_first_date_shard_id`**
+# **`get_first_date_shard_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_date_shard_id`
@@ -89,7 +88,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_shard_ids`, `bqtools-qb.[region]
         CALL bqtools.us.get_first_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, first_shard_id);
         ```
 
-## **`get_last_date_shard`**
+# **`get_last_date_shard`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_date_shard`
@@ -111,7 +110,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_shards`, `bqtools-qb.[region].ge
         CALL bqtools.us.get_last_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
         ```
 
-## **`get_last_date_shard_id`**
+# **`get_last_date_shard_id`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_date_shard_id`
@@ -133,7 +132,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_shard_ids`, `bqtools-qb.[region]
         CALL bqtools.us.get_last_date_shard_id(sharded_table_dataset_id, sharded_table_prefix, last_shard_id);
         ```
 
-## **`get_missing_date_shards`**
+# **`get_missing_date_shards`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_date_shards`
@@ -155,7 +154,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_shards`, `bqtools-qb.[region].ge
         CALL bqtools.us.get_missing_date_shards(sharded_table_dataset_id, sharded_table_prefix, start_date, end_date, missing_shards);
         ```
     
-## **`get_missing_date_shard_ids`**
+# **`get_missing_date_shard_ids`**
 _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_missing_date_shard_ids`
