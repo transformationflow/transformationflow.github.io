@@ -49,7 +49,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_view`
 _**ID**_ | `bqtools.[region].create_view`
-_**Description**_ | Creates or replaces a single `VIEW` defined by an arbitrary sql `query_statement`, with options defined in alignment with the `CREATE VIEW` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_view_statement).
+_**Description**_ | Creates or replaces a single `VIEW` defined by an arbitrary sql `query_statement`, with options defined in alignment with the `CREATE VIEW` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_view_statement). 
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `view_id STRING, query_statement STRING, view_options JSON`
 _**Returns**_ | `None`
@@ -74,7 +74,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_table_from_table_function`
 _**ID**_ | `bqtools.[region].create_table_from_table_function`
-_**Description**_ | Creates or replaces a single `Table` defined by an arbitrary sql `Table Function ID`, with options defined in alignment with the `CREATE TABLE` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_statement).
+_**Description**_ | Creates or replaces a single `TABLE` defined by a date-parameterised `TABLE FUNCTION`, with options defined in alignment with the `CREATE TABLE FUNCTION` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_function_statement).
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `destination_table_id STRING, source_table_function_id STRING, start_date DATE, end_date DATE, table_options JSON`
 _**Returns**_ | `None`
@@ -94,7 +94,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bq
         CALL bqtools.us.create_table_from_table_function(destination_table_id, source_table_function_id, start_date, end_date, table_options);
         ```
 
-??? abstract "example: `create_table`"
+??? abstract "example: `create_table_from_table_function`"
     === "Partitioned and Clustered Table"
         ```sql
         DECLARE destination_table_id STRING;
@@ -104,9 +104,9 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bq
         DECLARE table_options JSON;
 
         SET destination_table_id = 'project_id.dataset_name.destination_table_name';
-        SET source_table_function_id = 'project_id.dataset_name.function_table_name';
-        SET start_date = PARSE_DATE('%Y%m%d', '20081231');
-        SET end_date = PARSE_DATE('%Y%m%d', '20231231');
+        SET source_table_function_id = 'project_id.dataset_name.table_function_name';
+        SET start_date = CURRENT_DATE - 7;
+        SET end_date = CURRENT_DATE;
 
         SET table_options = JSON """
         {
@@ -115,7 +115,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bq
         }   
         """;
 
-        SELECT `bqtools-qb.us.create_table_from_table_function`(destination_table_id, source_table_function_id, start_date, end_date, table_options);
+        SELECT `bqtools-qb.[region].create_table_from_table_function`(destination_table_id, source_table_function_id, start_date, end_date, table_options);
         ```
 
 # **`create_function`**
@@ -123,11 +123,19 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_function`
 _**ID**_ | `bqtools.[region].create_function`
-_**Description**_ | Creates or replaces a function
-
-
-single `Table` defined by an arbitrary sql `Table Function ID`, with options defined in alignment with the `CREATE TABLE` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_table_statement).
+_**Description**_ | Creates or replaces a `FUNCTION` defined by an arbitrary `query_statement`, with optional argument names and data types defined by the `arguments` `STRUCT ARRAY` and options defined in alignment with the `CREATE FUNCTION` [DDL statement](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_function_statement).
 _**Type**_ | `PROCEDURE`
-_**Arguments**_ | `destination_table_id STRING, source_table_function_id STRING, start_date DATE, end_date DATE, table_options JSON`
+_**Arguments**_ | `function_id STRING, query_statement STRING, arguments ARRAY<STRUCT<name STRING, data_type STRING>>, function_options JSON`
 _**Returns**_ | `None`
-_**Dependencies**_ | `bqtools-qb.[region].create_table_from_table_function`, `bqtools-qb.[region].create_table`
+_**Dependencies**_ | `bqtools-qb.[region].create_function`
+
+!!! info "execution: `create_function`"
+    === "EU"
+        ```sql
+        CALL bqtools.eu.create_function(function_id, query_statement, arguments, function_options);
+        ```
+
+    === "US"
+        ```sql
+        CALL bqtools.us.create_function(function_id, query_statement, arguments, function_options);
+        ```
