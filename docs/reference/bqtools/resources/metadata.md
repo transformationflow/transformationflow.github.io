@@ -5,7 +5,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_dataset_ids`
 _**ID**_ | `bqtools.[region].get_dataset_ids`
-_**Description**_ | Returns the dataset_ids for all datasets across multiple projects.
+_**Description**_ | Returns the `dataset_ids` for all datasets across multiple projects.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `project_ids ARRAY<STRING>, OUT dataset_ids ARRAY<STRING>`
 _**Returns**_ | `OUT dataset_ids ARRAY<STRING>`
@@ -27,7 +27,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_base_table_ids`
 _**ID**_ | `bqtools.[region].get_base_table_ids`
-_**Description**_ | Returns an array of ids corresponding to every `BASE TABLE` in a single dataset.
+_**Description**_ | Returns the `table_ids` for every `BASE TABLE` in a single dataset.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `dataset_id STRING, OUT base_table_ids ARRAY<STRING>`
 _**Returns**_ | `OUT base_table_ids ARRAY<STRING>`
@@ -49,7 +49,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_view_ids`
 _**ID**_ | `bqtools.[region].get_view_ids`
-_**Description**_ | Returns an array of ids corresponding to every `VIEW` in a single dataset.
+_**Description**_ | Returns the `view_ids` for every `VIEW` in a single dataset.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `dataset_id STRING, OUT view_ids ARRAY<STRING>`
 _**Returns**_ | `OUT view_ids ARRAY<STRING>`
@@ -71,7 +71,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_external_table_ids`
 _**ID**_ | `bqtools.[region].get_external_table_ids`
-_**Description**_ | Returns an array of ids corresponding to every `EXTERNAL TABLE` in a single dataset.
+_**Description**_ | Returns the `table_ids` of every `EXTERNAL TABLE` in a single dataset.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `dataset_id STRING, OUT external_table_ids ARRAY<STRING>`
 _**Returns**_ | `OUT external_table_ids ARRAY<STRING>`
@@ -93,7 +93,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_table_function_ids`
 _**ID**_ | `bqtools.[region].get_table_function_ids`
-_**Description**_ | Returns an array of ids corresponding to every `TABLE FUNCTION` in a single dataset.
+_**Description**_ | Returns the `table_function_ids` for every `TABLE FUNCTION` in a single dataset.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `dataset_id STRING, OUT table_function_ids ARRAY<STRING>`
 _**Returns**_ | `OUT table_function_ids ARRAY<STRING>`
@@ -115,7 +115,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_function_ids`
 _**ID**_ | `bqtools.[region].get_function_ids`
-_**Description**_ | Returns an array of ids corresponding to every `FUNCTION` in a single dataset.
+_**Description**_ | Returns the `function_ids` for every `FUNCTION` in a single dataset.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `dataset_id STRING, OUT function_ids ARRAY<STRING>`
 _**Returns**_ | `OUT function_ids ARRAY<STRING>`
@@ -137,7 +137,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `get_procedure_ids`
 _**ID**_ | `bqtools.[region].get_procedure_ids`
-_**Description**_ | Returns an array of ids corresponding to every `PROCEDURE` in a single dataset.
+_**Description**_ | Returns the `procedure_ids` for every `PROCEDURE` in a single dataset.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `dataset_id STRING, OUT procedure_ids ARRAY<STRING>`
 _**Returns**_ | `OUT procedure_ids ARRAY<STRING>`
@@ -159,19 +159,19 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_sql`
 _**ID**_ | `bqtools.[region].get_sql`
-_**Description**_ | Returns the SQL definition of a single `ROUTINE` or `VIEW`.
+_**Description**_ | Returns the `SQL` definition of a single `ROUTINE` or `VIEW`.
 _**Type**_ | `PROCEDURE`
-_**Arguments**_ | `routine_or_view_id STRING, INOUT sql STRING`
-_**Returns**_ | `OUT sql STRING`
+_**Arguments**_ | `routine_or_view_id STRING, OUT sql_query STRING`
+_**Returns**_ | `OUT sql_query STRING`
 _**Dependencies**_ | `bqtools-qb.[region].get_sql`
 
 !!! info "execution: `get_sql`"
     === "EU"
         ```sql
-        CALL bqtools.eu.get_sql(routine_or_view_id, sql);
+        CALL bqtools.eu.get_sql(routine_or_view_id, sql_query);
         ```
 
     === "US"
         ```sql
-        CALL bqtools.us.get_sql(routine_or_view_id, sql);
+        CALL bqtools.us.get_sql(routine_or_view_id, sql_query);
         ```
