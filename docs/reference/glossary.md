@@ -1,4 +1,4 @@
-The following definitions are used consistently across all functions and development work.  These definitions may override some of the standard Google definitions which can be inconsistent across different system functions, views and user interfaces.
+The following definitions are used consistently across all functions and development activity.  These definitions may override some of the standard Google definitions which can be inconsistent across different system functions, views and user interfaces.
 
 # Naming Conventions
 Term | Data Type | Description | Key Functions
