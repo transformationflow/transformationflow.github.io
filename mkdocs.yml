@@ -24,7 +24,6 @@ theme:
       accent: cyan
   icon:
     repo: fontawesome/brands/github
-  #logo: assets/logos/TxFlow_Geometric_Logo_Icon_White_on_Transparent.png
   logo: assets/logos/TransformationFlowLogo3DTransparent.png
   favicon: assets/logos/TransformationFlowLogo3DTransparent_100x100.png
 
@@ -46,52 +45,49 @@ plugins:
 
 nav:
   - Introduction: index.md
-  - Products: products.md
-  # - BigQuery Manager:
-  #  - Objectives: bqmanager/objectives.md
-  #  - Architecture: bqmanager/architecture.md
-
-  # - Decode Data for GA4:
-  # - Deployment: ga4/deployment.md
-  # - Overview: ga4/overview.md
-  # - Architecture: ga4/architecture.md
-
+  - Libraries: libraries.md
   - Reference:
-    - Glossary: reference/glossary.md
+    - Terminology: reference/terminology.md
 
     - BigQuery Tools:
-      - Overview: reference/bqtools/index.md
-      - Resources:
-        - Metadata: reference/bqtools/resources/metadata.md
-        - Create: reference/bqtools/resources/create.md
-        - Copy: reference/bqtools/resources/copy.md
-      - Partitions:
-        - Partitioned Tables: reference/bqtools/partitions/partitioning.md
-        - Sharded Tables: reference/bqtools/partitions/sharding.md
-      - Queries:
-        - Profiling: reference/bqtools/queries/profiling.md
-        - Manipulation: reference/bqtools/queries/manipulation.md
-      - Data:
-        - Manipulation: reference/bqtools/data/manipulation.md
-        - Decoders: reference/bqtools/data/decoders.md
-        - Export: reference/bqtools/data/export.md
-      - Types:
-        - Dates: reference/bqtools/types/dates.md
-        - Strings: reference/bqtools/types/strings.md
-        - Arrays: reference/bqtools/types/arrays.md
-      - Objects:
-        - Profiling: reference/bqtools/objects/profiling.md
+      - Introduction: reference/bqtools/index.md
+   
+    - BigQuery Manager:
+      - Introduction: reference/bqmanager/index.md
 
-    # - BigQuery Manager:
-    #   - Overview: reference/bqmanager/index.md
+    - Decode Data:
+      - Introduction: reference/decodedata/index.md
+
+
+  #    - Resources:
+  #      - Metadata: reference/bqtools/resources/metadata.md
+  #      - Create: reference/bqtools/resources/create.md
+  #      - Copy: reference/bqtools/resources/copy.md
+  #    - Partitions:
+  #      - Partitioned Tables: reference/bqtools/partitions/partitioning.md
+  #      - Sharded Tables: reference/bqtools/partitions/sharding.md
+  #    - Queries:
+  #      - Profiling: reference/bqtools/queries/profiling.md
+  #      - Manipulation: reference/bqtools/queries/manipulation.md
+  #    - Data:
+  #      - Manipulation: reference/bqtools/data/manipulation.md
+  #      - Decoders: reference/bqtools/data/decoders.md
+  #      - Export: reference/bqtools/data/export.md
+  #    - Types:
+  #      - Dates: reference/bqtools/types/dates.md
+  #      - Strings: reference/bqtools/types/strings.md
+  #      - Arrays: reference/bqtools/types/arrays.md
+  #    - Objects:
+  #      - Profiling: reference/bqtools/objects/profiling.md
+
+ 
     #   - Resources: reference/bqmanager/resources.md
     #   - Definitions:
     #     - Configuration: reference/bqmanager/configuration.md
     #     - Common Arguments: reference/bqmanager/arguments.md
       # - Information Schema: reference/bqmanager/information_schema.md
     
-    # - Decode Data for GA4:
-    #  - Overview: reference/decodedata-ga4/index.md
+
     #  - Event Profiling: reference/decodedata-ga4/profiling.md
 
 

@@ -1,4 +1,4 @@
-The BigQuery Manager (`bqmanager`) library deploys a set of extensions to BigQuery to enable visibility and actions across multiple projects which are not possible using native BigQuery functionality.
+The **BigQuery Manager** (`bqmanager`) library deploys a set of metadata-powered extensions to BigQuery to enable visibility and actions across multiple projects which are not possible using native BigQuery functionality.
 
 # Summary
 _Attribute_ | Value
