@@ -1,7 +1,7 @@
 The following definitions are used consistently across all functions and development activity.  These definitions may override some of the standard Google definitions which can be inconsistent across different system functions, views and user interfaces.
 
 # Resource Types
-Resource Type <div style="width:140px"></div> | Description | Docs <div style="width:200px"></div>
+Resource Type <div style="width:80px"></div> | Description | Docs <div style="width:80px"></div>
 --- | --- | ---
 `TABLE` | The collective terminology for a resource of type `BASE TABLE`, `PARTITIONED TABLE`, `SHARDED TABLE`, `EXTERNAL TABLE`, `SNAPSHOT` or `VIEW` | [Introduction to tables](https://cloud.google.com/bigquery/docs/tables-intro)
 `BASE TABLE` | A native BigQuery table, for which the data is physically stored within BigQuery | [Standard BigQuery tables](https://cloud.google.com/bigquery/docs/tables-intro#standard_tables)
@@ -17,7 +17,7 @@ Resource Type <div style="width:140px"></div> | Description | Docs <div style="w
 `REMOTE FUNCTION` | A [Cloud Function](https://cloud.google.com/functions/) written in one of a variety of languages which can be called like a BigQuery `FUNCTION`, enabling interaction with external APIs and libraries in BigQuery queries and workflows | [Work with remote functions](https://cloud.google.com/bigquery/docs/remote-functions)
 
 # Naming Conventions
-Term <div style="width:140px"></div> | Data Type | Description 
+Term <div style="width:110px"></div> | Data Type | Description 
 --- | --- | --- 
 `project_id` | `STRING` | The globally unique identifier for each [project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
 `dataset_name` | `STRING` | The name for each [dataset](https://cloud.google.com/bigquery/docs/datasets), unique in each project
@@ -32,7 +32,7 @@ Term <div style="width:140px"></div> | Data Type | Description
 
 
 # Language Types
-Language Type <div style="width:140px"></div> | Description | Docs <div style="width:200px"></div>
+Language Type <div style="width:80"></div> | Description | Docs <div style="width:80px"></div>
 --- | --- | ---
 GoogleSQL | An ANSI compliant superset of Structured Query Language ([SQL](https://en.wikipedia.org/wiki/SQL))| [SQL in BigQuery](https://cloud.google.com/bigquery/docs/introduction-sql)
 Procedural Language | The core language which enables programmatic execution of arbitrary logic | [Procedural Language](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language)
