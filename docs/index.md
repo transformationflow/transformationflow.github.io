@@ -2,10 +2,9 @@
 hide:
   - navigation
 ---
-
-## Who we are
 ![Google Cloud Partners](assets/logos/google-cloud-partner-logo-horizontal-outline-400.png)
 
+## Who we are
 Transformationflow OÜ is a [Google Cloud Partner](https://cloud.google.com/find-a-partner/partner/transformationflow-%C3%96u), headquartered in Estonia (EU). 
 
 We are a remote, specialist team of Google Cloud Certified [Professional Data Engineers](https://cloud.google.com/learn/certification/data-engineer) who build data automation solutions and [libraries](libraries.md) on Google Cloud.  We have been working exclusively with Google Cloud and BigQuery since 2017.
