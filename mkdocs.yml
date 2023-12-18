@@ -51,7 +51,9 @@ nav:
 
     - BigQuery Tools:
       - Introduction: reference/bqtools/index.md
-   
+      - Resources:
+        - CREATE: reference/bqtools/resources/create.md
+
     - BigQuery Manager:
       - Introduction: reference/bqmanager/index.md
 
