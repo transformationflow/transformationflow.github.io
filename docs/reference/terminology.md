@@ -11,10 +11,10 @@ Resource Type <div style="width:80px"></div> | Description | Docs <div style="wi
 `SNAPSHOT` | An efficient mechanism for recording point-in-time table contents | [Introduction to table snapshots](https://cloud.google.com/bigquery/docs/table-snapshots-intro)
 `VIEW` | An ephemeral table-like logical resource defined by a SQL query | [Views](https://cloud.google.com/bigquery/docs/tables-intro#views)
 `ROUTINE` | The collective terminology for a resource of type `FUNCTION`, `PROCEDURE`, `TABLE FUNCTION` or `REMOTE FUNCTION` | [Manage Routines](https://cloud.google.com/bigquery/docs/routines)
-`TABLE FUNCTION (TF)` | Essentially a parameterized `VIEW`, supporting more complex, optimized query patterns | [Table functions](https://cloud.google.com/bigquery/docs/table-functions)
-`DATE-BOUNDED TABLE FUNCTION (DBTF)` | A table function with precisely two `DATE` parameters as arguments: `start_date` and ` end_date`
 `FUNCTION` | User-defined code (SQL, native Javascript or packaged Javascript libraries) which wraps logic into a reusable and shareable function, taking zero or more type-specific arguments and returning a single value | [User-defined functions](https://cloud.google.com/bigquery/docs/user-defined-functions)
 `PROCEDURE` | A set of arbitrarily complex statements which takes zero or more type-specific arguments and enables complex logic and actions to be packaged into a single, reusable and shareable resource | [SQL stored procedures](https://cloud.google.com/bigquery/docs/procedures)
+`TABLE FUNCTION (TF)` | Essentially a parameterized `VIEW`, supporting more complex, optimized query patterns | [Table functions](https://cloud.google.com/bigquery/docs/table-functions)
+`DATE-BOUNDED TABLE FUNCTION (DBTF)` | A table function with precisely two `DATE` parameters as arguments: `start_date` and ` end_date`
 `REMOTE FUNCTION` | A [Cloud Function](https://cloud.google.com/functions/) written in one of a variety of languages which can be called like a BigQuery `FUNCTION`, enabling interaction with external APIs and libraries from BigQuery queries and workflows | [Work with remote functions](https://cloud.google.com/bigquery/docs/remote-functions)
 
 # Naming Conventions
