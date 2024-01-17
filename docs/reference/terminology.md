@@ -6,7 +6,9 @@ Resource Type <div style="width:80px"></div> | Description | Docs <div style="wi
 `TABLE` | The collective terminology for a resource of type `BASE TABLE`, `PARTITIONED TABLE`, `SHARDED TABLE`, `EXTERNAL TABLE`, `SNAPSHOT` or `VIEW` | [Introduction to tables](https://cloud.google.com/bigquery/docs/tables-intro)
 `BASE TABLE` | A native BigQuery table, for which the data is physically stored within BigQuery | [Standard BigQuery tables](https://cloud.google.com/bigquery/docs/tables-intro#standard_tables)
 `PARTITIONED TABLE` | A native BigQuery table where the data is stored in physically separate partitions (typically using a `DATE` column), enabling efficient and performant query execution | [Partitioned tables](https://cloud.google.com/bigquery/docs/partitioned-tables)
+`DATE-PARTITIONED TABLE (DPT)` | A partitioned table which is partitioned by a specific date column. | [Partitioned tables](https://cloud.google.com/bigquery/docs/partitioned-tables)
 `SHARDED TABLE` | A set of tables with a common schema and prefix, but with distinct suffixes (e.g. `[prefix]_YYYYMMDD` for date-based sharding) | [Partitioning versus sharding](https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard)
+`DATE-SHARDED TABLE (DST)` | A sharded table which is sharded by date, with table names in the format `[prefix]_YYYYMMDD` | [Partitioning versus sharding](https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard)
 `EXTERNAL TABLE` | A BigQuery table where the data is stored externally, either within the Google ecosystem (Google Sheets, files on Google Cloud Storage) or externally (Amazon S3, Azure Blob Storage) | [External tables](https://cloud.google.com/bigquery/docs/tables-intro#external_tables)
 `SNAPSHOT` | An efficient mechanism for recording point-in-time table contents | [Introduction to table snapshots](https://cloud.google.com/bigquery/docs/table-snapshots-intro)
 `VIEW` | An ephemeral table-like logical resource defined by a SQL query | [Views](https://cloud.google.com/bigquery/docs/tables-intro#views)
@@ -14,7 +16,7 @@ Resource Type <div style="width:80px"></div> | Description | Docs <div style="wi
 `FUNCTION` | User-defined code (SQL, native Javascript or packaged Javascript libraries) which wraps logic into a reusable and shareable function, taking zero or more type-specific arguments and returning a single value | [User-defined functions](https://cloud.google.com/bigquery/docs/user-defined-functions)
 `PROCEDURE` | A set of statements which takes zero or more type-specific arguments and enables complex logic and actions to be packaged into a single, reusable and shareable resource | [SQL stored procedures](https://cloud.google.com/bigquery/docs/procedures)
 `TABLE FUNCTION (TF)` | A parameterized `VIEW` which can support more complex, optimized query patterns | [Table functions](https://cloud.google.com/bigquery/docs/table-functions)
-`DATE-BOUNDED TABLE FUNCTION (DBTF)` | A table function with precisely two `DATE` parameters as arguments: `start_date` and ` end_date`
+`DATE-BOUNDED TABLE FUNCTION (DBTF)` | A table function with precisely two `DATE` parameters as arguments: `start_date` and ` end_date` | [Table functions](https://cloud.google.com/bigquery/docs/table-functions)
 `REMOTE FUNCTION` | A [Cloud Function](https://cloud.google.com/functions/) written in one of a variety of languages which can be called like a BigQuery `FUNCTION`, enabling interaction with external APIs and libraries from BigQuery queries and workflows | [Work with remote functions](https://cloud.google.com/bigquery/docs/remote-functions)
 
 # Naming Conventions
