@@ -14,7 +14,8 @@ The following resources are deployed to the destination dataset in all deploymen
 ### BigQuery
 The `GA4_EVENTS` function can then be used in any place you would reference a table in BigQuery, passing the `start_date` and `end_date` arguments to efficiently access a date-bounded subset of the transformed data. Note that using the GoogleSQL [`CURRENT_DATE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#current_date) function enables dynamic ranges to be set in a clear and concise manner:
 
-!!! info "basic query example: `GA4_EVENTS`"
+#### Query Data
+??? info "basic query example: `GA4_EVENTS`"
     ***SELECT all data for the past 7 days***
     ```sql
     SELECT * 
@@ -46,9 +47,47 @@ The `GA4_EVENTS` function can then be used in any place you would reference a ta
     FROM unique_sessions_per_day
     ```
 
+#### Create Table
+??? info "create output table: `EVENTS`"
+    ***CREATE ouptut `EVENTS` table from data between `2016-01-01` and `CURRENT_DATE`, partitioned by `event_date`***
+    ```sql
+    CREATE OR REPLACE [dataset_id].EVENTS
+    PARTITION BY event_date
+    AS
+    SELECT * 
+    FROM [dataset_id].GA4_EVENTS (
+    '2016-01-01',
+    CURRENT_DATE) 
+    ```
+    To connect this table optimally to Looker Studio, use the `event_date` partitioning column as the report date field in Looker Studio.
+
+#### Replace Partitions
+??? info "replace output table date partitions: `EVENTS`"
+    ***REPLACE last 3 days of date partitions in the output `EVENTS` table from the `GA4_EVENTS` table function***
+    ```sql
+    DECLARE start_date, end_date DATE;
+
+    SET start_date = CURRENT_DATE - 3;
+    SET end_date = CURRENT_DATE;
+
+    DELETE 
+    FROM [dataset_id].EVENTS
+    WHERE event_date 
+    BETWEEN start_date AND end_date;
+
+    INSERT 
+    INTO [dataset_id].EVENTS
+    SELECT * 
+    FROM [dataset_id].GA4_EVENTS (start_date, end_date);
+    ```
+    Using the `start_date`and `end_date` `DATE` variables would enable us to encapsulate this pattern into a [`PROCEDURE`](../../terminology.md) if required, with the `start_date DATE` and `end_date DATE` as arguments. This `PROCEDURE` could then be run periodically using a [`SCHEDULED_QUERY`](../../terminology.md) to keep the data refreshed in a cost-efficient manner.
+    
+    It might also be desirable to include both of these DDL statements in a single [`TRANSACTION`](https://cloud.google.com/bigquery/docs/transactions) so that an error in either statement would result in a roll-back to the initial state.
+
 ### Looker Studio
 In order to directly and efficiently connect Looker Studio to the `GA4_EVENTS` date-partitioned table function, we leverage the report date parameters `@DS_START_DATE` and `@DS_END_DATE` in a Custom SQL Query from Looker Studio.  Note that we have to use the GoogleSQL [`PARSE_DATE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#parse_date) function to transform the report date parameters (transmitted in the format `YYYYMMDD`) into SQL-compliant dates (`DATE` formatted, equivalent to the string `YYYY-MM-DD`), which are then passed to the `GA4_EVENTS` table function as the `start_date` and `end_date` parameters).
 
+#### Create Data Source
 !!! info "custom query: `GA4_EVENTS`"
     ```sql
     SELECT * 
