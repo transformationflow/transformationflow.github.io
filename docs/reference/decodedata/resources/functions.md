@@ -12,7 +12,7 @@ The following resources are deployed to the destination dataset in all deploymen
 
 ## Usage
 ### BigQuery
-The `GA4_EVENTS` function can then be used in any place you would reference a table in BigQuery, passing the `start_date` and `end_date` arguments to efficiently access a date-bounded subset of the transformed data. Note that using the GoogleSQL [`CURRENT_DATE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#current_date) function enables dynamic ranges to be set in a clear and concise manner:
+The `GA4_EVENTS` function can be used in any place you would reference a table in BigQuery, passing the `start_date` and `end_date` arguments to efficiently access a date-bounded subset of the transformed data. Note that using the GoogleSQL [`CURRENT_DATE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#current_date) function enables dynamic ranges to be set in a clear and concise manner:
 
 #### Query Data
 ??? info "basic query example: `GA4_EVENTS`"
