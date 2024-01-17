@@ -1,5 +1,5 @@
 # Introduction
-The Google Analytics 4 export to BigQuery has a schema which is very difficult to query in SQL and analyse in connected tools.  Decode Data dynamically remodels this data into a foundational structure which is optimised for querying and analysis.
+The Google Analytics 4 export to BigQuery has a schema which is very difficult to query in SQL, and analyse in connected tools.  Decode Data dynamically remodels this data into a foundational structure which is optimised for querying and analysis.
 
 # Quickstart
 The function used for deployment depends on your particular use case.  The following attributes need to be determined in order to determine the specific deployment function.
