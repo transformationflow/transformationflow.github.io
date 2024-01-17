@@ -59,7 +59,9 @@ nav:
 
     - Decode Data:
       - Introduction: reference/decodedata/index.md
-
+      - Overview: reference/decodedata/overview.md
+      - Resources:
+        - Deployment: reference/decodedata/resources/deployment.md
 
   #    - Resources:
   #      - Metadata: reference/bqtools/resources/metadata.md

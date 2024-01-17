@@ -49,7 +49,7 @@ BQMANAGER_FUNCTIONS --> BQMANAGER
 
 BigQuery Foundation | Usage Description 
 --- | --- 
-[INFORMATION_SCHEMA.*]((https://cloud.google.com/bigquery/docs/information-schema-intro)) | Resource metadata views 
+[INFORMATION_SCHEMA.*](https://cloud.google.com/bigquery/docs/information-schema-intro) | Resource metadata views 
 [INFORMATION_SCHEMA.JOBS](https://cloud.google.com/bigquery/docs/information-schema-jobs) |  BigQuery activity logging
 [CLOUD_BILLING_EXPORT](https://cloud.google.com/billing/docs/how-to/export-data-bigquery) | Google Cloud Billing analysis 
 [PUBSUB_BIGQUERY_SUBSCRIPTIONS](https://cloud.google.com/pubsub/docs/bigquery) | Scheduled query monitoring
