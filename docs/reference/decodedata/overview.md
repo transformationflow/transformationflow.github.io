@@ -11,7 +11,7 @@ Single or Multi-Property | Do you want to deploy this onto a single property or 
 Data Profile | Do you want to extract the standard set of events, or the custom set of events observed in the actual data?
 Data Integration Required | Do you need to align the output schemas to enable downstream integration of the data?
 
-Invocation syntax and options are detailed in the [deployment function reference documentation](reference/decodedata/resources/deployment.md).
+Invocation syntax and options are detailed in the [deployment function reference documentation](resources/deployment.md).
 
 ## Website Analytics
 
