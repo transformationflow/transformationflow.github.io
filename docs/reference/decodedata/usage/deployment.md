@@ -58,8 +58,8 @@ Since the output schema will be consistent for _all_ GA4 properties, this approa
 ## **`GA4_CUSTOM`**
 | Deployment Function <div style="width:180px"></div>| App or Web | Single or Multi-Property | Event Names | Event Params | User Properties | Aligned Schema
 | --- | :-: | :-: | :-: | :-: | :-: | :-: |
-| `DEPLOY_GA4_CUSTOM_WEB` | Web | Single | Observed + Standard | Observed + Standard | Profiled | :material-close:
-| `DEPLOY_GA4_CUSTOM_APP` | App | Single | Observed + Standard | Observed + Standard | Profiled | :material-close:
+| `DEPLOY_GA4_CUSTOM_WEB` | Web | Single | Observed + Standard | Observed + Standard | Observed | :material-close:
+| `DEPLOY_GA4_CUSTOM_APP` | App | Single | Observed + Standard | Observed + Standard | Observed | :material-close:
 
 These functions deploys the decoder functions into the destination dataset, using the combination of observed event names and the standard set of event names defined by the [GA4 Automatically Collected Events](https://support.google.com/analytics/answer/9234069?hl=en&ref_topic=13367566&sjid=7618755317365101827-EU) specification for Web or App.  Event parameters are a combination of observed event parameters and event parameters defined by the [GA4 Enhanced Event Measurement](https://support.google.com/analytics/answer/9216061?hl=en&ref_topic=13367566&sjid=7618755317365101827-EU) specification for Web or App, and user properties are defined by the values observed in the data . 
 

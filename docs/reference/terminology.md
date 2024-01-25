@@ -18,6 +18,7 @@ Resource Type <div style="width:80px"></div> | Description | Docs <div style="wi
 `TABLE FUNCTION (TF)` | A parameterized `VIEW` which can support more complex, optimized query patterns | [Table functions](https://cloud.google.com/bigquery/docs/table-functions)
 `DATE-BOUNDED TABLE FUNCTION (DBTF)` | A table function with precisely two `DATE` parameters as arguments: `start_date` and ` end_date` | [Table functions](https://cloud.google.com/bigquery/docs/table-functions)
 `REMOTE FUNCTION` | A [Cloud Function](https://cloud.google.com/functions/) written in one of a variety of languages which can be called like a BigQuery `FUNCTION`, enabling interaction with external APIs and libraries from BigQuery queries and workflows | [Work with remote functions](https://cloud.google.com/bigquery/docs/remote-functions)
+`SCHEDULED QUERY` | An arbitrary SQL statement which can be scheduled to run periodically | [Scheduling Queries](https://cloud.google.com/bigquery/docs/scheduling-queries)
 
 # Naming Conventions
 Term <div style="width:110px"></div> | Data Type | Description 
