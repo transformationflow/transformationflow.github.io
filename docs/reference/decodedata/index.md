@@ -1,4 +1,4 @@
-The **Decode Data** (`decodedata`) library enables dynamic remodelling of the Google Analytics 4 to BigQuery data export, flattening the data without information loss, and making it simpler to use and more efficient to query.
+The **Decode Data** (`decodedata`) library enables dynamic remodelling of the Google Analytics 4 to BigQuery data export, flattening the data without information loss, making it simpler to use and more efficient to query.
 
 # Summary
 _Attribute_ | Value

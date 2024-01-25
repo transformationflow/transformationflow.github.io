@@ -62,6 +62,7 @@ nav:
       - Overview: reference/decodedata/overview.md
       - Usage:
         - Deployment: reference/decodedata/usage/deployment.md
+        - Advanced Options: reference/decodedata/usage/advanced.md
         - Resources: reference/decodedata/usage/resources.md
         - Automation: reference/decodedata/usage/automation.md
 
