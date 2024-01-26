@@ -6,10 +6,10 @@ _Attribute_ | Value
 _**Name**_ | Decode Data
 _**Project ID**_ | `decodedata`
 _**Access**_ | Licensed
-_**Description**_ | Profiles historic event data, then builds and deploys a base query and set of bespoke functions to remodel the data into a simple flat structure.  It adds count metrics for `event_names` and type-specific value columns for `event_params` and `user_properties`.
+_**Description**_ | Remodels GA4 event data into a flat structure, adding count metrics for `event_names` and type-specific value columns for `event_params` and `user_properties`. 
 
 # Deployment
-Functions are currently deployed into the following [BigQuery regions](https://cloud.google.com/bigquery/docs/locations), but can be mirrored to additional regions as required:
+Deployment functions are currently deployed into the following [BigQuery regions](https://cloud.google.com/bigquery/docs/locations), but can be mirrored to additional regions as required:
 
 Region Name | Dataset ID 
 --- | --- 

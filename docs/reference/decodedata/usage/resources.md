@@ -12,9 +12,39 @@ The following resources are deployed to the destination dataset in all deploymen
 | `EVENTS` | [`DATE-PARTITIONED TABLE`](../../terminology.md) | Partitioned by `event_date` | Output table containing remodelled event data. To connect this table optimally to Looker Studio, use the `event_date` partitioning column as the report date field in Looker Studio.
 | `RUN_FLOW`| [`PROCEDURE`](../../terminology.md)  | `start_date DATE`, `end_date DATE` | Runs the flow to refresh the output `EVENTS` table, with the behaviour controlled by the arguments.
 
+## Architecture
+These resources interoperate in the following architectural configuration:
+
+```mermaid
+flowchart TB
+subgraph GA4 Dataset
+
+subgraph source data
+    analytics.events[analytics_#########.events_*]
+end
+
+subgraph data modelling
+    analytics.RUN_FLOW((RUN_FLOW))
+    subgraph analytics.GA4_EVENTS[GA4_EVENTS]
+        analytics.GA4_event_names[GA4_event_names]
+        analytics.GA4_event_params[GA4_event_params]
+        analytics.GA4_user_properties[GA4_user_properties]
+    end
+end
+
+subgraph output data
+  analytics.EVENTS>EVENTS]
+end
+
+analytics.events --> analytics.GA4_EVENTS
+analytics.GA4_EVENTS --> analytics.RUN_FLOW --> analytics.EVENTS
+
+end
+```
+
 ## Usage
 ### BigQuery
-The `EVENTS` date-partitioned table is the output events table to which you connect downstream tools, logic and processes. Note that using the GoogleSQL [`CURRENT_DATE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#current_date) function enables dynamic ranges to be set in a clear and concise manner:
+The `EVENTS` date-partitioned table is the output events table to which you connect downstream tools, logic and processes. Note that using the GoogleSQL [`CURRENT_DATE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#current_date) function enables dynamic ranges to be set in a clear and concise manner.
 
 #### Query Data
 ??? info "basic query example: `EVENTS`"

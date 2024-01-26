@@ -25,10 +25,10 @@ Advanced filters are implemented via the `event_options JSON` variable, which is
 Note that the placeholders need to be replaced by a valid `JSON` value or array. Placeholder `"<[DATE]>"` would be replaced by e.g. `"2024-01-01"` and placeholder `["<ARRAY<STRING>"]` would be replaced by e.g. `["12345678", "87654321"]`.
 
 ## Data Profile Filters
-Note that in each logical case, events are _not_ filtered out, simply excluded from the profiling and therefore not included in the relevant output STRUCT (`event_count`, `event_param`, `user_property`).  This means that the row count for the result of a query against the `[dataset_id].GA4_EVENTS` date-bounded table function for a specific date range should _precisely_ match the row count in both the source GA4 table shard range `[dataset_id].events_*` _and_ the output table `[dataset_id].EVENTS`.
+Note that in each logical case, events are _not_ filtered out, simply excluded from the profiling and therefore not included in the relevant output `STRUCT` (`event_count`, `event_param`, `user_property`).  This means that the row count for the result of a query against the `[dataset_id].GA4_EVENTS` date-bounded table function for a specific date range should _precisely_ match the row count in both the source GA4 table shard range `[dataset_id].events_*` _and_ the output table `[dataset_id].EVENTS`.
 
 ### Date Range
-Date ranges are used to only use a specific date range to build the custom decoder functions, only including columns in the decoded model which are observed in the defined date range (in addition to the standard set of columns). Neither or both `start_date` and `end_date` need to be passed in order for the deployment to be executed. 
+Date ranges filter the specific date range used to build the custom decoder functions, only including columns in the decoded model which are observed in the defined date range (in addition to the standard set of columns). Neither or both `start_date` and `end_date` need to be passed in order for the deployment to be executed. 
 
 !!! info "advanced event_options: `start_date, end_date`"
     === "JSON"
@@ -39,7 +39,7 @@ Date ranges are used to only use a specific date range to build the custom decod
         }
         ```
 
-    === "Static GoogleSQL"
+    === "GoogleSQL (Static)"
         ```sql
         DECLARE event_options JSON; 
 
@@ -51,7 +51,7 @@ Date ranges are used to only use a specific date range to build the custom decod
         """
         ```
 
-    === "Dynamic GoogleSQL"
+    === "GoogleSQL (Dynamic)"
         ```sql
         DECLARE event_options JSON; 
 

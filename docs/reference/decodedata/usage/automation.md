@@ -1,6 +1,3 @@
-# Automation Options
-There are several options to ensure that your output table is kept updated in a timely and efficient manner. 
-
 ## BigQuery Native
 The simplest way to automatically synchronise the output `EVENTS` date-partitioned table is to use the native flow runner (`RUN_FLOW`) function, which is deployed with your core resources by default.
 
@@ -73,7 +70,14 @@ The `start_date` is used to define the observation window in which the new date 
     ```
 
 ### Automation Deployment
-Native automation is achieved using BigQuery Scheduled Queries, which needs to be enabled for the project. Incremental refresh should be used to minimise costs and control for unpredictable inbound data timing.
+Native automation is achieved using BigQuery [Scheduled Queries](../../terminology.md), which needs to be enabled for the project. Incremental refresh should be used to minimise costs and control for unpredictable inbound data timing, and it is recommended to schedule the incremental refresh every hour (and not more frequently than every 30 minutes). 
 
-It is also recommended to use a query label to support future integration with job-level cost data, enabling granular cost tracking by GA4 property.
+It is also recommended to use the query label `scheduled_query_id` to support integration with job-level cost data, enabling granular cost tracking by GA4 property.
+
+!!! info "`RUN_FLOW`: Incremental, 7 day observation window with `query_label`"
+    ```sql
+    SET @@query_label = "scheduled_query_id:ga4_dataset_id";
+
+    CALL [dataset_id].RUN_FLOW (CURRENT_DATE - 7, NULL);
+    ```
 
