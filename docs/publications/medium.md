@@ -5,6 +5,18 @@ hide:
 
 <div class="grid cards" markdown>
 
+-   [:fontawesome-brands-medium:{ .lg .middle }](https://medium.com/decode-data/essential-sql-functions-for-the-ga4-bigquery-events-export-adc07bcefc11){:target="_blank"} March 27, 2024 :material-clock-fast:{ .lg .middle } 5 min read 
+    
+    # [Essential SQL Functions for GA4 BigQuery Export Analysis](https://medium.com/decode-data/essential-sql-functions-for-the-ga4-bigquery-events-export-adc07bcefc11){:target="_blank"}
+
+    [![Essential SQL Functions for GA4 BigQuery Export Analysis](../assets/medium/Essential_SQL_Functions_for_GA4_BigQuery_Export_Analysis.webp){ align=center }](https://medium.com/decode-data/essential-sql-functions-for-the-ga4-bigquery-events-export-adc07bcefc11){:target="_blank"}
+    ---
+    
+    The fundamental functions you’ll need to master if you want to work with the GA4 events data export in BigQuery
+
+    [:octicons-arrow-right-24: Continue reading](https://medium.com/decode-data/essential-sql-functions-for-the-ga4-bigquery-events-export-adc07bcefc11){:target="_blank"}
+
+
 -   [:fontawesome-brands-medium:{ .lg .middle }](https://medium.com/towards-data-science/google-pub-sub-to-bigquery-the-simple-way-de116234fb87){:target="_blank"} Sep 21, 2023 :material-clock-fast:{ .lg .middle } 8 min read 
     
     # [Google Pub/Sub to BigQuery the simple way](https://medium.com/towards-data-science/google-pub-sub-to-bigquery-the-simple-way-de116234fb87){:target="_blank"}
