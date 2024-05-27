@@ -5,7 +5,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_date_partitions`
 _**ID**_ | `bqtools.[region].get_date_partitions`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Returns an array of dates corresponding to all existing partitions in a single partitioned table, sorted by descending date.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, OUT partitions ARRAY<DATE>`
@@ -38,7 +38,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_date_partition`
 _**ID**_ | `bqtools.[region].get_first_date_partition`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Returns the first partition date from a single date-partitioned table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, OUT first_partition DATE`
@@ -71,7 +71,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_date_partition`
 _**ID**_ | `bqtools.[region].get_last_date_partition`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Returns the last partition date from a single date-partitioned table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `partitioned_table_id STRING, OUT last_partition DATE`
@@ -104,7 +104,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_date_shards`
 _**ID**_ | `bqtools.[region].get_date_shards`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Returns an array of `shard_dates` corresponding to all existing date shards in a single date-sharded table, sorted by descending date.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT shard_dates ARRAY<DATE>`
@@ -139,7 +139,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_first_date_shard`
 _**ID**_ | `bqtools.[region].get_first_date_shard`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Returns the first `shard_date` from a single sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT first_shard DATE`
@@ -174,7 +174,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `get_last_date_shard`
 _**ID**_ | `bqtools.[region].get_last_date_shard`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Returns the last `shard_date` from a single date-sharded table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING, OUT last_shard DATE`

@@ -5,7 +5,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `parse_dataset_id`
 _**ID**_ | `bqtools.[region].parse_dataset_id`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Validates a single `dataset_id` and parses constituent elements.
 _**Type**_ | `FUNCTION (SQL)`
 _**Arguments**_ | `dataset_id STRING`
@@ -36,7 +36,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `parse_resource_id`
 _**ID**_ | `bqtools.[region].parse_resource_id`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Validates a single `resource_id` and parses constituent elements.
 _**Type**_ | `FUNCTION (SQL)`
 _**Arguments**_ | `resource_id STRING`

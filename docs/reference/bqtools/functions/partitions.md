@@ -5,7 +5,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `delete_date_partitions`
 _**ID**_ | `bqtools.[region].delete_date_partitions`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Deletes a range of date-partitions from a date-partitioned destination table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `table_id STRING, date_column_name STRING, start_date DATE, end_date DATE`
@@ -44,7 +44,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `insert_date_partitions_from_date_bounded_table_function`
 _**ID**_ | `bqtools.[region].insert_date_partitions_from_date_bounded_table_function`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Inserts a range of date partitions from a date-bounded table function into a date-partitioned destination table.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `destination_table_id STRING, source_table_function_id STRING, start_date DATE, end_date DATE`
@@ -85,7 +85,7 @@ _**Attribute**_ | Value
 --- | ---
 _**Function Name**_ | `replace_date_partitions_from_date_bounded_table_function`
 _**ID**_ | `bqtools.[region].replace_date_partitions_from_date_bounded_table_function`
-_**Latest Version**_ | `bqtools:v1.0.0`
+_**Version**_ | `bqtools:v1.0.0`
 _**Description**_ | Deletes a range of date partitions from a date-partitioned destination table and inserts the same range of date partitions from a date-bounded table function.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `destination_table_id STRING, date_column_name STRING, source_table_function_id STRING, start_date DATE, end_date DATE`

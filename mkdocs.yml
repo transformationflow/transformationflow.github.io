@@ -52,7 +52,7 @@ nav:
       - Introduction: reference/bqtools/index.md
       - Functions:
         - Metadata: reference/bqtools/functions/metadata.md
-        # - Resources: reference/bqtools/functions/create.md
+        - Resources: reference/bqtools/functions/resources.md
         - Partitions: reference/bqtools/functions/partitions.md
         - Utilities: reference/bqtools/functions/utilities.md
 
