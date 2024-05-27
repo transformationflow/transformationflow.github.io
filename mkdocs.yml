@@ -51,10 +51,10 @@ nav:
     - BigQuery Tools:
       - Introduction: reference/bqtools/index.md
       - Functions:
+        - Utilities: reference/bqtools/functions/utilities.md
         - Metadata: reference/bqtools/functions/metadata.md
         - Resources: reference/bqtools/functions/resources.md
         - Partitions: reference/bqtools/functions/partitions.md
-        - Utilities: reference/bqtools/functions/utilities.md
 
     - Decode Data:
       - Introduction: reference/decodedata/index.md
