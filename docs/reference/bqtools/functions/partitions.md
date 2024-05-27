@@ -12,7 +12,7 @@ _**Arguments**_ | `table_id STRING, date_column_name STRING, start_date DATE, en
 _**Returns**_ | `None`
 _**Dependencies**_ | `bqtools-qb.[region].delete_date_partitions`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE destination_table_id, date_column_name STRING;
@@ -51,7 +51,7 @@ _**Arguments**_ | `destination_table_id STRING, source_table_function_id STRING,
 _**Returns**_ | `None`
 _**Dependencies**_ | `bqtools-qb.[region].insert_date_partitions_from_date_bounded_table_function`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE destination_table_id, source_table_function_id STRING;
@@ -92,7 +92,7 @@ _**Arguments**_ | `destination_table_id STRING, date_column_name STRING, source_
 _**Returns**_ | `None`
 _**Dependencies**_ | `bqtools.[region].delete_date_partitions`, `bqtools.[region].insert_date_partitions_from_date_bounded_table_function`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE destination_table_id, date_column_name, source_table_function_id STRING;

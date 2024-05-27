@@ -12,7 +12,7 @@ _**Arguments**_ | `partitioned_table_id STRING, OUT partitions ARRAY<DATE>`
 _**Returns**_ | `OUT partitions ARRAY<DATE>`
 _**Dependencies**_ | `bqtools-qb.[region].get_date_partitions`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE partitioned_table_id STRING;
@@ -45,7 +45,7 @@ _**Arguments**_ | `partitioned_table_id STRING, OUT first_partition DATE`
 _**Returns**_ | `OUT first_partition DATE`
 _**Dependencies**_ | `bqtools.[region].get_date_partitions`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE partitioned_table_id STRING;
@@ -78,7 +78,7 @@ _**Arguments**_ | `partitioned_table_id STRING, OUT last_partition DATE`
 _**Returns**_ | `OUT last_partition DATE`
 _**Dependencies**_ | `bqtools.[region].get_date_partitions`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE partitioned_table_id STRING;
@@ -111,7 +111,7 @@ _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING,
 _**Returns**_ | `OUT shard_dates ARRAY<DATE>`
 _**Dependencies**_ | `bqtools-qb.[region].get_date_shards`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE sharded_table_dataset_id, sharded_table_prefix STRING;
@@ -146,7 +146,7 @@ _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING,
 _**Returns**_ | `OUT first_shard DATE`
 _**Dependencies**_ | `bqtools.[region].get_date_shards`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE sharded_table_dataset_id, sharded_table_prefix STRING;
@@ -181,7 +181,7 @@ _**Arguments**_ | `sharded_table_dataset_id STRING, sharded_table_prefix STRING,
 _**Returns**_ | `OUT last_shard DATE`
 _**Dependencies**_ | `bqtools.[region].get_date_shards`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE sharded_table_dataset_id, sharded_table_prefix STRING;

@@ -12,7 +12,7 @@ _**Arguments**_ | `dataset_id STRING`
 _**Returns**_ | `STRUCT<dataset_id_input STRING, is_valid BOOL, project_id STRING, dataset_name STRING>`
 _**Dependencies**_ | `None`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE dataset_name STRING;
@@ -43,7 +43,7 @@ _**Arguments**_ | `resource_id STRING`
 _**Returns**_ | `STRUCT<resource_id_input STRING, is_valid BOOL, project_id STRING, dataset_name STRING, resource_name STRING, dataset_id STRING, resource_id STRING>`
 _**Dependencies**_ | `None`
 
-!!! info "Function Usage" 
+!!! info "EXECUTION" 
     === "EU"
         ```sql
         DECLARE resource_id STRING;
