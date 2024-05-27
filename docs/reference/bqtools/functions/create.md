@@ -1,6 +1,15 @@
-These functions are used to create resources from SQL definitions and options.
+These functions are used to create resources from SQL definitions and deployment-specific options.
 
-# **`create_function`**
+
+
+
+
+
+
+
+
+
+# **create_function**
 _**Attribute**_ | Value
 --- | ---
 _**Name**_ | `create_function`

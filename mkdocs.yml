@@ -50,8 +50,11 @@ nav:
 
     - BigQuery Tools:
       - Introduction: reference/bqtools/index.md
-      - Resources:
-        - CREATE: reference/bqtools/resources/create.md
+      - Functions:
+        - Metadata: reference/bqtools/functions/metadata.md
+        # - Resources: reference/bqtools/functions/create.md
+        - Partitions: reference/bqtools/functions/partitions.md
+        - Utilities: reference/bqtools/functions/utilities.md
 
     - Decode Data:
       - Introduction: reference/decodedata/index.md
