@@ -1,4 +1,4 @@
-The **Decode Data** (`decodedata`) for GA4 library simplifies and augments the GA4 BigQuery export, making subsequent data operations simpler and quicker. Go to [decodedata.io]('https://decodedata.io/') for detailed documentation and registration.
+The **Decode Data** (`decodedata`) for GA4 library simplifies and augments the GA4 BigQuery export, making subsequent data operations simpler and quicker. Go to [decodedata.io](https://decodedata.io/) for detailed documentation and registration.
 
 # Summary
 _Attribute_ | Value
