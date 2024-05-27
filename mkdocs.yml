@@ -1,7 +1,6 @@
 site_name: Transformation Flow
 site_url: https://transformationflow.io/
 
-# Repository
 repo_name: transformationflow/transformationflow.github.io
 repo_url: https://github.com/transformationflow/transformationflow.github.io
 
@@ -101,12 +100,5 @@ extra:
       link: mailto:hello@transformationflow.io
     - icon: fontawesome/solid/calendar
       link: https://calendly.com/transformationflow/15
-
-#extra_css:
-#  - stylesheets/extra.css
-
-#extra_javascript:
-#  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-#  - javascripts/tables.js
 
 copyright: Copyright &copy; 2024 Transformationflow OÜ (16248096), Estonia
