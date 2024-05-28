@@ -5,6 +5,7 @@ _Attribute_ | Value
 --- | ---
 _**Name**_ | Decode Data
 _**Project ID**_ | `decodedata`
+_**Version**_ | `decodedata:v1.0.0`
 _**Access**_ | Licensed
 _**Description**_ | Enables automatic pre-modelling of the GA4 BigQuery `events_YYYYMMDD` export, providing flattened, date-partitioned `events` and `sessions` tables containing all standard and observed `event_params` and `user_properties`. It also provides mechanisms to detect new `event_params` and `user_properties` values and to incrementally update the schema based on inbound data detection. 
 

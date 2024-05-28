@@ -5,7 +5,7 @@ _Attribute_ | Value
 --- | ---
 _**Name**_ | BigQuery Tools
 _**Project ID**_ | `bqtools`
-
+_**Version**_ | `bqtools:v1.0.0`
 _**Access**_ | Private & Client
 _**Description**_ | The low-level building blocks used to build, deploy and manage data automation solutions and products. It enables functional engineering within the native BigQuery environment. 
 
