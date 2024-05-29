@@ -86,7 +86,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partitions`
 
         SET partitioned_table_id = 'project_id.dataset_name.partitioned_table_name';
 
-        CALL bqtools.eu.get_first_date_partition(partitioned_table_id, last_partition);
+        CALL bqtools.eu.get_last_date_partition(partitioned_table_id, last_partition);
         ```
     
     === "US"
@@ -96,7 +96,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_partitions`
 
         SET partitioned_table_id = 'project_id.dataset_name.partitioned_table_name';
 
-        CALL bqtools.us.get_first_date_partition(partitioned_table_id, last_partition);
+        CALL bqtools.us.get_last_date_partition(partitioned_table_id, last_partition);
         ```
 
 # **GET Date Shards**
@@ -190,7 +190,7 @@ _**Dependencies**_ | `bqtools.[region].get_date_shards`
         SET sharded_table_dataset_id = 'project_id.dataset_name';
         SET sharded_table_prefix = 'my_table_prefix_';
 
-        CALL bqtools.eu.get_first_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
+        CALL bqtools.eu.get_last_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
         ```
     
     === "US"
@@ -201,5 +201,5 @@ _**Dependencies**_ | `bqtools.[region].get_date_shards`
         SET sharded_table_dataset_id = 'project_id.dataset_name';
         SET sharded_table_prefix = 'my_table_prefix_';
 
-        CALL bqtools.us.get_first_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
+        CALL bqtools.us.get_last_date_shard(sharded_table_dataset_id, sharded_table_prefix, last_shard);
         ```
