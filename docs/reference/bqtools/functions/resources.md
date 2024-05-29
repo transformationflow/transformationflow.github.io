@@ -50,7 +50,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_function`
         IF NOT EXISTS | `BOOLEAN` | `true`/`false`| `if_not_exists` | `false`
         DESCRIPTION | `STRING` | `Function description` | `description` | `None`
     
-    === "Default"
+    === "Default Options"
         If the `function_options` `JSON` argument is `NULL`, the default options will correspond to the following DDL statement:
 
         ```sql
@@ -107,7 +107,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_procedure`
         IF NOT EXISTS | `BOOLEAN` | `true`/`false`| `if_not_exists` | `false`
         DESCRIPTION | `STRING` | `Function description` | `description` | `None`
     
-    === "Default"
+    === "Default Options"
         If the `procedure_options` `JSON` argument is `NULL`, the default options will correspond to the following DDL statement:
 
         ```sql
@@ -168,7 +168,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table`
         FRIENDLY NAME | `STRING` | `Friendly name` | `friendly_name` | `None`
         DEFAULT ROUNDING MODE | `STRING` | `Default rounding mode` | `default_rounding_mode` | `None`
 
-    === "Default"
+    === "Default Options"
         If the `table_options` `JSON` argument is `NULL`, the default options will correspond to the following DDL statement:
 
         ```sql
@@ -228,7 +228,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table_function`
         IF NOT EXISTS | `BOOLEAN` | `true`/`false`| `if_not_exists` | `false`
         DESCRIPTION | `STRING` | `Function description` | `description` | `None`
     
-    === "Default"
+    === "Default Options"
         If the `function_options` `JSON` argument is `NULL`, the default options will correspond to the following DDL statement:
 
         ```sql
@@ -293,7 +293,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_table`
         FRIENDLY NAME | `STRING` | `Friendly name` | `friendly_name` | `None`
         DEFAULT ROUNDING MODE | `STRING` | `Default rounding mode` | `default_rounding_mode` | `None`
 
-    === "Default"
+    === "Default Options"
         If the `table_options` `JSON` argument is `NULL`, the default options will correspond to the following DDL statement:
 
         ```sql
@@ -349,7 +349,7 @@ _**Dependencies**_ | `bqtools-qb.[region].create_view`
         EXPIRATION TIMESTAMP | `STRING` | `Timestamp` | `expiration_timestamp` | `None`
         FRIENDLY NAME | `STRING` | `Friendly name` | `friendly_name` | `None`
     
-    === "Default"
+    === "Default Options"
         If the `view_options` `JSON` argument is `NULL`, the default options will correspond to the following DDL statement:
 
         ```sql
