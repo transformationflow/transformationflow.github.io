@@ -63,9 +63,11 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`, `bqtools.[region].get
         --- | --- | --- | --- | --- | ---
         EXECUTION MODE | STRING | `full`, `incremental`, `date_range` | execution_mode | `incremental` | Flow execution mode.
         DATES TO REPLACE | INT64 | Integer value | replace_additional_date_partitions | `0` | Additional historic date partitions to replace in `incremental` mode.
-        START DATE | DATE | Date value | Start date in `date_range` mode.
-        END DATE | DATE | Date value | End date in `date_range` mode.
+        START DATE | DATE | Date value | start_date | Start date in `date_range` mode.
+        END DATE | DATE | Date value | end_date | End date in `date_range` mode.
     
+    Note that a `NULL` value for the `execution` mode will execute an `incremental` flow on only the latest arriving date partitions. 
+
 ??? note "DESTINATION TABLE OPTIONS"
 
     === "Destination Table Options"
