@@ -58,7 +58,7 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`, `bqtools.[region].get
 
 
 ??? note "EXECUTION OPTIONS"
-    === "Options"
+    === "execution_options"
         Option | Data Type | Values | JSON Path | Default | Description
         --- | --- | --- | --- | --- | ---
         EXECUTION MODE | STRING | `full`, `incremental`, `date_range` | execution_mode | `incremental` | Flow execution mode.
@@ -66,14 +66,39 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`, `bqtools.[region].get
         START DATE | DATE | Date value | start_date | Start date in `date_range` mode.
         END DATE | DATE | Date value | end_date | End date in `date_range` mode.
     
-    Note that a `NULL` value for the `execution` mode will execute an `incremental` flow on only the latest arriving date partitions. 
+        Note that a `NULL` value for the `execution` mode will execute an `incremental` flow on only the latest arriving date partitions. 
+
+    === "Examples"
+        === "Full"
+        ```sql
+        SET execution_options = JSON '{"execution_mode": "full"}';
+        ```
+
+        === "Incremental"
+        ```sql
+        SET execution_options = JSON '{"execution_mode": "incremental", "replace_additional_date_partitions": 4}';
+        ```
+
+        === "Date Range"
+        ```sql
+        SET execution_options = JSON '{"execution_mode": "date_range", "start_date": "2024-01-01", "end_date": "2024-01-31"}';
+        ```
+
 
 ??? note "DESTINATION TABLE OPTIONS"
 
-    === "Destination Table Options"
+    === "destination_table_options"
         Option | Data Type | Values | JSON Path | Default | Description
         --- | --- | --- | --- | --- | ---
         PARTITION EXPRESSION | STRING | Partition expression or column | partition_expression | `None` | Destination table partitioning specification.
         CLUSTERING COLUMN LIST | ARRAY<STRING> |  Clustering columns | clustering_column_list | `None` | Destination table clustering specification.   
         DESCRIPTION | STRING |  Description | description | `None` | Destination table description.       
         
+    === "Example"
+        The following `destination_table_options` configuration in `full` execution mode will build the destination table as a date partitioned table, partitioned on the `event_date` column, clustered on the `session_id`column and with "Event-level aggregation" as the table description.  
+
+        ```sql
+        SET destination_table_options = JSON'{"description": "Event-level aggregation", "clustering_column_list": ["session_id"], "partition_expression": "event_date"}';
+        ```
+
+        Note that in `incremental` and `date_range` execution modes, the destination table is not rebuilt, so the `destination_table_options` is ignored and a `NULL` value can be passed without impact to execution behaviour.
