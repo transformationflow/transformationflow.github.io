@@ -51,11 +51,12 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`, `bqtools.[region].get
     ARGUMENT | DATA TYPE | DESCRIPTION
     --- | --- | ---
     source_table_id | STRING | The source date-partitioned or date-sharded data table.
-    transform_resource_id | STRING | The source date-bounded table function defining the transformation.
+    transform_resource_id | STRING | The source [date-bounded table function](/reference/bqtools/concepts/resources#date-bounded-table-function) defining the transformation.
     destination_table_id | STRING | The destination date-partitioned table.
     execution_options | JSON | Options to configure specific executions.
     destination_table_options | JSON | Deployment options for the destination table.
 
+    For sharded table types, include the trailing underscore in the source_table_id (e.g. `project_id.analytics1234.events_`).
 
 ??? note "EXECUTION OPTIONS"
     === "execution_options"

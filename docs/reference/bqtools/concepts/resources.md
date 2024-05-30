@@ -19,3 +19,5 @@ SELECT *
 FROM ...
 ```
 
+Note that using the `start_date` and `end_date` `DATE` arguments in the query is optional, but they _must_ be defined as table function arguments.
+
