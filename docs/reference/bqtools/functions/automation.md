@@ -6,7 +6,7 @@ _**Attribute**_ | Value
 _**Function Name**_ | `run_flow`
 _**ID**_ | `bqtools.[region].run_flow`
 _**Version**_ | `bqtools:v1.0.0`
-_**Description**_ | Runs a single, idempotent execution of a logical flow, defined by a date-partitioned or date-sharded data source, a transformation/augmentation [date-bounded table function](/reference/bqtools/concepts/resources#date-bounded-table-function), a destination table and a set of execution and deployment options.
+_**Description**_ | Runs a single, idempotent execution of a logical flow, defined by a date-partitioned or date-sharded data source, a transformation/augmentation [date-bounded table function](../concepts/resources.md#date-bounded-table-function), a destination table and a set of execution and deployment options.
 _**Type**_ | `PROCEDURE`
 _**Arguments**_ | `source_table_id STRING, transform_resource_id STRING, destination_table_id STRING, execution_options JSON, destination_table_options JSON`
 _**Returns**_ | `None`
@@ -51,7 +51,7 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`, `bqtools.[region].get
     ARGUMENT | DATA TYPE | DESCRIPTION
     --- | --- | ---
     source_table_id | STRING | The source date-partitioned or date-sharded data table.
-    transform_resource_id | STRING | The source [date-bounded table function](/reference/bqtools/concepts/resources#date-bounded-table-function) defining the transformation.
+    transform_resource_id | STRING | The source [date-bounded table function](../concepts/resources.md#date-bounded-table-function) defining the transformation.
     destination_table_id | STRING | The destination date-partitioned table.
     execution_options | JSON | Options to configure specific executions.
     destination_table_options | JSON | Deployment options for the destination table.
