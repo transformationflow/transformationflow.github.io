@@ -57,6 +57,7 @@ nav:
         - Metadata: reference/bqtools/functions/metadata.md
         - Resources: reference/bqtools/functions/resources.md
         - Partitions: reference/bqtools/functions/partitions.md
+        - Export: reference/bqtools/functions/export.md
       - Concepts:
         - Resources: reference/bqtools/concepts/resources.md
 
