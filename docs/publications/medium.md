@@ -5,6 +5,18 @@ hide:
 
 <div class="grid cards" markdown>
 
+-   [:fontawesome-brands-medium:{ .lg .middle }](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"} June 5, 2024 :material-clock-fast:{ .lg .middle } 16 min read 
+    
+    # [How to Build a Simple Data Stack on BigQuery](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"}
+
+    [![Essential SQL Functions for GA4 BigQuery Export Analysis](../assets/medium/How_to_Build_a_Simple_Data_Stack_on_BigQuery.webp){ align=center }](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"}
+    ---
+    
+    Building data infrastructure on BigQuery is a highly capable, escalable, extensible, accessible and future-proof choice for any team or organisation, at any scale
+
+    [:octicons-arrow-right-24: Continue reading](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"}
+
+
 -   [:fontawesome-brands-medium:{ .lg .middle }](https://medium.com/decode-data/essential-sql-functions-for-the-ga4-bigquery-events-export-adc07bcefc11){:target="_blank"} March 27, 2024 :material-clock-fast:{ .lg .middle } 5 min read 
     
     # [Essential SQL Functions for GA4 BigQuery Export Analysis](https://medium.com/decode-data/essential-sql-functions-for-the-ga4-bigquery-events-export-adc07bcefc11){:target="_blank"}
