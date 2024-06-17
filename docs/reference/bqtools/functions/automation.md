@@ -80,10 +80,20 @@ _**Dependencies**_ | `bqtools.[region].parse_resource_id`, `bqtools.[region].get
         SET execution_options = JSON '{"execution_mode": "incremental", "replace_additional_date_partitions": 4}';
         ```
 
-        === "Date Range"
+        === "Full Date Range"
         ```sql
         SET execution_options = JSON '{"execution_mode": "date_range", "start_date": "2024-01-01", "end_date": "2024-01-31"}';
         ```
+
+        === "Start Date Range"
+        ```sql
+        SET execution_options = JSON '{"execution_mode": "date_range", "end_date": "2024-01-31"}';
+        ```
+
+        === "End Date Range"
+        ```sql
+        SET execution_options = JSON '{"execution_mode": "date_range", "start_date": "2024-01-01"}';
+        ```        
 
 
 ??? note "DESTINATION TABLE OPTIONS"
