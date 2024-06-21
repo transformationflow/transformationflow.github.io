@@ -5,11 +5,23 @@ hide:
 
 <div class="grid cards" markdown>
 
+-   [:fontawesome-brands-medium:{ .lg .middle }](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"} June 21, 2024 :material-clock-fast:{ .lg .middle } 11 min read 
+    
+    # [Understanding the GA4 BigQuery Export Schema and Structure](https://medium.com/towards-data-science/understanding-the-ga4-bigquery-export-schema-and-structure-3a068ebee4ea){:target="_blank"}
+
+    [![Understanding the GA4 BigQuery Export Schema and Structure](../assets/medium/Understanding_the_GA4_BigQuery_Export_Schema_and_Structure.webp){ align=center }](https://medium.com/towards-data-science/understanding-the-ga4-bigquery-export-schema-and-structure-3a068ebee4ea){:target="_blank"}
+    ---
+    
+    A qualitative investigation into one of the weirdest data structures ever forced upon millions of innocent, unsuspecting analysts
+
+    [:octicons-arrow-right-24: Continue reading](https://medium.com/towards-data-science/understanding-the-ga4-bigquery-export-schema-and-structure-3a068ebee4ea){:target="_blank"}
+
+
 -   [:fontawesome-brands-medium:{ .lg .middle }](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"} June 14, 2024 :material-clock-fast:{ .lg .middle } 17 min read 
     
     # [A Guide to Functional Data Engineering in BigQuery](https://medium.com/decode-data/a-guide-to-functional-data-engineering-in-bigquery-9c0065d76749){:target="_blank"}
 
-    [![Essential SQL Functions for GA4 BigQuery Export Analysis](../assets/medium/A_Guide_to_Functional_Data_Engineering_in_BigQuery.webp){ align=center }](https://medium.com/decode-data/a-guide-to-functional-data-engineering-in-bigquery-9c0065d76749){:target="_blank"}
+    [![A Guide to Functional Data Engineering in BigQuery](../assets/medium/A_Guide_to_Functional_Data_Engineering_in_BigQuery.webp){ align=center }](https://medium.com/decode-data/a-guide-to-functional-data-engineering-in-bigquery-9c0065d76749){:target="_blank"}
     ---
     
     An exploration of the Functional Data Engineering paradigm and how to implement this in BigQuery
@@ -21,7 +33,7 @@ hide:
     
     # [How to Build a Simple Data Stack on BigQuery](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"}
 
-    [![Essential SQL Functions for GA4 BigQuery Export Analysis](../assets/medium/How_to_Build_a_Simple_Data_Stack_on_BigQuery.webp){ align=center }](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"}
+    [![How to Build a Simple Data Stack on BigQuery](../assets/medium/How_to_Build_a_Simple_Data_Stack_on_BigQuery.webp){ align=center }](https://medium.com/decode-data/how-to-build-a-simple-data-stack-on-bigquery-7f63d744b81d){:target="_blank"}
     ---
     
     Building data infrastructure on BigQuery is a highly capable, escalable, extensible, accessible and future-proof choice for any team or organisation, at any scale
